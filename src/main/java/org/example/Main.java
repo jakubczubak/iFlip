@@ -28,6 +28,41 @@ public class Main {
         put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27)); // 14, 15, 16
     }};
 
+    private static class RecommendationAssessment {
+        private final String status;
+
+        public RecommendationAssessment(String status) {
+            this.status = status;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        @Override
+        public String toString() {
+            return status;
+        }
+    }
+
+    private static RecommendationAssessment getRecommendationAssessment(double price, PriceStats stats) {
+        double median = stats.getPercentile50();
+
+        if (median == 0.0) {
+            return new RecommendationAssessment("Brak danych");
+        }
+
+        double priceToMedianRatio = price / median;
+
+        if (priceToMedianRatio <= 0.8) {
+            return new RecommendationAssessment("Świetna okazja");
+        } else if (priceToMedianRatio <= 0.95) {
+            return new RecommendationAssessment("Dobra okazja");
+        } else {
+            return new RecommendationAssessment("Przeciętna");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean continueSearching = true;
@@ -74,10 +109,10 @@ public class Main {
             List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
             PriceAnalyzer analyzer = new PriceAnalyzer(offers);
 
-            // Obliczanie średnich
-            double averagePrice = analyzer.calculateAveragePrice();
-            double averagePriceWithoutProtection = analyzer.calculateAveragePriceWithoutProtection();
-            double averagePriceWithProtection = analyzer.calculateAveragePriceWithProtection();
+            // Obliczanie statystyk
+            PriceStats overallStats = analyzer.getOverallPriceStats();
+            PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection();
+            PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection();
 
             // Rekomendacje
             List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(0.8, location.isEmpty() ? null : location);
@@ -87,7 +122,7 @@ public class Main {
 
             // Wyświetlanie wyników
             displayResults(offers, selectedModel, selectedStorage, location,
-                    averagePrice, averagePriceWithoutProtection, averagePriceWithProtection,
+                    overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection, scanner);
 
             // Zapytanie o kontynuację
@@ -262,46 +297,62 @@ public class Main {
     }
 
     private static void displayResults(List<Offer> offers, String model, String storage, String location,
-                                       double averagePrice, double averagePriceWithoutProtection, double averagePriceWithProtection,
+                                       PriceStats overallStats,
+                                       PriceStats statsWithoutProtection,
+                                       PriceStats statsWithProtection,
                                        List<Offer> recommendedWithout, List<Offer> recommendedWith, Scanner scanner) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
                 offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
         System.out.println("----------------------------------------");
 
-        // Średnie ceny
-        System.out.println("\nŚrednie ceny:");
-        System.out.printf("• Ogólna: %.2f PLN\n", averagePrice);
-        System.out.printf("• Bez pakietu ochronnego: %.2f PLN\n", averagePriceWithoutProtection);
-        System.out.printf("• Z pakietem ochronnym: %.2f PLN\n", averagePriceWithProtection);
+        // Statystyki cen
+        System.out.println("\nStatystyki cen:");
+        System.out.println("• Ogólne:");
+        System.out.printf("  - Średnia: %.2f PLN\n", overallStats.getAverage());
+        System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", overallStats.getStandardDeviation());
+        System.out.printf("  - Percentyle: Q1=%.2f PLN, Mediana=%.2f PLN, Q3=%.2f PLN\n",
+                overallStats.getPercentile25(), overallStats.getPercentile50(), overallStats.getPercentile75());
+        System.out.println("• Bez pakietu ochronnego:");
+        System.out.printf("  - Średnia: %.2f PLN\n", statsWithoutProtection.getAverage());
+        System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", statsWithoutProtection.getStandardDeviation());
+        System.out.printf("  - Percentyle: Q1=%.2f PLN, Mediana=%.2f PLN, Q3=%.2f PLN\n",
+                statsWithoutProtection.getPercentile25(), statsWithoutProtection.getPercentile50(), statsWithoutProtection.getPercentile75());
+        System.out.println("• Z pakietem ochronnym:");
+        System.out.printf("  - Średnia: %.2f PLN\n", statsWithProtection.getAverage());
+        System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", statsWithProtection.getStandardDeviation());
+        System.out.printf("  - Percentyle: Q1=%.2f PLN, Mediana=%.2f PLN, Q3=%.2f PLN\n",
+                statsWithProtection.getPercentile25(), statsWithProtection.getPercentile50(), statsWithProtection.getPercentile75());
         System.out.println("----------------------------------------");
 
         // Rekomendacje bez pakietu ochronnego
-        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout);
+        System.out.println("\nNotatka: Rekomendacje uwzględniają wszystkie oferty z ceną poniżej mediany.");
+        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection);
 
         // Rekomendacje z pakietem ochronnym
-        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith);
+        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection);
     }
 
-    private static void displayRecommendations(String title, List<Offer> recommendations) {
+    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats) {
         if (recommendations.isEmpty()) {
             System.out.println("\n" + title + ":");
-            System.out.println("Brak rekomendowanych ofert (cena poniżej 80% średniej).");
+            System.out.println("Brak rekomendowanych ofert (cena poniżej mediany).");
             System.out.println("----------------------------------------");
             return;
         }
 
         System.out.println("\n" + title + ":");
-        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
-        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Data            | Lokalizacja        | Link");
-        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
+        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Rekomendacja  | Data            | Lokalizacja        | Link");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
 
         for (Offer offer : recommendations) {
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
-            System.out.printf("| %-48s | %10.2f | %-15s | %-18s | %s\n",
-                    shortTitle, offer.getPrice(), offer.getDate().toString(), offer.getLocation(), offer.getUrl());
+            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats);
+            System.out.printf("| %-48s | %10.2f | %-13s | %-15s | %-18s | %s\n",
+                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(), offer.getLocation(), offer.getUrl());
         }
-        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
         System.out.println("----------------------------------------");
     }
 }
