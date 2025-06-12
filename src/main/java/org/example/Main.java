@@ -1,0 +1,304 @@
+package org.example;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Main {
+    private static final List<String> IPHONE_MODELS = Arrays.asList(
+            "iPhone X", "iPhone XS", "iPhone XS Max", "iPhone XR",
+            "iPhone 11", "iPhone 11 Pro", "iPhone 11 Pro Max",
+            "iPhone 12", "iPhone 12 Mini", "iPhone 12 Pro", "iPhone 12 Pro Max",
+            "iPhone 13", "iPhone 13 Mini", "iPhone 13 Pro", "iPhone 13 Pro Max",
+            "iPhone SE", "iPhone 14", "iPhone 14 Plus", "iPhone 14 Pro", "iPhone 14 Pro Max",
+            "iPhone 15", "iPhone 15 Plus", "iPhone 15 Pro", "iPhone 15 Pro Max",
+            "iPhone 16", "iPhone 16 Plus", "iPhone 16 Pro", "iPhone 16 Pro Max"
+    );
+
+    private static final List<String> STORAGE_CAPACITIES = Arrays.asList(
+            "32GB", "64GB", "128GB", "256GB", "512GB", "1TB"
+    );
+
+    private static final List<String> DEVICE_STATES = Arrays.asList(
+            "Nowy", "Używany", "Uszkodzony"
+    );
+
+    private static final Map<String, List<Integer>> MODEL_GROUPS = new LinkedHashMap<>() {{
+        put("iPhone X–XR", Arrays.asList(0, 1, 2, 3)); // iPhone X, XS, XS Max, XR
+        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)); // 11, 12, 13, SE
+        put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27)); // 14, 15, 16
+    }};
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continueSearching = true;
+
+        while (continueSearching) {
+            System.out.println("\n=== iFlip ===");
+            System.out.println("\n=== Wyszukiwarka ofert iPhone na OLX ===");
+            System.out.println("Wybierz opcje poniżej, aby znaleźć najlepsze oferty.\n");
+
+            // Wybór modelu
+            String selectedModel = selectModel(scanner);
+            if (selectedModel == null) continue;
+
+            // Wybór pojemności
+            String selectedStorage = selectStorage(scanner);
+            if (selectedStorage == null) continue;
+
+            // Wybór stanu
+            List<String> selectedStates = selectStates(scanner);
+            if (selectedStates == null) continue;
+
+            // Wybór lokalizacji
+            String location = selectLocation(scanner);
+            if (location == null) continue;
+
+            // Podsumowanie wyborów
+            System.out.println("\n=== Podsumowanie wyborów ===");
+            System.out.printf("Model: %s\n", selectedModel);
+            System.out.printf("Pojemność: %s\n", selectedStorage);
+            System.out.printf("Stan: %s\n", selectedStates.isEmpty() ? "Wszystkie" : String.join(", ", selectedStates));
+            System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
+            System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
+            String confirm = scanner.nextLine().trim().toLowerCase();
+            if (!confirm.equals("tak")) {
+                System.out.println("Powrót do wyboru opcji.\n");
+                continue;
+            }
+
+            // Scrapowanie i analiza
+            OlxScraper scraper = new OlxScraper();
+            List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
+            PriceAnalyzer analyzer = new PriceAnalyzer(offers);
+
+            // Obliczanie średnich
+            double averagePrice = analyzer.calculateAveragePrice();
+            double averagePriceWithoutProtection = analyzer.calculateAveragePriceWithoutProtection();
+            double averagePriceWithProtection = analyzer.calculateAveragePriceWithProtection();
+
+            // Rekomendacje
+            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(0.8, location.isEmpty() ? null : location);
+            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(location.isEmpty() ? null : location);
+            recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+            recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+
+            // Wyświetlanie wyników
+            displayResults(offers, selectedModel, selectedStorage, location,
+                    averagePrice, averagePriceWithoutProtection, averagePriceWithProtection,
+                    recommendedOffersWithoutProtection, recommendedOffersWithProtection, scanner);
+
+            // Zapytanie o kontynuację
+            System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
+            continueSearching = scanner.nextLine().trim().toLowerCase().equals("tak");
+        }
+
+        System.out.println("\nDziękujemy za skorzystanie z wyszukiwarki OLX!");
+        scanner.close();
+    }
+
+    private static String selectModel(Scanner scanner) {
+        System.out.println("=== Wybór modelu iPhone’a ===");
+        System.out.println("Wybierz grupę modeli:");
+        int groupIndex = 1;
+        for (String group : MODEL_GROUPS.keySet()) {
+            System.out.printf("%d. %s\n", groupIndex++, group);
+        }
+        System.out.print("Wpisz numer grupy (1–" + MODEL_GROUPS.size() + ") lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        int groupChoice;
+        try {
+            groupChoice = Integer.parseInt(input);
+            if (groupChoice < 1 || groupChoice > MODEL_GROUPS.size()) {
+                System.out.println("Proszę wpisać numer od 1 do " + MODEL_GROUPS.size() + ".");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawny numer.");
+            return null;
+        }
+
+        String selectedGroup = new ArrayList<>(MODEL_GROUPS.keySet()).get(groupChoice - 1);
+        List<Integer> modelIndices = MODEL_GROUPS.get(selectedGroup);
+
+        System.out.println("\nWybierz model z grupy " + selectedGroup + ":");
+        for (int i = 0; i < modelIndices.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, IPHONE_MODELS.get(modelIndices.get(i)));
+        }
+        System.out.print("Wpisz numer modelu (1–" + modelIndices.size() + ") lub 'q' aby wyjść: ");
+
+        input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        int modelChoice;
+        try {
+            modelChoice = Integer.parseInt(input);
+            if (modelChoice < 1 || modelChoice > modelIndices.size()) {
+                System.out.println("Proszę wpisać numer od 1 do " + modelIndices.size() + ".");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawny numer.");
+            return null;
+        }
+
+        return IPHONE_MODELS.get(modelIndices.get(modelChoice - 1));
+    }
+
+    private static String selectStorage(Scanner scanner) {
+        System.out.println("\n=== Wybór pojemności pamięci ===");
+        for (int i = 0; i < STORAGE_CAPACITIES.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, STORAGE_CAPACITIES.get(i));
+        }
+        System.out.print("Wpisz numer pojemności (1–" + STORAGE_CAPACITIES.size() + ") lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        int storageChoice;
+        try {
+            storageChoice = Integer.parseInt(input);
+            if (storageChoice < 1 || storageChoice > STORAGE_CAPACITIES.size()) {
+                System.out.println("Proszę wpisać numer od 1 do " + STORAGE_CAPACITIES.size() + ".");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawny numer.");
+            return null;
+        }
+
+        return STORAGE_CAPACITIES.get(storageChoice - 1);
+    }
+
+    private static List<String> selectStates(Scanner scanner) {
+        System.out.println("\n=== Wybór stanu urządzenia ===");
+        System.out.println("Możesz wybrać kilka stanów, wpisując numery oddzielone spacją (np. '1 2').");
+        System.out.println("Zostaw puste, aby wybrać wszystkie stany.");
+        for (int i = 0; i < DEVICE_STATES.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, DEVICE_STATES.get(i));
+        }
+        System.out.print("Wpisz numery stanów (1–" + DEVICE_STATES.size() + ") lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        if (input.isEmpty()) {
+            return Arrays.asList("new", "used", "damaged"); // Wszystkie stany
+        }
+
+        try {
+            List<Integer> stateChoices = Arrays.stream(input.split("\\s+"))
+                    .map(Integer::parseInt)
+                    .filter(i -> i >= 1 && i <= DEVICE_STATES.size())
+                    .distinct()
+                    .collect(Collectors.toList());
+
+            if (stateChoices.isEmpty()) {
+                System.out.println("Nie wybrano żadnych poprawnych stanów. Używam wszystkich stanów.");
+                return Arrays.asList("new", "used", "damaged");
+            }
+
+            List<String> selectedStates = stateChoices.stream()
+                    .map(i -> {
+                        switch (i) {
+                            case 1:
+                                return "new";
+                            case 2:
+                                return "used";
+                            case 3:
+                                return "damaged";
+                            default:
+                                return null;
+                        }
+                    })
+                    .filter(s -> s != null)
+                    .collect(Collectors.toList());
+
+            System.out.println("Wybrane stany: " + selectedStates.stream()
+                    .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                    .collect(Collectors.joining(", ")));
+            return selectedStates;
+
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawne numery oddzielone spacją. Używam wszystkich stanów.");
+            return Arrays.asList("new", "used", "damaged");
+        }
+    }
+
+    private static String selectLocation(Scanner scanner) {
+        System.out.println("\n=== Wybór lokalizacji ===");
+        System.out.println("Wpisz nazwę miasta (np. Warszawa, Kraków) lub zostaw puste dla całej Polski.");
+        System.out.print("Lokalizacja lub 'q' aby wyjść: ");
+
+        String location = scanner.nextLine().trim();
+        if (location.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        if (!location.isEmpty() && !location.matches("[a-zA-ZąęłńóśźżĄĘŁŃÓŚŹŻ\\s-]{2,}")) {
+            System.out.println("Proszę wpisać poprawną nazwę miasta (tylko litery, min. 2 znaki).");
+            return null;
+        }
+
+        return location;
+    }
+
+    private static void displayResults(List<Offer> offers, String model, String storage, String location,
+                                       double averagePrice, double averagePriceWithoutProtection, double averagePriceWithProtection,
+                                       List<Offer> recommendedWithout, List<Offer> recommendedWith, Scanner scanner) {
+        System.out.println("\n=== Wyniki wyszukiwania ===");
+        System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
+                offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
+        System.out.println("----------------------------------------");
+
+        // Średnie ceny
+        System.out.println("\nŚrednie ceny:");
+        System.out.printf("• Ogólna: %.2f PLN\n", averagePrice);
+        System.out.printf("• Bez pakietu ochronnego: %.2f PLN\n", averagePriceWithoutProtection);
+        System.out.printf("• Z pakietem ochronnym: %.2f PLN\n", averagePriceWithProtection);
+        System.out.println("----------------------------------------");
+
+        // Rekomendacje bez pakietu ochronnego
+        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout);
+
+        // Rekomendacje z pakietem ochronnym
+        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith);
+    }
+
+    private static void displayRecommendations(String title, List<Offer> recommendations) {
+        if (recommendations.isEmpty()) {
+            System.out.println("\n" + title + ":");
+            System.out.println("Brak rekomendowanych ofert (cena poniżej 80% średniej).");
+            System.out.println("----------------------------------------");
+            return;
+        }
+
+        System.out.println("\n" + title + ":");
+        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
+        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Data            | Lokalizacja        | Link");
+        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
+
+        for (Offer offer : recommendations) {
+            String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
+            System.out.printf("| %-48s | %10.2f | %-15s | %-18s | %s\n",
+                    shortTitle, offer.getPrice(), offer.getDate().toString(), offer.getLocation(), offer.getUrl());
+        }
+        System.out.println("+--------------------------------------------------+------------+-----------------+--------------------+");
+        System.out.println("----------------------------------------");
+    }
+}
