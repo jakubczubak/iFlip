@@ -6,6 +6,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -28,21 +30,36 @@ public class OlxScraper {
         String storageQuery = storageCapacity.toLowerCase().replace("tb", "tb").replace("gb", "gb");
         String baseUrl;
 
-        String filters = "search%5Bfilter_enum_phonemodel%5D%5B0%5D=iphone-" + modelQuery +
-                "&search%5Bfilter_enum_builtinmemory_phones%5D%5B0%5D=" + storageQuery;
+        // Budowanie parametrów filtra
+        StringBuilder filters = new StringBuilder();
+        filters.append("search%5Bfilter_enum_phonemodel%5D%5B0%5D=iphone-")
+                .append(URLEncoder.encode(modelQuery, StandardCharsets.UTF_8));
+        filters.append("&search%5Bfilter_enum_builtinmemory_phones%5D%5B0%5D=")
+                .append(URLEncoder.encode(storageQuery, StandardCharsets.UTF_8));
 
+        // Dodanie parametru lokalizacji
         if (location != null && !location.isEmpty()) {
-            String locationSlug = location.trim().toLowerCase().replaceAll("\\s+", "-");
-            filters = "search%5Bdist%5D=50&" + filters;
-            baseUrl = "https://www.olx.pl/elektronika/telefony/smartfony-telefony-komorkowe/" + locationSlug + "/q-iphone/?" + filters;
-        } else {
-            baseUrl = "https://www.olx.pl/elektronika/telefony/smartfony-telefony-komorkowe/q-iphone/?" + filters;
+            filters.insert(0, "search%5Bdist%5D=50&");
         }
 
+        // Dodanie parametrów stanu
+        System.out.println("Przekazane stany: " + (states != null ? states : "null"));
         if (states != null && !states.isEmpty()) {
             for (int i = 0; i < states.size(); i++) {
-                filters += "&search%5Bfilter_enum_state%5D%5B" + i + "%5D=" + states.get(i);
+                filters.append("&search%5Bfilter_enum_state%5D%5B")
+                        .append(i)
+                        .append("%5D=")
+                        .append(URLEncoder.encode(states.get(i), StandardCharsets.UTF_8));
             }
+        }
+
+        // Budowanie pełnego URL
+        if (location != null && !location.isEmpty()) {
+            String locationSlug = location.trim().toLowerCase().replaceAll("\\s+", "-");
+            baseUrl = "https://www.olx.pl/elektronika/telefony/smartfony-telefony-komorkowe/" +
+                    URLEncoder.encode(locationSlug, StandardCharsets.UTF_8) + "/q-iphone/?" + filters;
+        } else {
+            baseUrl = "https://www.olx.pl/elektronika/telefony/smartfony-telefony-komorkowe/q-iphone/?" + filters;
         }
 
         int page = 1;
@@ -77,6 +94,7 @@ public class OlxScraper {
 
                 Element nextPageElement = doc.selectFirst("a[data-testid=pagination-forward]");
                 hasNextPage = nextPageElement != null;
+                System.out.println("Czy jest następna strona? " + hasNextPage);
                 page++;
 
             } catch (IOException e) {
@@ -90,47 +108,52 @@ public class OlxScraper {
     }
 
     private Offer parseOffer(Element element, String model, String storageCapacity) {
-        Element titleElement = element.selectFirst("h4.css-1g61gc2");
-        String title = titleElement != null ? titleElement.text() : "";
-        if (title.isEmpty()) {
-            System.err.println("Brak tytułu publikacji.");
+        try {
+            Element titleElement = element.selectFirst("h4.css-1g61gc2");
+            String title = titleElement != null ? titleElement.text() : "";
+            if (title.isEmpty()) {
+                System.err.println("Brak tytułu publikacji.");
+                return null;
+            }
+
+            Element priceElement = element.selectFirst("p[data-testid=ad-price]");
+            String priceText = priceElement != null ? priceElement.text() : "";
+            double price = parsePrice(priceText);
+            if (price <= 0) {
+                return null; // Cicho pomijamy oferty z nieprawidłową ceną
+            }
+
+            Element linkElement = element.selectFirst("a.css-1tqlkj0");
+            String offerUrl = linkElement != null ? linkElement.attr("href") : "";
+            if (offerUrl.isEmpty()) {
+                System.err.println("Brak URL dla publikacji: " + title);
+                return null;
+            }
+            if (!offerUrl.startsWith("https")) {
+                offerUrl = "https://www.olx.pl" + offerUrl;
+            }
+
+            Element dateLocationElement = element.selectFirst("p[data-testid=location-date]");
+            String dateLocationText = dateLocationElement != null ? dateLocationElement.text() : "";
+            String locationText = parseLocation(dateLocationText);
+            if (locationText.isEmpty()) {
+                System.err.println("Brak lokalizacji dla publikacji: " + title);
+                return null;
+            }
+            LocalDate date = parseDate(dateLocationText);
+            if (date == null) {
+                System.err.println("Nieprawidłowa data dla publikacji: " + title);
+                return null;
+            }
+
+            Element protectionElement = element.selectFirst("span[data-testid=btr-label-wrapper]");
+            boolean hasProtectionPackage = protectionElement != null;
+
+            return new Offer(title, price, offerUrl, date, locationText, hasProtectionPackage, model, storageCapacity);
+        } catch (Exception e) {
+            System.err.println("Błąd podczas parsowania oferty: " + e.getMessage());
             return null;
         }
-
-        Element priceElement = element.selectFirst("p[data-testid=ad-price]");
-        String priceText = priceElement != null ? priceElement.text() : "";
-        double price = parsePrice(priceText);
-        if (price <= 0) {
-            return null; // Cicho pomijamy oferty z nieprawidłową ceną
-        }
-
-        Element linkElement = element.selectFirst("a.css-1tqlkj0");
-        String offerUrl = linkElement != null ? linkElement.attr("href") : "";
-        if (offerUrl.isEmpty()) {
-            System.err.println("Brak URL dla publikacji: " + title);
-            return null;
-        }
-        if (!offerUrl.startsWith("https")) {
-            offerUrl = "https://www.olx.pl" + offerUrl;
-        }
-
-        Element dateLocationElement = element.selectFirst("p[data-testid=location-date]");
-        String dateLocationText = dateLocationElement != null ? dateLocationElement.text() : "";
-        String locationText = parseLocation(dateLocationText);
-        if (locationText.isEmpty()) {
-            System.err.println("Brak lokalizacji dla publikacji: " + title);
-            return null;
-        }
-        LocalDate date = parseDate(dateLocationText);
-        if (date == null) {
-            System.err.println("Nieprawidłowa data dla publikacji: " + title);
-            return null;
-        }
-
-        Element protectionElement = element.selectFirst("span[data-testid=btr-label-wrapper]");
-        boolean hasProtectionPackage = protectionElement != null;
-
-        return new Offer(title, price, offerUrl, date, locationText, hasProtectionPackage, model, storageCapacity);
     }
 
     private double parsePrice(String priceText) {

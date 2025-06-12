@@ -66,6 +66,9 @@ public class Main {
                 continue;
             }
 
+            // Logowanie wybranych stanów
+            System.out.println("Wybrane stany przed scrapowaniem: " + selectedStates);
+
             // Scrapowanie i analiza
             OlxScraper scraper = new OlxScraper();
             List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
