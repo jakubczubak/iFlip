@@ -45,7 +45,7 @@ public class Main {
         }
     }
 
-    private static RecommendationAssessment getRecommendationAssessment(double price, PriceStats stats, double zScore) {
+    private static RecommendationAssessment getRecommendationAssessment(double price, PriceStats stats, double zScore, String trendAnalysis) {
         double median = stats.getPercentile50();
 
         if (median == 0.0) {
@@ -53,11 +53,12 @@ public class Main {
         }
 
         double priceToMedianRatio = price / median;
+        boolean isTrendCompliant = trendAnalysis.contains("taniej");
 
         if (priceToMedianRatio <= 0.8 && zScore <= -1.0) {
-            return new RecommendationAssessment("Świetna okazja");
+            return new RecommendationAssessment("Świetna (" + (isTrendCompliant ? "z trendem)" : "bez trendu)"));
         } else if (priceToMedianRatio <= 0.95 && zScore <= -0.5) {
-            return new RecommendationAssessment("Dobra okazja");
+            return new RecommendationAssessment("Dobra (" + (isTrendCompliant ? "z trendem)" : "bez trendu)"));
         } else {
             return new RecommendationAssessment("Przeciętna");
         }
@@ -108,6 +109,8 @@ public class Main {
             OlxScraper scraper = new OlxScraper();
             List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
             PriceAnalyzer analyzer = new PriceAnalyzer(offers);
+            PriceHistoryManager historyManager = new PriceHistoryManager();
+            historyManager.savePrices(offers); // Zapis ofert do pliku JSON
 
             // Obliczanie statystyk
             PriceStats overallStats = analyzer.getOverallPriceStats();
@@ -131,8 +134,8 @@ public class Main {
             );
 
             // Rekomendacje
-            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location);
-            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location);
+            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager);
+            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager);
             recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
             recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
 
@@ -140,7 +143,7 @@ public class Main {
             displayResults(offers, selectedModel, selectedStorage, location,
                     overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection,
-                    zScoresWithoutProtection, zScoresWithProtection);
+                    zScoresWithoutProtection, zScoresWithProtection, historyManager);
 
             // Zapytanie o kontynuację
             System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
@@ -301,7 +304,7 @@ public class Main {
 
         String location = scanner.nextLine().trim();
         if (location.equalsIgnoreCase("q")) {
-            System.out.println("Anulowano wybór.");
+            System.out.println("Anulowano wyboru.");
             return null;
         }
 
@@ -317,7 +320,7 @@ public class Main {
                                        PriceStats overallStats, PriceStats statsWithoutProtection,
                                        PriceStats statsWithProtection, List<Offer> recommendedWithout,
                                        List<Offer> recommendedWith, Map<Offer, Double> zScoresWithoutProtection,
-                                       Map<Offer, Double> zScoresWithProtection) {
+                                       Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
                 offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
@@ -343,14 +346,15 @@ public class Main {
         System.out.println("----------------------------------------");
 
         // Rekomendacje bez pakietu ochronnego
-        System.out.println("\nNotatka: Rekomendacje uwzględniają oferty z ceną poniżej mediany i z-score poniżej -0.5.");
-        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats);
+        System.out.println("\nNotatka: Rekomendacje uwzględniają oferty z ceną poniżej mediany i z-score poniżej -0.5. " +
+                "Oferty zgodne z trendem cenowym są oznaczone w kolumnie 'Rekomendacja'.");
+        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager);
 
         // Rekomendacje z pakietem ochronnym
-        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats);
+        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager);
     }
 
-    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats) {
+    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager) {
         if (recommendations.isEmpty()) {
             System.out.println("\n" + title + ":");
             System.out.println("Brak rekomendowanych ofert (cena poniżej mediany i z-score poniżej -0.5).");
@@ -364,14 +368,18 @@ public class Main {
         double sellingPrice = overallStats.getPercentile25(); // Szacowana cena sprzedaży (Q1)
 
         System.out.println("\n" + title + ":");
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+------------+--------------------+--------------------+");
-        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Rekomendacja  | Data            | Lokalizacja        | Z-Score        | Cena sprzedaży | Marża              | Link               |");
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+------------+--------------------+--------------------+");
+        // Nagłówek tabeli z wyrównanymi kolumnami
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
+        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-25s |\n",
+                "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
 
         for (Offer offer : recommendations) {
+            // Obcięcie tytułu do maksymalnej długości 48 znaków z dodaniem "..." jeśli za długi
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
             double zScore = zScores.getOrDefault(offer, 0.0);
-            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats, zScore);
+            String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
+            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats, zScore, trendAnalysis);
 
             // Obliczenie marży
             double purchasePrice = offer.getPrice();
@@ -380,11 +388,12 @@ public class Main {
             double profitMarginPercentage = (profitMargin / sellingPrice) * 100;
             String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
 
-            System.out.printf("| %-48s | %10.2f | %-13s | %-15s | %-18s | %14.2f | %10.2f | %-18s | %-18s |\n",
+            // Formatowanie wiersza z wyrównaniem do lewej strony i stałymi szerokościami
+            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-25s |\n",
                     shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
-                    offer.getLocation(), zScore, sellingPrice, marginText, offer.getUrl());
+                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis);
         }
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+------------+--------------------+--------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
         System.out.println("----------------------------------------");
     }
 }

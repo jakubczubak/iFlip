@@ -10,23 +10,19 @@ public class PriceAnalyzer {
         this.offers = offers != null ? offers : new ArrayList<>();
     }
 
-    // Obliczanie statystyk dla listy cen
     private PriceStats calculatePriceStats(List<Double> prices) {
         if (prices.isEmpty()) {
             return new PriceStats(0.0, 0.0, 0.0, 0.0, 0.0);
         }
 
-        // Średnia
         double average = prices.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
 
-        // Odchylenie standardowe
         double variance = prices.stream()
                 .mapToDouble(price -> Math.pow(price - average, 2))
                 .average()
                 .orElse(0.0);
         double standardDeviation = Math.sqrt(variance);
 
-        // Percentyle
         List<Double> sortedPrices = prices.stream().sorted().collect(Collectors.toList());
         double percentile25 = calculatePercentile(sortedPrices, 0.25);
         double percentile50 = calculatePercentile(sortedPrices, 0.50);
@@ -35,7 +31,6 @@ public class PriceAnalyzer {
         return new PriceStats(average, standardDeviation, percentile25, percentile50, percentile75);
     }
 
-    // Obliczanie percentyla
     private double calculatePercentile(List<Double> sortedPrices, double percentile) {
         if (sortedPrices.isEmpty()) {
             return 0.0;
@@ -101,8 +96,7 @@ public class PriceAnalyzer {
                 .collect(Collectors.toList());
     }
 
-    // Metoda getRecommendedOffersWithoutProtection
-    public List<Offer> getRecommendedOffersWithoutProtection(double threshold, String location) {
+    public List<Offer> getRecommendedOffersWithoutProtection(double zScoreThreshold, String location, PriceHistoryManager historyManager) {
         PriceStats stats = getPriceStatsWithoutProtection();
         double medianPrice = stats.getPercentile50();
         if (medianPrice == 0.0) {
@@ -111,12 +105,15 @@ public class PriceAnalyzer {
         return offers.stream()
                 .filter(offer -> !offer.hasProtectionPackage())
                 .filter(offer -> offer.getPrice() <= medianPrice && offer.getPrice() > 0)
+                .filter(offer -> {
+                    double zScore = calculateZScore(offer.getPrice(), stats);
+                    return zScore <= zScoreThreshold;
+                })
                 .filter(offer -> location == null || offer.getLocation().toLowerCase().contains(location.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
-    // Metoda getRecommendedOffersWithProtection
-    public List<Offer> getRecommendedOffersWithProtection(double v, String location) {
+    public List<Offer> getRecommendedOffersWithProtection(double zScoreThreshold, String location, PriceHistoryManager historyManager) {
         PriceStats stats = getPriceStatsWithProtection();
         double medianPrice = stats.getPercentile50();
         if (medianPrice == 0.0) {
@@ -125,17 +122,28 @@ public class PriceAnalyzer {
         return offers.stream()
                 .filter(Offer::hasProtectionPackage)
                 .filter(offer -> offer.getPrice() <= medianPrice && offer.getPrice() > 0)
+                .filter(offer -> {
+                    double zScore = calculateZScore(offer.getPrice(), stats);
+                    return zScore <= zScoreThreshold;
+                })
                 .filter(offer -> location == null || offer.getLocation().toLowerCase().contains(location.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
-    // Obliczanie z-score
+    private double calculateZScore(double price, PriceStats stats) {
+        double average = stats.getAverage();
+        double standardDeviation = stats.getStandardDeviation();
+        if (standardDeviation == 0.0) {
+            return 0.0;
+        }
+        return (price - average) / standardDeviation;
+    }
+
     public Map<Offer, Double> calculateZScores(List<Offer> offers, PriceStats stats) {
         Map<Offer, Double> zScores = new HashMap<>();
         double average = stats.getAverage();
         double standardDeviation = stats.getStandardDeviation();
 
-        // Sprawdzanie minimalnej liczby ofert
         if (offers.size() < 5 || standardDeviation == 0.0) {
             offers.forEach(offer -> zScores.put(offer, 0.0));
             return zScores;
