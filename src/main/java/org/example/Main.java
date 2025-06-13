@@ -368,15 +368,17 @@ public class Main {
         double sellingPrice = overallStats.getPercentile25(); // Szacowana cena sprzedaży (Q1)
 
         System.out.println("\n" + title + ":");
-        // Nagłówek tabeli z wyrównanymi kolumnami
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
-        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-25s |\n",
-                "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy");
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
+        // Nagłówek tabeli z wyrównanymi kolumnami, dodano kolumnę URL
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+-------------------------+");
+        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-26s | %-23s |\n",
+                "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy", "URL");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+-------------------------+");
 
         for (Offer offer : recommendations) {
             // Obcięcie tytułu do maksymalnej długości 48 znaków z dodaniem "..." jeśli za długi
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
+            // Obcięcie URL do maksymalnej długości 23 znaków z dodaniem "..." jeśli za długi
+            String shortUrl = offer.getUrl().length() > 23 ? offer.getUrl().substring(0, 20) + "..." : offer.getUrl();
             double zScore = zScores.getOrDefault(offer, 0.0);
             String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
             RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats, zScore, trendAnalysis);
@@ -389,11 +391,11 @@ public class Main {
             String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
 
             // Formatowanie wiersza z wyrównaniem do lewej strony i stałymi szerokościami
-            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-25s |\n",
+            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-25s | %-23s |\n",
                     shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
-                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis);
+                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis, shortUrl);
         }
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+---------------------------+-------------------------+");
         System.out.println("----------------------------------------");
     }
 }
