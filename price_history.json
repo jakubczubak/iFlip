@@ -37651,5 +37651,6053 @@
     "price": 2299,
     "model": "iPhone 12 Pro Max",
     "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 470,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": false,
+    "price": 730,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 490,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 680,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 449,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 770,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 749,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": true,
+    "price": 720,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 920,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 890,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 639,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 679,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 780,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 690,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 849,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 790,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 1300,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 799.99,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1099,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 980,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1330,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 840,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 1399,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1019,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1349,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 1200,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 949,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 449,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 470,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": false,
+    "price": 730,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 490,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 680,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 770,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 749,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": true,
+    "price": 720,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 920,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 890,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 639,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 679,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 780,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 690,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 849,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 790,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 1300,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 799.99,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1099,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 980,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1330,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 840,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 1399,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1019,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1349,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 1200,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 949,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 449,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 470,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": false,
+    "price": 730,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 490,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 680,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 770,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 749,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": true,
+    "price": 720,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 920,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 890,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 639,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 679,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 780,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 690,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 849,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 790,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 1300,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 799.99,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1099,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 980,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1330,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 840,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 1399,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1019,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1349,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 1200,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 949,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 449,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 470,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": false,
+    "price": 730,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 490,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 680,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 450,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 770,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": false,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 749,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": true,
+    "price": 720,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 920,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 600,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 890,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 599,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 639,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 699,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 679,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 790,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 780,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 619,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 690,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": false,
+    "price": 849,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 1300,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 799.99,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 799,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1099,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 700,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1150,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 850,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 820,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 980,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-14",
+    "hasProtectionPackage": false,
+    "price": 1250,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1330,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1330,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1050,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 950,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 840,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1400,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": false,
+    "price": 900,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 1190,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 1100,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 1399,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1019,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 800,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1299,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1349,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 1200,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 979,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 949,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1550,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1030,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1000,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 650,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 999,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1149,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1199,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 899,
+    "model": "iPhone 12 Mini",
+    "storageCapacity": "128GB"
   }
 ]

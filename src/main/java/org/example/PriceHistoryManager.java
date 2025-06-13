@@ -127,7 +127,7 @@ public class PriceHistoryManager {
         if (currentPrice < median * 0.9) {
             return String.format("Znacznie taniej (%s)", medianText);
         } else if (currentPrice < median) {
-            return String.format("Taniej (%s)", medianText);
+            return String.format("Taniej (%s) ", medianText);
         } else {
             return String.format("Średnio (%s)", medianText);
         }
