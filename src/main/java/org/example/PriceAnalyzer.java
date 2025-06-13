@@ -135,7 +135,8 @@ public class PriceAnalyzer {
         double average = stats.getAverage();
         double standardDeviation = stats.getStandardDeviation();
 
-        if (standardDeviation == 0.0) {
+        // Sprawdzanie minimalnej liczby ofert
+        if (offers.size() < 5 || standardDeviation == 0.0) {
             offers.forEach(offer -> zScores.put(offer, 0.0));
             return zScores;
         }
