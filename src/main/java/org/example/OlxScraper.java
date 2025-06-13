@@ -6,6 +6,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
@@ -23,6 +25,9 @@ public class OlxScraper {
     private static final Pattern TODAY_PATTERN = Pattern.compile("Dzisiaj o (\\d{2}:\\d{2})");
     private static final Pattern REFRESHED_DATE_PATTERN = Pattern.compile("Odświeżono dnia (\\d+ \\p{L}+ \\d{4})");
     private static final Pattern SIMPLE_DATE_PATTERN = Pattern.compile("(\\d+ \\p{L}+ \\d{4})$");
+    private static final int REQUEST_DELAY_MS = 2000; // 2 seconds delay between requests
+    private static final int MAX_RETRIES = 3; // Maximum number of retries for rate-limited requests
+    private static final int RETRY_DELAY_MS = 5000; // 5 seconds delay between retries
 
     public List<Offer> scrapeOffers(String model, String storageCapacity, String location, List<String> states) {
         List<Offer> offers = new ArrayList<>();
@@ -70,10 +75,12 @@ public class OlxScraper {
             System.out.println("Pobieram dane z URL (strona " + page + "): " + url);
 
             try {
-                Document doc = Jsoup.connect(url)
-                        .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-                        .timeout(10000)
-                        .get();
+                Document doc = fetchWithRetry(url);
+                if (doc == null) {
+                    System.err.println("Nie udało się pobrać danych z URL po kilku próbach: " + url);
+                    hasNextPage = false;
+                    break;
+                }
 
                 Elements offerElements = doc.select("div.css-qfzx1y");
 
@@ -97,6 +104,13 @@ public class OlxScraper {
                 System.out.println("Czy jest następna strona? " + hasNextPage);
                 page++;
 
+                // Delay between requests to avoid rate-limiting
+                Thread.sleep(REQUEST_DELAY_MS);
+
+            } catch (InterruptedException e) {
+                System.err.println("Przerwano działanie podczas opóźnienia: " + e.getMessage());
+                Thread.currentThread().interrupt(); // Restore interrupted status
+                hasNextPage = false;
             } catch (IOException e) {
                 System.err.println("Błąd podczas pobierania danych z URL: " + url);
                 System.err.println("Szczegóły błędu: " + e.getMessage());
@@ -105,6 +119,44 @@ public class OlxScraper {
         }
 
         return offers;
+    }
+
+    private Document fetchWithRetry(String url) throws IOException, InterruptedException {
+        int retries = 0;
+        while (retries < MAX_RETRIES) {
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+                connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+                connection.setConnectTimeout(10000);
+                connection.setReadTimeout(10000);
+
+                int responseCode = connection.getResponseCode();
+                if (responseCode == 429) {
+                    System.err.println("Otrzymano kod HTTP 429 (Too Many Requests). Ponawiam próbę po opóźnieniu...");
+                    retries++;
+                    if (retries >= MAX_RETRIES) {
+                        System.err.println("Przekroczono maksymalną liczbę prób dla URL: " + url);
+                        return null;
+                    }
+                    Thread.sleep(RETRY_DELAY_MS);
+                    continue;
+                } else if (responseCode != 200) {
+                    System.err.println("Otrzymano kod HTTP: " + responseCode + " dla URL: " + url);
+                    return null;
+                }
+
+                return Jsoup.parse(connection.getInputStream(), "UTF-8", url);
+
+            } catch (IOException e) {
+                System.err.println("Błąd podczas próby połączenia (próba " + (retries + 1) + "): " + e.getMessage());
+                retries++;
+                if (retries >= MAX_RETRIES) {
+                    throw e;
+                }
+                Thread.sleep(RETRY_DELAY_MS);
+            }
+        }
+        return null;
     }
 
     private Offer parseOffer(Element element, String model, String storageCapacity) {
