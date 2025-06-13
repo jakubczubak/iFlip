@@ -45,7 +45,7 @@ public class Main {
         }
     }
 
-    private static RecommendationAssessment getRecommendationAssessment(double price, PriceStats stats) {
+    private static RecommendationAssessment getRecommendationAssessment(double price, PriceStats stats, double zScore) {
         double median = stats.getPercentile50();
 
         if (median == 0.0) {
@@ -54,9 +54,9 @@ public class Main {
 
         double priceToMedianRatio = price / median;
 
-        if (priceToMedianRatio <= 0.8) {
+        if (priceToMedianRatio <= 0.8 && zScore <= -1.0) {
             return new RecommendationAssessment("Świetna okazja");
-        } else if (priceToMedianRatio <= 0.95) {
+        } else if (priceToMedianRatio <= 0.95 && zScore <= -0.5) {
             return new RecommendationAssessment("Dobra okazja");
         } else {
             return new RecommendationAssessment("Przeciętna");
@@ -114,16 +114,33 @@ public class Main {
             PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection();
             PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection();
 
+            // Obliczanie z-scores
+            Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
+                    offers.stream()
+                            .filter(offer -> !offer.hasProtectionPackage())
+                            .filter(offer -> offer.getPrice() > 0)
+                            .collect(Collectors.toList()),
+                    statsWithoutProtection
+            );
+            Map<Offer, Double> zScoresWithProtection = analyzer.calculateZScores(
+                    offers.stream()
+                            .filter(Offer::hasProtectionPackage)
+                            .filter(offer -> offer.getPrice() > 0)
+                            .collect(Collectors.toList()),
+                    statsWithProtection
+            );
+
             // Rekomendacje
-            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(0.8, location.isEmpty() ? null : location);
-            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(location.isEmpty() ? null : location);
+            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location);
+            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location);
             recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
             recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
 
             // Wyświetlanie wyników
             displayResults(offers, selectedModel, selectedStorage, location,
                     overallStats, statsWithoutProtection, statsWithProtection,
-                    recommendedOffersWithoutProtection, recommendedOffersWithProtection, scanner);
+                    recommendedOffersWithoutProtection, recommendedOffersWithProtection,
+                    zScoresWithoutProtection, zScoresWithProtection, scanner);
 
             // Zapytanie o kontynuację
             System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
@@ -297,10 +314,10 @@ public class Main {
     }
 
     private static void displayResults(List<Offer> offers, String model, String storage, String location,
-                                       PriceStats overallStats,
-                                       PriceStats statsWithoutProtection,
-                                       PriceStats statsWithProtection,
-                                       List<Offer> recommendedWithout, List<Offer> recommendedWith, Scanner scanner) {
+                                       PriceStats overallStats, PriceStats statsWithoutProtection,
+                                       PriceStats statsWithProtection, List<Offer> recommendedWithout,
+                                       List<Offer> recommendedWith, Map<Offer, Double> zScoresWithoutProtection,
+                                       Map<Offer, Double> zScoresWithProtection, Scanner scanner) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
                 offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
@@ -326,33 +343,35 @@ public class Main {
         System.out.println("----------------------------------------");
 
         // Rekomendacje bez pakietu ochronnego
-        System.out.println("\nNotatka: Rekomendacje uwzględniają wszystkie oferty z ceną poniżej mediany.");
-        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection);
+        System.out.println("\nNotatka: Rekomendacje uwzględniają oferty z ceną poniżej mediany i z-score poniżej -0.5.");
+        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection);
 
         // Rekomendacje z pakietem ochronnym
-        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection);
+        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection);
     }
 
-    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats) {
+    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores) {
         if (recommendations.isEmpty()) {
             System.out.println("\n" + title + ":");
-            System.out.println("Brak rekomendowanych ofert (cena poniżej mediany).");
+            System.out.println("Brak rekomendowanych ofert (cena poniżej mediany i z-score poniżej -0.5).");
             System.out.println("----------------------------------------");
             return;
         }
 
         System.out.println("\n" + title + ":");
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
-        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Rekomendacja  | Data            | Lokalizacja        | Link");
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+");
+        System.out.println("| Tytuł oferty                                     | Cena (PLN) | Rekomendacja  | Data            | Lokalizacja        | Z-Score        | Link");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+");
 
         for (Offer offer : recommendations) {
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
-            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats);
-            System.out.printf("| %-48s | %10.2f | %-13s | %-15s | %-18s | %s\n",
-                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(), offer.getLocation(), offer.getUrl());
+            double zScore = zScores.getOrDefault(offer, 0.0);
+            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats, zScore);
+            System.out.printf("| %-48s | %10.2f | %-13s | %-15s | %-18s | %14.2f | %s\n",
+                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
+                    offer.getLocation(), zScore, offer.getUrl());
         }
-        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------+-----------------+--------------------+----------------+");
         System.out.println("----------------------------------------");
     }
 }
