@@ -5,28 +5,52 @@ import java.util.stream.Collectors;
 
 public class PriceAnalyzer {
     private final List<Offer> offers;
+    private final double LOWER_PERCENTILE = 0.05; // 5. percentyl
+    private final double UPPER_PERCENTILE = 0.95; // 95. percentyl
 
     public PriceAnalyzer(List<Offer> offers) {
         this.offers = offers != null ? offers : new ArrayList<>();
     }
 
-    private PriceStats calculatePriceStats(List<Double> prices) {
+    private PriceStats calculatePriceStats(List<Double> prices, List<Offer> sourceOffers, List<Offer> lowPriceOutlierOffers) {
         if (prices.isEmpty()) {
             return new PriceStats(0.0, 0.0, 0.0, 0.0, 0.0);
         }
 
-        double average = prices.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+        // Obliczanie percentyli dla filtrowania wartości odstających
+        List<Double> sortedPrices = prices.stream().sorted().collect(Collectors.toList());
+        double percentile5 = calculatePercentile(sortedPrices, LOWER_PERCENTILE);
+        double percentile95 = calculatePercentile(sortedPrices, UPPER_PERCENTILE);
 
-        double variance = prices.stream()
+        // Filtrowanie cen w przedziale [5. percentyl, 95. percentyl] i zbieranie tanich ofert odstających
+        List<Double> filteredPrices = new ArrayList<>();
+        for (int i = 0; i < prices.size(); i++) {
+            double price = prices.get(i);
+            Offer offer = sourceOffers.get(i);
+            if (price >= percentile5 && price <= percentile95) {
+                filteredPrices.add(price);
+            } else if (price < percentile5) {
+                lowPriceOutlierOffers.add(offer); // Dodajemy tylko tanie oferty do listy odstających
+            }
+        }
+
+        if (filteredPrices.isEmpty()) {
+            return new PriceStats(0.0, 0.0, 0.0, 0.0, 0.0);
+        }
+
+        // Obliczanie statystyk na podstawie przefiltrowanych cen
+        double average = filteredPrices.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+
+        double variance = filteredPrices.stream()
                 .mapToDouble(price -> Math.pow(price - average, 2))
                 .average()
                 .orElse(0.0);
         double standardDeviation = Math.sqrt(variance);
 
-        List<Double> sortedPrices = prices.stream().sorted().collect(Collectors.toList());
-        double percentile25 = calculatePercentile(sortedPrices, 0.25);
-        double percentile50 = calculatePercentile(sortedPrices, 0.50);
-        double percentile75 = calculatePercentile(sortedPrices, 0.75);
+        List<Double> sortedFilteredPrices = filteredPrices.stream().sorted().collect(Collectors.toList());
+        double percentile25 = calculatePercentile(sortedFilteredPrices, 0.25);
+        double percentile50 = calculatePercentile(sortedFilteredPrices, 0.50);
+        double percentile75 = calculatePercentile(sortedFilteredPrices, 0.75);
 
         return new PriceStats(average, standardDeviation, percentile25, percentile50, percentile75);
     }
@@ -46,58 +70,45 @@ public class PriceAnalyzer {
         return sortedPrices.get(lowerIndex) * (1 - fraction) + sortedPrices.get(upperIndex) * fraction;
     }
 
-    public PriceStats getOverallPriceStats() {
+    public PriceStats getOverallPriceStats(List<Offer> lowPriceOutlierOffers) {
         List<Double> prices = offers.stream()
                 .map(Offer::getPrice)
                 .filter(price -> price > 0)
                 .collect(Collectors.toList());
-        return calculatePriceStats(prices);
+        List<Offer> sourceOffers = offers.stream()
+                .filter(offer -> offer.getPrice() > 0)
+                .collect(Collectors.toList());
+        return calculatePriceStats(prices, sourceOffers, lowPriceOutlierOffers);
     }
 
-    public PriceStats getPriceStatsWithProtection() {
+    public PriceStats getPriceStatsWithProtection(List<Offer> lowPriceOutlierOffers) {
         List<Double> prices = offers.stream()
                 .filter(Offer::hasProtectionPackage)
                 .map(Offer::getPrice)
                 .filter(price -> price > 0)
                 .collect(Collectors.toList());
-        return calculatePriceStats(prices);
+        List<Offer> sourceOffers = offers.stream()
+                .filter(Offer::hasProtectionPackage)
+                .filter(offer -> offer.getPrice() > 0)
+                .collect(Collectors.toList());
+        return calculatePriceStats(prices, sourceOffers, lowPriceOutlierOffers);
     }
 
-    public PriceStats getPriceStatsWithoutProtection() {
+    public PriceStats getPriceStatsWithoutProtection(List<Offer> lowPriceOutlierOffers) {
         List<Double> prices = offers.stream()
                 .filter(offer -> !offer.hasProtectionPackage())
                 .map(Offer::getPrice)
                 .filter(price -> price > 0)
                 .collect(Collectors.toList());
-        return calculatePriceStats(prices);
-    }
-
-    public double calculateAveragePrice() {
-        return getOverallPriceStats().getAverage();
-    }
-
-    public double calculateAveragePriceWithProtection() {
-        return getPriceStatsWithProtection().getAverage();
-    }
-
-    public double calculateAveragePriceWithoutProtection() {
-        return getPriceStatsWithoutProtection().getAverage();
-    }
-
-    public List<Offer> getRecommendedOffers(double threshold, String location) {
-        double averagePrice = calculateAveragePrice();
-        if (averagePrice == 0.0) {
-            return new ArrayList<>();
-        }
-        double maxPrice = averagePrice * threshold;
-        return offers.stream()
-                .filter(offer -> offer.getPrice() <= maxPrice && offer.getPrice() > 0)
-                .filter(offer -> location == null || offer.getLocation().toLowerCase().contains(location.toLowerCase()))
+        List<Offer> sourceOffers = offers.stream()
+                .filter(offer -> !offer.hasProtectionPackage())
+                .filter(offer -> offer.getPrice() > 0)
                 .collect(Collectors.toList());
+        return calculatePriceStats(prices, sourceOffers, lowPriceOutlierOffers);
     }
 
     public List<Offer> getRecommendedOffersWithoutProtection(double zScoreThreshold, String location, PriceHistoryManager historyManager) {
-        PriceStats stats = getPriceStatsWithoutProtection();
+        PriceStats stats = getPriceStatsWithoutProtection(new ArrayList<>());
         double medianPrice = stats.getPercentile50();
         if (medianPrice == 0.0) {
             return new ArrayList<>();
@@ -114,7 +125,7 @@ public class PriceAnalyzer {
     }
 
     public List<Offer> getRecommendedOffersWithProtection(double zScoreThreshold, String location, PriceHistoryManager historyManager) {
-        PriceStats stats = getPriceStatsWithProtection();
+        PriceStats stats = getPriceStatsWithProtection(new ArrayList<>());
         double medianPrice = stats.getPercentile50();
         if (medianPrice == 0.0) {
             return new ArrayList<>();

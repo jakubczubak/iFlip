@@ -112,10 +112,13 @@ public class Main {
             PriceHistoryManager historyManager = new PriceHistoryManager();
             historyManager.savePrices(offers); // Zapis ofert do pliku JSON
 
+            // Lista na tanie oferty odstające
+            List<Offer> lowPriceOutlierOffers = new ArrayList<>();
+
             // Obliczanie statystyk
-            PriceStats overallStats = analyzer.getOverallPriceStats();
-            PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection();
-            PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection();
+            PriceStats overallStats = analyzer.getOverallPriceStats(lowPriceOutlierOffers);
+            PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
+            PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
 
             // Obliczanie z-scores
             Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
@@ -143,7 +146,7 @@ public class Main {
             displayResults(offers, selectedModel, selectedStorage, location,
                     overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection,
-                    zScoresWithoutProtection, zScoresWithProtection, historyManager);
+                    lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection, historyManager);
 
             // Zapytanie o kontynuację
             System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
@@ -319,7 +322,8 @@ public class Main {
     private static void displayResults(List<Offer> offers, String model, String storage, String location,
                                        PriceStats overallStats, PriceStats statsWithoutProtection,
                                        PriceStats statsWithProtection, List<Offer> recommendedWithout,
-                                       List<Offer> recommendedWith, Map<Offer, Double> zScoresWithoutProtection,
+                                       List<Offer> recommendedWith, List<Offer> lowPriceOutlierOffers,
+                                       Map<Offer, Double> zScoresWithoutProtection,
                                        Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
@@ -327,7 +331,7 @@ public class Main {
         System.out.println("----------------------------------------");
 
         // Statystyki cen
-        System.out.println("\nStatystyki cen:");
+        System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5. i powyżej 95. percentyla):");
         System.out.println("• Ogólne:");
         System.out.printf("  - Średnia: %.2f PLN\n", overallStats.getAverage());
         System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", overallStats.getStandardDeviation());
@@ -352,6 +356,9 @@ public class Main {
 
         // Rekomendacje z pakietem ochronnym
         displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager);
+
+        // Wyświetlanie tanich ofert odstających
+        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5. percentyla)", lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager);
     }
 
     private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager) {
@@ -389,6 +396,51 @@ public class Main {
             String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
 
             // Formatowanie wiersza z wyrównaniem do lewej strony i stałymi szerokościami, pełny URL
+            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
+                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
+                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
+        }
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("----------------------------------------");
+    }
+
+    private static void displayLowPriceOutlierOffers(String title, List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection, PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection, Map<Offer, Double> zScoresWithProtection, PriceStats overallStats, PriceHistoryManager historyManager) {
+        if (lowPriceOutlierOffers.isEmpty()) {
+            System.out.println("\n" + title + ":");
+            System.out.println("Brak podejrzanych tanich ofert (ceny poniżej 5. percentyla).");
+            System.out.println("----------------------------------------");
+            return;
+        }
+
+        // Stałe koszty
+        double shippingCost = 20.0; // Średni koszt przesyłki
+        double listingFee = 10.0;   // Średnia opłata za wystawienie
+        double sellingPrice = overallStats.getPercentile25(); // Szacowana cena sprzedaży (Q1)
+
+        // Sortowanie ofert po cenie od najtańszej
+        lowPriceOutlierOffers.sort(Comparator.comparingDouble(Offer::getPrice));
+
+        System.out.println("\n" + title + ":");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-26s | %-142s |\n",
+                "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy", "URL");
+        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+
+        for (Offer offer : lowPriceOutlierOffers) {
+            String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
+            PriceStats relevantStats = offer.hasProtectionPackage() ? statsWithProtection : statsWithoutProtection;
+            Map<Offer, Double> relevantZScores = offer.hasProtectionPackage() ? zScoresWithProtection : zScoresWithoutProtection;
+            double zScore = relevantZScores.getOrDefault(offer, 0.0);
+            String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
+            RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), relevantStats, zScore, trendAnalysis);
+
+            // Obliczenie marży
+            double purchasePrice = offer.getPrice();
+            double totalCosts = purchasePrice + shippingCost + listingFee;
+            double profitMargin = sellingPrice - totalCosts;
+            double profitMarginPercentage = (profitMargin / sellingPrice) * 100;
+            String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
+
             System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
                     shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
                     offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
