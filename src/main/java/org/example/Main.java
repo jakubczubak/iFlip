@@ -1,5 +1,9 @@
 package org.example;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -24,7 +28,7 @@ public class Main {
 
     private static final Map<String, List<Integer>> MODEL_GROUPS = new LinkedHashMap<>() {{
         put("iPhone X–XR", Arrays.asList(0, 1, 2, 3));
-        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
+        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15));
         put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27));
     }};
 
@@ -142,7 +146,7 @@ public class Main {
                     overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection,
                     lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
-                    historyManager, distanceCalculator);
+                    historyManager, distanceCalculator, scanner);
 
             System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
             continueSearching = scanner.nextLine().trim().toLowerCase().equals("tak");
@@ -315,7 +319,7 @@ public class Main {
                                        List<Offer> recommendedWith, List<Offer> lowPriceOutlierOffers,
                                        Map<Offer, Double> zScoresWithoutProtection,
                                        Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
-                                       DistanceCalculator distanceCalculator) {
+                                       DistanceCalculator distanceCalculator, Scanner scanner) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
                 offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
@@ -344,6 +348,9 @@ public class Main {
         displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager, distanceCalculator);
         displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
         displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
+
+        // Prompt user to open links for "Świetna" recommendations from low price outliers
+        promptOpenSuperbOfferLinks(recommendedWithout, recommendedWith, lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, historyManager, scanner);
     }
 
     private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
@@ -381,7 +388,6 @@ public class Main {
                 dateDisplay += " (" + offer.getDateStatus() + ")";
             }
 
-            // Dołączanie odległości do lokalizacji
             String locationDisplay = offer.getLocation().isEmpty() ? "Cała Polska" : offer.getLocation();
             if (!offer.getLocation().isEmpty()) {
                 double[] offerCoordinates = distanceCalculator.getCoordinates(offer.getLocation());
@@ -396,7 +402,6 @@ public class Main {
                 }
             }
 
-            // Skrócenie locationDisplay, jeśli przekracza 23 znaki
             if (locationDisplay.length() > 23) {
                 locationDisplay = locationDisplay.substring(0, 20) + "...";
             }
@@ -448,7 +453,6 @@ public class Main {
                 dateDisplay += " (" + offer.getDateStatus() + ")";
             }
 
-            // Dołączanie odległości do lokalizacji
             String locationDisplay = offer.getLocation().isEmpty() ? "Cała Polska" : offer.getLocation();
             if (!offer.getLocation().isEmpty()) {
                 double[] offerCoordinates = distanceCalculator.getCoordinates(offer.getLocation());
@@ -463,7 +467,6 @@ public class Main {
                 }
             }
 
-            // Skrócenie locationDisplay, jeśli przekracza 23 znaki
             if (locationDisplay.length() > 23) {
                 locationDisplay = locationDisplay.substring(0, 20) + "...";
             }
@@ -474,5 +477,53 @@ public class Main {
         }
         System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
         System.out.println("----------------------------------------");
+    }
+
+    private static void promptOpenSuperbOfferLinks(List<Offer> recommendedWithout, List<Offer> recommendedWith,
+                                                   List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection,
+                                                   PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection,
+                                                   Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
+                                                   Scanner scanner) {
+        // Filter offers with "Świetna" recommendation from low price outliers
+        List<Offer> superbOutliers = lowPriceOutlierOffers.stream()
+                .filter(offer -> {
+                    PriceStats relevantStats = offer.hasProtectionPackage() ? statsWithProtection : statsWithoutProtection;
+                    Map<Offer, Double> relevantZScores = offer.hasProtectionPackage() ? zScoresWithProtection : zScoresWithoutProtection;
+                    double zScore = relevantZScores.getOrDefault(offer, 0.0);
+                    String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
+                    RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), relevantStats, zScore, trendAnalysis);
+                    return assessment.getStatus().startsWith("Świetna");
+                })
+                .collect(Collectors.toList());
+
+        // Check if there are any superb offers in low price outliers
+        if (superbOutliers.isEmpty()) {
+            System.out.println("\nBrak ofert z rekomendacją 'Świetna' w tabeli 'Podejrzane tanie oferty'.");
+            return;
+        }
+
+        System.out.printf("\nZnaleziono %d ofert z rekomendacją 'Świetna' w tabeli 'Podejrzane tanie oferty'. Czy chcesz je automatycznie otworzyć? (tak/nie): ", superbOutliers.size());
+        String input = scanner.nextLine().trim().toLowerCase();
+
+        if (!input.equals("tak")) {
+            System.out.println("Powrót do wyszukiwania.");
+            return;
+        }
+
+        // Open the superb offer links from low price outliers
+        System.out.printf("Otwieram %d linków do ofert 'Świetna' z tabeli 'Podejrzane tanie oferty'...\n", superbOutliers.size());
+        for (Offer offer : superbOutliers) {
+            try {
+                Desktop.getDesktop().browse(new URI(offer.getUrl()));
+                // Add a small delay to avoid overwhelming the browser
+                Thread.sleep(500);
+            } catch (IOException | URISyntaxException e) {
+                System.err.println("Błąd podczas otwierania linku: " + offer.getUrl() + " - " + e.getMessage());
+            } catch (InterruptedException e) {
+                System.err.println("Przerwano otwieranie linków: " + e.getMessage());
+                Thread.currentThread().interrupt();
+            }
+        }
+        System.out.println("Zakończono otwieranie linków.");
     }
 }

@@ -1,27 +1,23 @@
 {
-  "Olsztyn": {
-    "latitude": 53.7766839,
-    "longitude": 20.476507
+  "Żmigród": {
+    "latitude": 51.4717386,
+    "longitude": 16.9082719
   },
-  "Myślenice": {
-    "latitude": 49.834608,
-    "longitude": 19.9384283
-  },
-  "Konstantynów Łódzki": {
-    "latitude": 51.7475546,
-    "longitude": 19.3255118
-  },
-  "Luzino": {
-    "latitude": 54.5618906,
-    "longitude": 18.1047847
+  "Mikołów": {
+    "latitude": 50.1691812,
+    "longitude": 18.9044238
   },
   "Bydgoszcz": {
     "latitude": 53.1297127,
     "longitude": 18.0294488
   },
-  "Drezdenko": {
-    "latitude": 52.8398486,
-    "longitude": 15.8318163
+  "Sławków": {
+    "latitude": 50.2918851,
+    "longitude": 19.3414305
+  },
+  "Syrynia": {
+    "latitude": 50.0235643,
+    "longitude": 18.3352182
   },
   "Pogórze": {
     "latitude": 49.7982946,
@@ -31,341 +27,357 @@
     "latitude": 50.6787929,
     "longitude": 17.9298844
   },
-  "Pątnów": {
-    "latitude": 51.2302685,
-    "longitude": 16.0000992
+  "Chełm": {
+    "latitude": 51.1355882,
+    "longitude": 23.4939364
   },
-  "Dąbrowa Górnicza": {
-    "latitude": 50.369624,
-    "longitude": 19.2890465
+  "Działdowo": {
+    "latitude": 53.2346517,
+    "longitude": 20.1817841
   },
-  "Dąbrowa Białostocka": {
-    "latitude": 53.654439,
-    "longitude": 23.3485102
+  "Łańcut": {
+    "latitude": 50.0695949,
+    "longitude": 22.2335056
   },
-  "Poznań": {
-    "latitude": 52.4082663,
-    "longitude": 16.9335199
+  "Janowiec": {
+    "latitude": 51.3232858,
+    "longitude": 21.890616
   },
-  "Szczecin": {
-    "latitude": 53.4296809,
-    "longitude": 14.5929127
+  "Krotoszyn": {
+    "latitude": 51.695926,
+    "longitude": 17.4374158
   },
-  "Barlinek": {
-    "latitude": 52.9920762,
-    "longitude": 15.2166391
+  "Łęczyca": {
+    "latitude": 52.0545062,
+    "longitude": 19.1982904
   },
-  "Kęty": {
-    "latitude": 49.882908,
-    "longitude": 19.2239362
+  "Pszczyna": {
+    "latitude": 49.9778089,
+    "longitude": 18.9423721
   },
-  "Sieciechowice": {
-    "latitude": 50.2426704,
-    "longitude": 19.9716692
+  "Nowy Targ": {
+    "latitude": 49.4892092,
+    "longitude": 20.0263411
   },
-  "Libiąż": {
-    "latitude": 50.1030516,
-    "longitude": 19.3147486
+  "Ząbki": {
+    "latitude": 52.2934961,
+    "longitude": 21.1157408
   },
-  "Mielec": {
-    "latitude": 50.2802473,
-    "longitude": 21.4631343
+  "Podkowa Leśna": {
+    "latitude": 52.1217773,
+    "longitude": 20.7295541
   },
-  "Piła": {
-    "latitude": 53.1347194,
-    "longitude": 16.7527254
+  "Ruszowice": {
+    "latitude": 50.4639845,
+    "longitude": 16.5724359
+  },
+  "Stadnicka Wola": {
+    "latitude": 51.175214,
+    "longitude": 20.4115999
   },
   "Płock": {
     "latitude": 52.5464521,
     "longitude": 19.7008606
   },
-  "Sosnowiec": {
-    "latitude": 50.2712401,
-    "longitude": 19.2155628
+  "Radom": {
+    "latitude": 51.4171605,
+    "longitude": 21.1609448
   },
-  "Połajewo": {
-    "latitude": 52.5102506,
-    "longitude": 18.3993751
+  "Ludkowo": {
+    "latitude": 52.81202,
+    "longitude": 18.07131
   },
-  "Prudnik": {
-    "latitude": 50.3217212,
-    "longitude": 17.5801041
-  },
-  "Kozodrza": {
-    "latitude": 50.10014,
-    "longitude": 21.61011
+  "Nakło Śląskie": {
+    "latitude": 50.4370002,
+    "longitude": 18.9059878
   },
   "Luboń": {
     "latitude": 52.3367462,
     "longitude": 16.8717831
   },
-  "Toruń": {
-    "latitude": 53.0102721,
-    "longitude": 18.6048094
+  "Szreńsk": {
+    "latitude": 53.01147,
+    "longitude": 20.12223
   },
-  "Ostrów Wielkopolski": {
-    "latitude": 51.6471864,
-    "longitude": 17.8037607
+  "Lasowice Wielkie": {
+    "latitude": 50.8708217,
+    "longitude": 18.220082
   },
-  "Kazimierz": {
-    "latitude": 51.7688876,
-    "longitude": 19.2031956
+  "Maków Mazowiecki": {
+    "latitude": 52.8620544,
+    "longitude": 21.0923524
+  },
+  "Choszczno": {
+    "latitude": 53.1704801,
+    "longitude": 15.4167349
+  },
+  "Kielce": {
+    "latitude": 50.8540285,
+    "longitude": 20.6099157
+  },
+  "Juszkowo": {
+    "latitude": 54.2562871,
+    "longitude": 18.603323
   },
   "Kozienice": {
     "latitude": 51.5849678,
     "longitude": 21.549883
   },
-  "Siemianowice Śląskie": {
-    "latitude": 50.3128508,
-    "longitude": 19.0177859
-  },
-  "Grudziądz": {
-    "latitude": 53.4725119,
-    "longitude": 18.7618937
-  },
-  "Kutno": {
-    "latitude": 52.2317559,
-    "longitude": 19.3570182
-  },
-  "Wielbark": {
-    "latitude": 53.3984244,
-    "longitude": 20.9462724
-  },
-  "Roszków": {
-    "latitude": 51.95928,
-    "longitude": 17.44578
+  "Łupawsko": {
+    "latitude": 54.277592,
+    "longitude": 17.5896928
   },
   "Bolestraszyce": {
     "latitude": 49.8113997,
     "longitude": 22.8416704
   },
-  "Wenecja": {
-    "latitude": 52.81237,
-    "longitude": 17.7412
+  "Olkusz": {
+    "latitude": 50.2788158,
+    "longitude": 19.5596307
   },
-  "Bielsko": {
-    "latitude": 52.607327,
-    "longitude": 15.9228416
+  "Górzyca": {
+    "latitude": 52.4928154,
+    "longitude": 14.6514668
   },
-  "Podlesie": {
-    "latitude": 50.4935568,
-    "longitude": 20.2450365
-  },
-  "Pszów": {
-    "latitude": 50.0395806,
-    "longitude": 18.3949412
-  },
-  "Skrzynki": {
-    "latitude": 52.5856824,
-    "longitude": 20.3501853
+  "Stara Wieś": {
+    "latitude": 49.7214975,
+    "longitude": 22.0095894
   },
   "Kluczbork": {
     "latitude": 50.9730701,
     "longitude": 18.2140089
   },
-  "Czeladź": {
-    "latitude": 50.3191419,
-    "longitude": 19.0784201
+  "Jarosław": {
+    "latitude": 50.0159029,
+    "longitude": 22.6796573
+  },
+  "Chełmża": {
+    "latitude": 53.1923757,
+    "longitude": 18.6125545
   },
   "Falenty Duże": {
     "latitude": 52.1316667,
     "longitude": 20.9141666
   },
+  "Przasnysz": {
+    "latitude": 53.018288,
+    "longitude": 20.8845646
+  },
+  "Słubice": {
+    "latitude": 52.3557481,
+    "longitude": 14.5662367
+  },
   "Zduny": {
     "latitude": 51.6463268,
     "longitude": 17.377617
+  },
+  "Radonia": {
+    "latitude": 51.3621448,
+    "longitude": 19.9952254
   },
   "Lublin": {
     "latitude": 51.2181945,
     "longitude": 22.5546776
   },
-  "Łuków": {
-    "latitude": 51.93008,
-    "longitude": 22.3790669
+  "Laryszów": {
+    "latitude": 50.444953,
+    "longitude": 18.7798249
+  },
+  "Paparzyn": {
+    "latitude": 53.36283,
+    "longitude": 18.62633
   },
   "Łomża": {
     "latitude": 53.1824307,
     "longitude": 22.0521838
   },
-  "Tulce": {
-    "latitude": 52.3434434,
-    "longitude": 17.0758308
+  "Zabrze": {
+    "latitude": 50.3086154,
+    "longitude": 18.7863749
   },
-  "Września": {
-    "latitude": 52.3250694,
-    "longitude": 17.5652282
+  "Pułtusk": {
+    "latitude": 52.7051109,
+    "longitude": 21.0840274
   },
-  "Borkowo": {
-    "latitude": 52.5611271,
-    "longitude": 20.6639877
-  },
-  "Końskie": {
-    "latitude": 51.1910223,
-    "longitude": 20.4071836
-  },
-  "Bochnia": {
-    "latitude": 49.9693563,
-    "longitude": 20.430541
-  },
-  "Wieruszów": {
-    "latitude": 51.2951647,
-    "longitude": 18.1510623
+  "Zawiercie": {
+    "latitude": 50.5055878,
+    "longitude": 19.4717069
   },
   "Tarnowskie Góry": {
     "latitude": 50.4654128,
     "longitude": 18.8335884
   },
-  "Pisz": {
-    "latitude": 53.6294943,
-    "longitude": 21.8098191
+  "Prokopów": {
+    "latitude": 51.9157124,
+    "longitude": 17.8024424
   },
-  "Częstochowa": {
-    "latitude": 50.8089997,
-    "longitude": 19.1244089
+  "Białka": {
+    "latitude": 49.3366677,
+    "longitude": 20.1340425
   },
-  "Lipsko": {
-    "latitude": 51.158513,
-    "longitude": 21.6490099
+  "Ladzin": {
+    "latitude": 49.5988248,
+    "longitude": 21.8656782
+  },
+  "Łyskowo": {
+    "latitude": 53.02142,
+    "longitude": 15.28524
   },
   "Kościerzyna": {
     "latitude": 54.1210215,
     "longitude": 17.9781656
   },
-  "Wolbrom": {
-    "latitude": 50.3848386,
-    "longitude": 19.7598844
-  },
-  "Rokietnica": {
-    "latitude": 52.5103217,
-    "longitude": 16.7421238
-  },
   "Antoniew": {
     "latitude": 52.1710262,
     "longitude": 19.6631546
-  },
-  "Rusko": {
-    "latitude": 54.39812,
-    "longitude": 16.41199
   },
   "Gostyń": {
     "latitude": 51.8778633,
     "longitude": 17.0167637
   },
-  "Tuczno": {
-    "latitude": 53.194419,
-    "longitude": 16.1548235
-  },
-  "Czechowice": {
-    "latitude": 51.7280044,
-    "longitude": 20.0365662
+  "Opoczno": {
+    "latitude": 51.3782439,
+    "longitude": 20.2931754
   },
   "Milanówek": {
     "latitude": 52.123784,
     "longitude": 20.6693368
   },
-  "Radzionków": {
-    "latitude": 50.4002717,
-    "longitude": 18.9026247
-  },
   "Kwidzyn": {
     "latitude": 53.7335842,
     "longitude": 18.9319222
   },
-  "Kurowice": {
-    "latitude": 52.5260478,
-    "longitude": 22.3220942
+  "Biery": {
+    "latitude": 49.7948582,
+    "longitude": 18.9064469
   },
-  "Szkaradowo": {
-    "latitude": 51.58591,
-    "longitude": 17.15149
+  "Zbąszynek": {
+    "latitude": 52.2436262,
+    "longitude": 15.8138946
   },
   "Łódź": {
     "latitude": 51.7728245,
     "longitude": 19.4784857
   },
-  "Gogolin": {
-    "latitude": 50.4925107,
-    "longitude": 18.0176197
+  "Krapkowice": {
+    "latitude": 50.4747406,
+    "longitude": 17.9670987
+  },
+  "Pokrówka": {
+    "latitude": 51.1004651,
+    "longitude": 23.4514125
+  },
+  "Miętne": {
+    "latitude": 51.9229831,
+    "longitude": 21.5803373
+  },
+  "Kochanowice": {
+    "latitude": 50.7091402,
+    "longitude": 18.751991
   },
   "Warszawa": {
     "latitude": 52.2319581,
     "longitude": 21.0067249
   },
-  "Gdynia": {
-    "latitude": 54.5164982,
-    "longitude": 18.5402738
+  "Jelenia Góra": {
+    "latitude": 50.8501049,
+    "longitude": 15.6537492
   },
-  "Słupsk": {
-    "latitude": 54.463577,
-    "longitude": 17.020948
+  "Cigacice": {
+    "latitude": 52.0340235,
+    "longitude": 15.6167729
   },
-  "Rybnik": {
-    "latitude": 50.1105691,
-    "longitude": 18.5531874
+  "Lubiszewo": {
+    "latitude": 54.1172222,
+    "longitude": 17.7611111
   },
-  "Reszel": {
-    "latitude": 54.0482576,
-    "longitude": 21.1421611
+  "Bielawa": {
+    "latitude": 50.6753898,
+    "longitude": 16.6071926
   },
-  "Będzin": {
-    "latitude": 50.3230785,
-    "longitude": 19.1322201
+  "Kazuń Nowy": {
+    "latitude": 52.4188889,
+    "longitude": 20.6847222
   },
-  "Pasturka": {
-    "latitude": 50.49634,
-    "longitude": 20.56679
+  "Polkowice": {
+    "latitude": 51.5039288,
+    "longitude": 16.0713371
   },
-  "Zduńska Wola": {
-    "latitude": 51.6028615,
-    "longitude": 18.9333201
+  "Płochocin": {
+    "latitude": 52.2078126,
+    "longitude": 20.7193054
   },
-  "Rogoźno": {
-    "latitude": 52.7523023,
-    "longitude": 16.9936288
+  "Lidzbark Warmiński": {
+    "latitude": 54.1305863,
+    "longitude": 20.564917
   },
-  "Goczałkowice": {
-    "latitude": 49.9477778,
-    "longitude": 18.9636111
+  "Chojnice": {
+    "latitude": 53.6999165,
+    "longitude": 17.5703461
   },
-  "Gliwice": {
-    "latitude": 50.3011314,
-    "longitude": 18.6623472
+  "Malbork": {
+    "latitude": 54.0287383,
+    "longitude": 19.0393964
   },
-  "Wrocław": {
-    "latitude": 51.1263106,
-    "longitude": 16.9781963
+  "Góra": {
+    "latitude": 51.6681499,
+    "longitude": 16.5393277
   },
-  "Kalisz": {
-    "latitude": 51.7472867,
-    "longitude": 18.079532
+  "Ośno Lubuskie": {
+    "latitude": 52.455132,
+    "longitude": 14.8682003
   },
-  "Śrem": {
-    "latitude": 52.0893322,
-    "longitude": 17.0156809
+  "Kolonia Żółwin": {
+    "latitude": 52.4841426,
+    "longitude": 15.618583
   },
-  "Zambrów": {
-    "latitude": 52.98552,
-    "longitude": 22.24117
+  "Dawidy": {
+    "latitude": 54.1347385,
+    "longitude": 19.6874498
   },
-  "Bytom": {
-    "latitude": 50.3470387,
-    "longitude": 18.9231857
+  "Pleszew": {
+    "latitude": 51.8960985,
+    "longitude": 17.7865673
   },
-  "Zwięczyca": {
-    "latitude": 50.0049155,
-    "longitude": 21.9581949
+  "Nowe Smarchowice": {
+    "latitude": 51.0279778,
+    "longitude": 17.6818471
+  },
+  "Inwałd": {
+    "latitude": 49.863906,
+    "longitude": 19.397887
+  },
+  "Kady": {
+    "latitude": 52.0970492,
+    "longitude": 20.6651577
   },
   "Szprotawa": {
     "latitude": 51.5650714,
     "longitude": 15.5367584
   },
-  "Legionowo": {
-    "latitude": 52.3952285,
-    "longitude": 20.9308309
+  "Ujazd": {
+    "latitude": 51.5980362,
+    "longitude": 19.9218143
   },
-  "Otwock": {
-    "latitude": 52.1161661,
-    "longitude": 21.293459
+  "Ciechanowice": {
+    "latitude": 50.86498,
+    "longitude": 15.98039
+  },
+  "Józefin": {
+    "latitude": 51.1898332,
+    "longitude": 23.3413236
+  },
+  "Dąbrowa": {
+    "latitude": 54.2741903,
+    "longitude": 20.8060513
+  },
+  "Walentowo": {
+    "latitude": 52.38695,
+    "longitude": 19.1532
+  },
+  "Doręgowice": {
+    "latitude": 53.6267978,
+    "longitude": 17.4900075
   },
   "Imielin": {
     "latitude": 50.1440745,
@@ -379,133 +391,113 @@
     "latitude": 53.7479406,
     "longitude": 23.0942916
   },
+  "Bielsk": {
+    "latitude": 52.6713156,
+    "longitude": 19.8049119
+  },
   "Ustronie Morskie": {
     "latitude": 54.2135984,
     "longitude": 15.7560763
-  },
-  "Bukowiec": {
-    "latitude": 52.8564728,
-    "longitude": 17.2386686
-  },
-  "Rumia": {
-    "latitude": 54.5696102,
-    "longitude": 18.3849041
-  },
-  "Słosinko": {
-    "latitude": 53.9424043,
-    "longitude": 16.9845619
   },
   "Rzeszów": {
     "latitude": 50.0374531,
     "longitude": 22.0047174
   },
+  "Palędzie": {
+    "latitude": 52.3701023,
+    "longitude": 16.7364634
+  },
   "Przywidz": {
     "latitude": 54.1968155,
     "longitude": 18.3236359
-  },
-  "Świlcza": {
-    "latitude": 50.0714236,
-    "longitude": 21.8998941
-  },
-  "Chorzów": {
-    "latitude": 50.2885563,
-    "longitude": 18.9704425
-  },
-  "Jaczów": {
-    "latitude": 51.6269166,
-    "longitude": 16.0739394
   },
   "Rekowo Górne": {
     "latitude": 54.6425894,
     "longitude": 18.3384026
   },
-  "Gdańsk": {
-    "latitude": 54.3482907,
-    "longitude": 18.6540233
+  "Bieżeń": {
+    "latitude": 50.8094444,
+    "longitude": 18.8841667
   },
-  "Piaszczyce": {
-    "latitude": 51.11874,
-    "longitude": 19.53056
-  },
-  "Chruszczewo": {
-    "latitude": 52.9004208,
-    "longitude": 20.5740746
+  "Piaseczno": {
+    "latitude": 52.0747377,
+    "longitude": 21.0270885
   },
   "Elbląg": {
     "latitude": 54.1558708,
     "longitude": 19.4044583
   },
-  "Kościan": {
-    "latitude": 52.0833694,
-    "longitude": 16.6460888
+  "Lulinek": {
+    "latitude": 52.5689354,
+    "longitude": 16.6978697
+  },
+  "Pierwoszyno": {
+    "latitude": 54.5969925,
+    "longitude": 18.4995574
   },
   "Sochaczew": {
     "latitude": 52.2367219,
     "longitude": 20.2571236
   },
-  "Międzychód": {
-    "latitude": 52.6046468,
-    "longitude": 15.8935386
+  "Szczecinek": {
+    "latitude": 53.708021,
+    "longitude": 16.6943922
   },
-  "Skierniewice": {
-    "latitude": 51.9580068,
-    "longitude": 20.1448085
+  "Bełchatów": {
+    "latitude": 51.3547046,
+    "longitude": 19.3769199
   },
-  "Białystok": {
-    "latitude": 53.127505,
-    "longitude": 23.1470509
+  "Legnica": {
+    "latitude": 51.2047689,
+    "longitude": 16.174675
   },
-  "Żukówka": {
-    "latitude": 52.17147,
-    "longitude": 20.63033
+  "Dzierżoniów": {
+    "latitude": 50.7291725,
+    "longitude": 16.6567531
   },
-  "Katowice": {
-    "latitude": 50.2137321,
-    "longitude": 19.0058878
+  "Suwałki": {
+    "latitude": 54.0990636,
+    "longitude": 22.9279363
   },
-  "Gułtowy": {
-    "latitude": 52.3510995,
-    "longitude": 17.3295324
-  },
-  "Wysoka": {
-    "latitude": 53.1829333,
-    "longitude": 17.0797137
-  },
-  "Dywity": {
-    "latitude": 53.83404,
-    "longitude": 20.47337
+  "Ciechanów": {
+    "latitude": 52.8712044,
+    "longitude": 20.6062459
   },
   "Mława": {
     "latitude": 53.1341915,
     "longitude": 20.362883
   },
-  "Świdnik": {
-    "latitude": 51.2204629,
-    "longitude": 22.6998639
+  "Jastrzębie": {
+    "latitude": 53.5210031,
+    "longitude": 18.2675963
+  },
+  "Zielona Łąka": {
+    "latitude": 51.871169,
+    "longitude": 17.795357
+  },
+  "Jaśkowice": {
+    "latitude": 51.1287174,
+    "longitude": 18.2175176
+  },
+  "Gołaszyn": {
+    "latitude": 52.6273481,
+    "longitude": 16.8407979
   },
   "Racławiczki": {
     "latitude": 50.4698182,
     "longitude": 17.7941309
   },
-  "Rychwał": {
-    "latitude": 52.0706234,
-    "longitude": 18.1668295
+  "Leszno": {
+    "latitude": 51.8436498,
+    "longitude": 16.5744141
   },
-  "Wałcz": {
-    "latitude": 53.2728538,
-    "longitude": 16.4768177
+  "Moszczenica": {
+    "latitude": 51.5046899,
+    "longitude": 19.6766075
   },
-  "Kórnik": {
-    "latitude": 52.2492751,
-    "longitude": 17.0901242
-  },
-  "Psary": {
-    "latitude": 50.8691352,
-    "longitude": 17.36217
-  },
-  "Lubań": {
-    "latitude": 51.1180898,
-    "longitude": 15.2892651
+  "Blizne Łaszczyńskiego": {
+    "latitude": 52.2408995,
+    "longitude": 20.8846861
   },
   "Zielona Góra": {
     "latitude": 51.9275736,
@@ -515,16 +507,1560 @@
     "latitude": 51.9739233,
     "longitude": 17.5011254
   },
-  "Kraków": {
-    "latitude": 50.0469432,
-    "longitude": 19.9971534
+  "Rajkowo": {
+    "latitude": 53.3961852,
+    "longitude": 14.4723694
+  },
+  "Nowe Miasteczko": {
+    "latitude": 51.6908103,
+    "longitude": 15.7311977
+  },
+  "Gralewo PKP": {
+    "latitude": 53.3202154,
+    "longitude": 20.0355447
+  },
+  "Brusy": {
+    "latitude": 53.8861557,
+    "longitude": 17.7190437
+  },
+  "Głogów": {
+    "latitude": 51.6701928,
+    "longitude": 16.0614037
+  },
+  "Zelów": {
+    "latitude": 51.4650276,
+    "longitude": 19.2195805
+  },
+  "Pątnów": {
+    "latitude": 51.2302685,
+    "longitude": 16.0000992
+  },
+  "Łask": {
+    "latitude": 51.5929947,
+    "longitude": 19.1334784
+  },
+  "Dopiewiec": {
+    "latitude": 52.3603332,
+    "longitude": 16.7113395
+  },
+  "Murowana Goślina": {
+    "latitude": 52.5758465,
+    "longitude": 17.0097914
+  },
+  "Nakło nad Notecią": {
+    "latitude": 53.1386896,
+    "longitude": 17.5998891
+  },
+  "Barlinek": {
+    "latitude": 52.9920762,
+    "longitude": 15.2166391
+  },
+  "Trzcianka": {
+    "latitude": 53.041755,
+    "longitude": 16.4614788
+  },
+  "Tymbark": {
+    "latitude": 49.7293607,
+    "longitude": 20.3248972
+  },
+  "Rokicina": {
+    "latitude": 52.3316754,
+    "longitude": 20.1415676
+  },
+  "Kęty": {
+    "latitude": 49.882908,
+    "longitude": 19.2239362
+  },
+  "Sieciechowice": {
+    "latitude": 50.2426704,
+    "longitude": 19.9716692
+  },
+  "Chotomów": {
+    "latitude": 52.411713,
+    "longitude": 20.8814051
+  },
+  "Libiąż": {
+    "latitude": 50.1030516,
+    "longitude": 19.3147486
+  },
+  "Połajewo": {
+    "latitude": 52.5102506,
+    "longitude": 18.3993751
+  },
+  "Sanok": {
+    "latitude": 49.5609053,
+    "longitude": 22.207028
+  },
+  "Prudnik": {
+    "latitude": 50.3217212,
+    "longitude": 17.5801041
+  },
+  "Wydorowo": {
+    "latitude": 51.9715899,
+    "longitude": 16.5437113
+  },
+  "Więcławice": {
+    "latitude": 52.6288664,
+    "longitude": 19.423039
+  },
+  "Radzymin": {
+    "latitude": 52.4176347,
+    "longitude": 21.1807836
+  },
+  "Złotów": {
+    "latitude": 53.3591987,
+    "longitude": 17.043816
+  },
+  "Skarbki": {
+    "latitude": 52.1360215,
+    "longitude": 18.5129048
+  },
+  "Borowo": {
+    "latitude": 54.3197718,
+    "longitude": 18.2911885
+  },
+  "Ostrów Wielkopolski": {
+    "latitude": 51.6471864,
+    "longitude": 17.8037607
+  },
+  "Kazimierz": {
+    "latitude": 51.7688876,
+    "longitude": 19.2031956
+  },
+  "Wudzyn": {
+    "latitude": 53.3223504,
+    "longitude": 18.0793838
+  },
+  "Kalinówka": {
+    "latitude": 52.8247222,
+    "longitude": 22.9758334
+  },
+  "Wenecja": {
+    "latitude": 52.81237,
+    "longitude": 17.7412
+  },
+  "Wyszków": {
+    "latitude": 52.5928035,
+    "longitude": 21.4584581
+  },
+  "Sopotnia Mała": {
+    "latitude": 49.6149054,
+    "longitude": 19.275872
+  },
+  "Mińsk Mazowiecki": {
+    "latitude": 52.1795958,
+    "longitude": 21.569456
+  },
+  "Kryształowice": {
+    "latitude": 50.955593,
+    "longitude": 16.805353
+  },
+  "Wysiołek Luborzycki": {
+    "latitude": 50.1502312,
+    "longitude": 20.1070829
+  },
+  "Mosty": {
+    "latitude": 53.5482699,
+    "longitude": 14.9553995
+  },
+  "Inowrocław": {
+    "latitude": 52.7952408,
+    "longitude": 18.2595624
+  },
+  "Czapury": {
+    "latitude": 52.3248844,
+    "longitude": 16.9113654
+  },
+  "Bolszewo": {
+    "latitude": 54.61685,
+    "longitude": 18.17654
+  },
+  "Szymanów": {
+    "latitude": 52.1616414,
+    "longitude": 20.3810754
+  },
+  "Sierpc": {
+    "latitude": 52.8529055,
+    "longitude": 19.6675433
+  },
+  "Gzin": {
+    "latitude": 53.2041358,
+    "longitude": 18.3125991
+  },
+  "Września": {
+    "latitude": 52.3250694,
+    "longitude": 17.5652282
+  },
+  "Borkowo": {
+    "latitude": 52.5611271,
+    "longitude": 20.6639877
+  },
+  "Nysa": {
+    "latitude": 50.4738029,
+    "longitude": 17.3324733
+  },
+  "Bochnia": {
+    "latitude": 49.9693563,
+    "longitude": 20.430541
+  },
+  "Rybno": {
+    "latitude": 52.3972222,
+    "longitude": 18.4672222
+  },
+  "Tomaszów Mazowiecki": {
+    "latitude": 51.5194865,
+    "longitude": 20.0337541
+  },
+  "Oszkowice": {
+    "latitude": 52.0695687,
+    "longitude": 19.5601201
+  },
+  "Piekary": {
+    "latitude": 50.3840312,
+    "longitude": 18.9456429
+  },
+  "Wolbrom": {
+    "latitude": 50.3848386,
+    "longitude": 19.7598844
+  },
+  "Józefów": {
+    "latitude": 50.4808298,
+    "longitude": 23.0540591
+  },
+  "Rokietnica": {
+    "latitude": 52.5103217,
+    "longitude": 16.7421238
+  },
+  "Grzybowo": {
+    "latitude": 54.1601032,
+    "longitude": 15.4908301
+  },
+  "Lenartowice": {
+    "latitude": 50.5037546,
+    "longitude": 21.0872804
+  },
+  "Radzionków": {
+    "latitude": 50.4002717,
+    "longitude": 18.9026247
+  },
+  "Kowalewo Pomorskie": {
+    "latitude": 53.1543137,
+    "longitude": 18.8975473
+  },
+  "Tczew": {
+    "latitude": 54.0908761,
+    "longitude": 18.7779435
+  },
+  "Liszkowice": {
+    "latitude": 52.9312978,
+    "longitude": 18.2583659
+  },
+  "Otwock Mały": {
+    "latitude": 52.0605287,
+    "longitude": 21.2538081
+  },
+  "Zamienie": {
+    "latitude": 52.151461,
+    "longitude": 21.5064882
+  },
+  "Kurowice": {
+    "latitude": 52.5260478,
+    "longitude": 22.3220942
+  },
+  "Środa Śląska": {
+    "latitude": 51.1638949,
+    "longitude": 16.5942505
+  },
+  "Szkaradowo": {
+    "latitude": 51.58591,
+    "longitude": 17.15149
+  },
+  "Basznia Górna": {
+    "latitude": 50.1638467,
+    "longitude": 23.256157
+  },
+  "Szymany": {
+    "latitude": 53.48385,
+    "longitude": 20.9626
+  },
+  "Wierciszów": {
+    "latitude": 51.0647455,
+    "longitude": 22.571472
+  },
+  "Siewierz": {
+    "latitude": 50.4710097,
+    "longitude": 19.2318901
+  },
+  "Stanisławów Pierwszy": {
+    "latitude": 51.2975,
+    "longitude": 19.12112
+  },
+  "Słupsk": {
+    "latitude": 54.463577,
+    "longitude": 17.020948
+  },
+  "Będzin": {
+    "latitude": 50.3230785,
+    "longitude": 19.1322201
+  },
+  "Skoczów": {
+    "latitude": 49.7999039,
+    "longitude": 18.7877583
+  },
+  "Pobiedziska": {
+    "latitude": 52.4773387,
+    "longitude": 17.2870352
+  },
+  "Zduńska Wola": {
+    "latitude": 51.6028615,
+    "longitude": 18.9333201
+  },
+  "Niestępowo": {
+    "latitude": 54.3196827,
+    "longitude": 18.42489
+  },
+  "Marianka Mroczeńska": {
+    "latitude": 51.2190512,
+    "longitude": 17.9321204
+  },
+  "Zakopane": {
+    "latitude": 49.2969114,
+    "longitude": 19.9504753
+  },
+  "Śrem": {
+    "latitude": 52.0893322,
+    "longitude": 17.0156809
+  },
+  "Zambrów": {
+    "latitude": 52.98552,
+    "longitude": 22.24117
+  },
+  "Wartkowice": {
+    "latitude": 51.9755724,
+    "longitude": 19.0022484
+  },
+  "Zwięczyca": {
+    "latitude": 50.0049155,
+    "longitude": 21.9581949
+  },
+  "Klaudyn": {
+    "latitude": 52.2747138,
+    "longitude": 20.8562767
+  },
+  "Zagościniec": {
+    "latitude": 52.3715409,
+    "longitude": 21.2705897
+  },
+  "Otwock": {
+    "latitude": 52.1161661,
+    "longitude": 21.293459
+  },
+  "Świdnica": {
+    "latitude": 50.8424835,
+    "longitude": 16.4870549
+  },
+  "Puławy": {
+    "latitude": 51.4262598,
+    "longitude": 21.9853014
+  },
+  "Wołów": {
+    "latitude": 51.3363841,
+    "longitude": 16.6486903
+  },
+  "Kobiór": {
+    "latitude": 50.0607873,
+    "longitude": 18.9339311
+  },
+  "Kołobrzeg": {
+    "latitude": 54.1760677,
+    "longitude": 15.5765542
+  },
+  "Gościcino": {
+    "latitude": 54.6034684,
+    "longitude": 18.1547108
+  },
+  "Goleniów": {
+    "latitude": 53.5656939,
+    "longitude": 14.8299285
+  },
+  "Rumia": {
+    "latitude": 54.5696102,
+    "longitude": 18.3849041
+  },
+  "Kobylany": {
+    "latitude": 52.0457165,
+    "longitude": 23.5642639
+  },
+  "Przemyśl": {
+    "latitude": 49.7835552,
+    "longitude": 22.7885113
+  },
+  "Chorzów": {
+    "latitude": 50.2885563,
+    "longitude": 18.9704425
+  },
+  "Jaczów": {
+    "latitude": 51.6269166,
+    "longitude": 16.0739394
+  },
+  "Maciejów": {
+    "latitude": 51.8780168,
+    "longitude": 19.4640641
+  },
+  "Mirzec": {
+    "latitude": 51.1362408,
+    "longitude": 21.0570374
+  },
+  "Konopnica": {
+    "latitude": 51.226236,
+    "longitude": 22.4614994
+  },
+  "Piastów": {
+    "latitude": 52.185552,
+    "longitude": 20.847642
+  },
+  "Kcynia": {
+    "latitude": 52.9917668,
+    "longitude": 17.4873729
+  },
+  "Sępólno Krajeńskie": {
+    "latitude": 53.4547434,
+    "longitude": 17.5348373
+  },
+  "Konstancin": {
+    "latitude": 52.0941864,
+    "longitude": 19.3486177
+  },
+  "Nagawczyna": {
+    "latitude": 50.0511096,
+    "longitude": 21.4641973
+  },
+  "Tarnów": {
+    "latitude": 50.0123784,
+    "longitude": 20.9880739
+  },
+  "Siercza": {
+    "latitude": 49.97247,
+    "longitude": 20.04329
+  },
+  "Międzychód": {
+    "latitude": 52.6046468,
+    "longitude": 15.8935386
+  },
+  "Skierniewice": {
+    "latitude": 51.9580068,
+    "longitude": 20.1448085
+  },
+  "Świecie": {
+    "latitude": 53.4072518,
+    "longitude": 18.4455253
+  },
+  "Barcin": {
+    "latitude": 52.8632346,
+    "longitude": 17.9472463
+  },
+  "Białystok": {
+    "latitude": 53.127505,
+    "longitude": 23.1470509
+  },
+  "Żukówka": {
+    "latitude": 52.17147,
+    "longitude": 20.63033
+  },
+  "Wysoka": {
+    "latitude": 53.1829333,
+    "longitude": 17.0797137
+  },
+  "Kępno": {
+    "latitude": 51.2790265,
+    "longitude": 17.9866632
+  },
+  "Granowo": {
+    "latitude": 53.6600659,
+    "longitude": 17.6481861
+  },
+  "Bystrzyca Kłodzka": {
+    "latitude": 50.2968684,
+    "longitude": 16.652017
+  },
+  "Siemianice": {
+    "latitude": 54.5020348,
+    "longitude": 17.0607701
+  },
+  "Lipusz": {
+    "latitude": 54.1005877,
+    "longitude": 17.7810502
+  },
+  "Dywity": {
+    "latitude": 53.83404,
+    "longitude": 20.47337
+  },
+  "Czersk": {
+    "latitude": 53.796196,
+    "longitude": 17.9756228
+  },
+  "Cieszyn": {
+    "latitude": 49.7488623,
+    "longitude": 18.6334308
+  },
+  "Kowalewek": {
+    "latitude": 52.1718567,
+    "longitude": 18.1637733
+  },
+  "Bożków": {
+    "latitude": 50.5136569,
+    "longitude": 16.5762286
+  },
+  "Głuchów": {
+    "latitude": 52.158794,
+    "longitude": 19.6606159
+  },
+  "Sulnowo": {
+    "latitude": 53.4342402,
+    "longitude": 18.4445426
+  },
+  "Nowy Dwór Gdański": {
+    "latitude": 54.2146299,
+    "longitude": 19.1150846
+  },
+  "Gromadka": {
+    "latitude": 51.361438,
+    "longitude": 15.7569399
+  },
+  "Radomsko": {
+    "latitude": 51.071061,
+    "longitude": 19.4498464
+  },
+  "Psary": {
+    "latitude": 50.8691352,
+    "longitude": 17.36217
+  },
+  "Gostynin": {
+    "latitude": 52.4242453,
+    "longitude": 19.4633384
+  },
+  "Ognica": {
+    "latitude": 53.08091,
+    "longitude": 14.3704999
+  },
+  "Kędzierzyn": {
+    "latitude": 52.695948,
+    "longitude": 19.7343485
+  },
+  "Gniezno": {
+    "latitude": 52.5246501,
+    "longitude": 17.5981524
+  },
+  "Myślenice": {
+    "latitude": 49.834608,
+    "longitude": 19.9384283
+  },
+  "Konstantynów Łódzki": {
+    "latitude": 51.7475546,
+    "longitude": 19.3255118
+  },
+  "Luzino": {
+    "latitude": 54.5618906,
+    "longitude": 18.1047847
+  },
+  "Pruszków": {
+    "latitude": 52.1626141,
+    "longitude": 20.8080199
+  },
+  "Chełmek": {
+    "latitude": 50.1003348,
+    "longitude": 19.2542585
+  },
+  "Dąbrowa Białostocka": {
+    "latitude": 53.654439,
+    "longitude": 23.3485102
+  },
+  "Magdalenka": {
+    "latitude": 52.0927076,
+    "longitude": 20.9067608
+  },
+  "Łeba": {
+    "latitude": 54.7604388,
+    "longitude": 17.5313769
+  },
+  "Dębno Polskie": {
+    "latitude": 51.58506,
+    "longitude": 16.88105
+  },
+  "Grodzisk Mazowiecki": {
+    "latitude": 52.1066223,
+    "longitude": 20.6313441
+  },
+  "Koszalin": {
+    "latitude": 54.19092,
+    "longitude": 16.17707
+  },
+  "Czernichów": {
+    "latitude": 49.9871154,
+    "longitude": 19.6761974
+  },
+  "Dębica": {
+    "latitude": 50.0461163,
+    "longitude": 21.4127615
+  },
+  "Kostomłoty Pierwsze": {
+    "latitude": 50.9180484,
+    "longitude": 20.5905677
+  },
+  "Boguszyn": {
+    "latitude": 50.4599057,
+    "longitude": 16.6642323
+  },
+  "Mielec": {
+    "latitude": 50.2802473,
+    "longitude": 21.4631343
+  },
+  "Dakowy Mokre": {
+    "latitude": 52.2699724,
+    "longitude": 16.4849266
+  },
+  "Sosnowiec": {
+    "latitude": 50.2712401,
+    "longitude": 19.2155628
+  },
+  "Robakowo": {
+    "latitude": 52.3098969,
+    "longitude": 17.0771599
+  },
+  "Popkowice": {
+    "latitude": 50.9963242,
+    "longitude": 22.2200773
+  },
+  "Ryki": {
+    "latitude": 51.6266968,
+    "longitude": 21.935696
+  },
+  "Serednica": {
+    "latitude": 49.4836801,
+    "longitude": 22.5230035
+  },
+  "Wieluń": {
+    "latitude": 51.2204544,
+    "longitude": 18.5700965
+  },
+  "Kozodrza": {
+    "latitude": 50.10014,
+    "longitude": 21.61011
+  },
+  "Głuszyca": {
+    "latitude": 50.6862202,
+    "longitude": 16.3730583
+  },
+  "Namysłów": {
+    "latitude": 51.0766258,
+    "longitude": 17.7185619
+  },
+  "Jasło": {
+    "latitude": 49.7469627,
+    "longitude": 21.493576
+  },
+  "Piekary Śląskie": {
+    "latitude": 50.3757791,
+    "longitude": 18.9379389
+  },
+  "Toruń": {
+    "latitude": 53.0102721,
+    "longitude": 18.6048094
+  },
+  "Strzebielino Osiedle": {
+    "latitude": 54.5683428,
+    "longitude": 18.039103
+  },
+  "Reda": {
+    "latitude": 54.6043272,
+    "longitude": 18.3505191
+  },
+  "Malinowo": {
+    "latitude": 52.8015743,
+    "longitude": 23.0671777
+  },
+  "Siemianowice Śląskie": {
+    "latitude": 50.3128508,
+    "longitude": 19.0177859
+  },
+  "Grudziądz": {
+    "latitude": 53.4725119,
+    "longitude": 18.7618937
+  },
+  "Sitno": {
+    "latitude": 53.65826,
+    "longitude": 16.66858
+  },
+  "Roszków": {
+    "latitude": 51.95928,
+    "longitude": 17.44578
+  },
+  "Opalenica": {
+    "latitude": 52.3088119,
+    "longitude": 16.4124256
+  },
+  "Kamionki": {
+    "latitude": 54.2097465,
+    "longitude": 22.3477987
+  },
+  "Lębork": {
+    "latitude": 54.5333804,
+    "longitude": 17.744783
+  },
+  "Pszów": {
+    "latitude": 50.0395806,
+    "longitude": 18.3949412
+  },
+  "Skrzynki": {
+    "latitude": 52.5856824,
+    "longitude": 20.3501853
+  },
+  "Skarżysko": {
+    "latitude": 51.1138821,
+    "longitude": 20.857883
+  },
+  "Sulechów": {
+    "latitude": 52.0854782,
+    "longitude": 15.6259091
+  },
+  "Ruda Śląska": {
+    "latitude": 50.2703482,
+    "longitude": 18.8643879
+  },
+  "Ropczyce": {
+    "latitude": 50.0528608,
+    "longitude": 21.6116324
+  },
+  "Koteże": {
+    "latitude": 53.9256554,
+    "longitude": 18.4917513
+  },
+  "Wychódźc": {
+    "latitude": 52.3985094,
+    "longitude": 20.4154795
+  },
+  "Nadolice Wielkie": {
+    "latitude": 51.0846172,
+    "longitude": 17.2375659
+  },
+  "Łuków": {
+    "latitude": 51.93008,
+    "longitude": 22.3790669
+  },
+  "Konin": {
+    "latitude": 52.2301933,
+    "longitude": 18.2521112
+  },
+  "Łabowa": {
+    "latitude": 49.5275011,
+    "longitude": 20.8553116
+  },
+  "Dys": {
+    "latitude": 51.3136055,
+    "longitude": 22.5744716
+  },
+  "Wieruszów": {
+    "latitude": 51.2951647,
+    "longitude": 18.1510623
+  },
+  "Głogoczów": {
+    "latitude": 49.8948023,
+    "longitude": 19.8759729
+  },
+  "Kostrzyn": {
+    "latitude": 52.3983662,
+    "longitude": 17.2275394
+  },
+  "Pisz": {
+    "latitude": 53.6294943,
+    "longitude": 21.8098191
+  },
+  "Lipsko": {
+    "latitude": 51.158513,
+    "longitude": 21.6490099
+  },
+  "Chorzele": {
+    "latitude": 53.2610476,
+    "longitude": 20.8978631
+  },
+  "Otomin": {
+    "latitude": 54.31971,
+    "longitude": 18.50347
+  },
+  "Nowy Sącz": {
+    "latitude": 49.6249173,
+    "longitude": 20.691346
+  },
+  "Zbąszyń": {
+    "latitude": 52.2501028,
+    "longitude": 15.9209286
+  },
+  "Trzebnica": {
+    "latitude": 51.3096424,
+    "longitude": 17.062596
+  },
+  "Niepołomice": {
+    "latitude": 50.0331163,
+    "longitude": 20.2171599
+  },
+  "Kraśnik": {
+    "latitude": 50.9249236,
+    "longitude": 22.229206
+  },
+  "Turek": {
+    "latitude": 52.0162022,
+    "longitude": 18.5114471
+  },
+  "Ubocze": {
+    "latitude": 53.89807,
+    "longitude": 16.4031
+  },
+  "Ostrołęka": {
+    "latitude": 53.0779641,
+    "longitude": 21.5748428
+  },
+  "Szczecno": {
+    "latitude": 50.7327279,
+    "longitude": 20.7643928
+  },
+  "Karpacz": {
+    "latitude": 50.7639983,
+    "longitude": 15.7451981
+  },
+  "Osolin": {
+    "latitude": 51.3423902,
+    "longitude": 16.8466255
+  },
+  "Grodzisk Wielkopolski": {
+    "latitude": 52.2263198,
+    "longitude": 16.3628106
+  },
+  "Murzynowo Leśne": {
+    "latitude": 52.154676,
+    "longitude": 17.3396886
+  },
+  "Olesno": {
+    "latitude": 50.8766575,
+    "longitude": 18.4219452
+  },
+  "Sopot": {
+    "latitude": 54.4430399,
+    "longitude": 18.5613095
+  },
+  "Gliwice": {
+    "latitude": 50.3011314,
+    "longitude": 18.6623472
+  },
+  "Kalisz": {
+    "latitude": 51.7472867,
+    "longitude": 18.079532
+  },
+  "Bytom": {
+    "latitude": 50.3470387,
+    "longitude": 18.9231857
+  },
+  "Stary Kostrzynek": {
+    "latitude": 52.8328478,
+    "longitude": 14.1510042
+  },
+  "Pabianice": {
+    "latitude": 51.6639859,
+    "longitude": 19.3535024
+  },
+  "Dobrzykowice": {
+    "latitude": 51.0930764,
+    "longitude": 17.191386
+  },
+  "Bruśnik": {
+    "latitude": 49.7484324,
+    "longitude": 20.9065506
+  },
+  "Brodnica": {
+    "latitude": 53.2580224,
+    "longitude": 19.4054337
+  },
+  "Węgrów": {
+    "latitude": 52.3989231,
+    "longitude": 22.0174472
+  },
+  "Staszów": {
+    "latitude": 50.5612276,
+    "longitude": 21.1677849
+  },
+  "Bogatynia": {
+    "latitude": 50.9077147,
+    "longitude": 14.9539185
+  },
+  "Gaj": {
+    "latitude": 52.7084796,
+    "longitude": 23.0825802
+  },
+  "Stary Olsztyn": {
+    "latitude": 53.7270206,
+    "longitude": 20.5296706
+  },
+  "Bukowiec": {
+    "latitude": 52.8564728,
+    "longitude": 17.2386686
+  },
+  "Chęciny": {
+    "latitude": 50.8000835,
+    "longitude": 20.4622228
+  },
+  "Słosinko": {
+    "latitude": 53.9424043,
+    "longitude": 16.9845619
+  },
+  "Wilcze": {
+    "latitude": 53.36519,
+    "longitude": 17.79699
+  },
+  "Zielonka": {
+    "latitude": 52.2913318,
+    "longitude": 21.2605662
+  },
+  "Świlcza": {
+    "latitude": 50.0714236,
+    "longitude": 21.8998941
+  },
+  "Łupstych": {
+    "latitude": 53.7828036,
+    "longitude": 20.3641032
+  },
+  "Nowy Krępiec": {
+    "latitude": 51.2140839,
+    "longitude": 22.7438407
+  },
+  "Piotrków Trybunalski": {
+    "latitude": 51.412854,
+    "longitude": 19.6886837
+  },
+  "Mokronos Dolny": {
+    "latitude": 51.0712597,
+    "longitude": 16.9338718
+  },
+  "Głuchołazy": {
+    "latitude": 50.3170828,
+    "longitude": 17.3833809
+  },
+  "Piaszczyce": {
+    "latitude": 51.11874,
+    "longitude": 19.53056
+  },
+  "Rotmanka": {
+    "latitude": 54.2724335,
+    "longitude": 18.6107035
+  },
+  "Solec": {
+    "latitude": 52.4384757,
+    "longitude": 19.3693462
+  },
+  "Chruszczewo": {
+    "latitude": 52.9004208,
+    "longitude": 20.5740746
+  },
+  "Warszowice": {
+    "latitude": 49.99281,
+    "longitude": 18.71899
+  },
+  "Biała Podlaska": {
+    "latitude": 52.0290318,
+    "longitude": 23.1494095
+  },
+  "Gąski": {
+    "latitude": 53.6771806,
+    "longitude": 20.1261217
+  },
+  "Strzelce Opolskie": {
+    "latitude": 50.5109033,
+    "longitude": 18.3004547
+  },
+  "Krosno": {
+    "latitude": 49.6938045,
+    "longitude": 21.7651458
+  },
+  "Mieszkowice": {
+    "latitude": 52.785412,
+    "longitude": 14.4954296
+  },
+  "Lubin": {
+    "latitude": 51.3974465,
+    "longitude": 16.2051275
+  },
+  "Mzyki": {
+    "latitude": 50.6145681,
+    "longitude": 19.0903949
+  },
+  "Barwałd Dolny": {
+    "latitude": 49.8652553,
+    "longitude": 19.5807313
+  },
+  "Porąbka": {
+    "latitude": 53.7031,
+    "longitude": 15.97712
+  },
+  "Katowice": {
+    "latitude": 50.2137321,
+    "longitude": 19.0058878
+  },
+  "Starachowice": {
+    "latitude": 51.0518865,
+    "longitude": 21.0761377
+  },
+  "Łysa Góra": {
+    "latitude": 50.8603921,
+    "longitude": 21.0475366
+  },
+  "Swarzędz": {
+    "latitude": 52.4103728,
+    "longitude": 17.0771038
+  },
+  "Joniec": {
+    "latitude": 52.6018757,
+    "longitude": 20.5803874
+  },
+  "Świdnik": {
+    "latitude": 51.2204629,
+    "longitude": 22.6998639
+  },
+  "Łazy": {
+    "latitude": 50.4276105,
+    "longitude": 19.3948494
+  },
+  "Jaszczów": {
+    "latitude": 51.2111949,
+    "longitude": 22.9332819
+  },
+  "Sztum": {
+    "latitude": 53.9198663,
+    "longitude": 19.0305384
+  },
+  "Rychwał": {
+    "latitude": 52.0706234,
+    "longitude": 18.1668295
+  },
+  "Gniewkowo": {
+    "latitude": 52.894429,
+    "longitude": 18.4066817
+  },
+  "Wałcz": {
+    "latitude": 53.2728538,
+    "longitude": 16.4768177
+  },
+  "Lubań": {
+    "latitude": 51.1180898,
+    "longitude": 15.2892651
   },
   "Pogorzela": {
     "latitude": 51.8224142,
     "longitude": 17.2310362
   },
-  "Gostynin": {
-    "latitude": 52.4242453,
-    "longitude": 19.4633384
+  "Dobrzeń Wielki": {
+    "latitude": 50.76795,
+    "longitude": 17.84708
+  },
+  "Mosina": {
+    "latitude": 52.2455834,
+    "longitude": 16.8472591
+  },
+  "Olsztyn": {
+    "latitude": 53.7766839,
+    "longitude": 20.476507
+  },
+  "Knurów": {
+    "latitude": 50.2071818,
+    "longitude": 18.6637073
+  },
+  "Drezdenko": {
+    "latitude": 52.8398486,
+    "longitude": 15.8318163
+  },
+  "Gryfice": {
+    "latitude": 53.9148529,
+    "longitude": 15.1987062
+  },
+  "Lusowo": {
+    "latitude": 53.905404,
+    "longitude": 15.4035927
+  },
+  "Racibórz": {
+    "latitude": 50.0905252,
+    "longitude": 18.2151495
+  },
+  "Żegocina": {
+    "latitude": 49.8041261,
+    "longitude": 20.417899
+  },
+  "Dąbrowa Górnicza": {
+    "latitude": 50.369624,
+    "longitude": 19.2890465
+  },
+  "Poznań": {
+    "latitude": 52.4082663,
+    "longitude": 16.9335199
+  },
+  "Szczecin": {
+    "latitude": 53.4296809,
+    "longitude": 14.5929127
+  },
+  "Lipno": {
+    "latitude": 52.8473901,
+    "longitude": 19.1792654
+  },
+  "Piła": {
+    "latitude": 53.1347194,
+    "longitude": 16.7527254
+  },
+  "Pawłowice": {
+    "latitude": 51.8511124,
+    "longitude": 20.6161082
+  },
+  "Stare Drzewce": {
+    "latitude": 51.77082,
+    "longitude": 16.215
+  },
+  "Oświęcim": {
+    "latitude": 50.0336707,
+    "longitude": 19.2600798
+  },
+  "Rzuchowa": {
+    "latitude": 49.9519826,
+    "longitude": 20.9314045
+  },
+  "Wałbrzych": {
+    "latitude": 50.785221,
+    "longitude": 16.2846403
+  },
+  "Ślesin": {
+    "latitude": 52.37082,
+    "longitude": 18.30593
+  },
+  "Milicz": {
+    "latitude": 51.5319957,
+    "longitude": 17.2752485
+  },
+  "Kalwaria": {
+    "latitude": 53.9774218,
+    "longitude": 17.754981
+  },
+  "Międzybórz": {
+    "latitude": 51.397711,
+    "longitude": 17.6650165
+  },
+  "Żory": {
+    "latitude": 50.0388902,
+    "longitude": 18.6806124
+  },
+  "Szymiszów": {
+    "latitude": 50.5177,
+    "longitude": 18.2484683
+  },
+  "Tychy": {
+    "latitude": 50.126498,
+    "longitude": 19.0067846
+  },
+  "Andrychów": {
+    "latitude": 49.8555791,
+    "longitude": 19.3436756
+  },
+  "Włocławek": {
+    "latitude": 52.6603872,
+    "longitude": 19.071948
+  },
+  "Daleszyce": {
+    "latitude": 50.801991,
+    "longitude": 20.8066334
+  },
+  "Chrzanów": {
+    "latitude": 50.1411926,
+    "longitude": 19.4028502
+  },
+  "Leszczyna": {
+    "latitude": 52.8840604,
+    "longitude": 20.3519572
+  },
+  "Kutno": {
+    "latitude": 52.2317559,
+    "longitude": 19.3570182
+  },
+  "Wielbark": {
+    "latitude": 53.3984244,
+    "longitude": 20.9462724
+  },
+  "Dąbrówka Stara": {
+    "latitude": 51.7759771,
+    "longitude": 20.7253666
+  },
+  "Bielsko": {
+    "latitude": 52.607327,
+    "longitude": 15.9228416
+  },
+  "Podlesie": {
+    "latitude": 50.4935568,
+    "longitude": 20.2450365
+  },
+  "Nowogard": {
+    "latitude": 53.6687698,
+    "longitude": 15.1225889
+  },
+  "Czeladź": {
+    "latitude": 50.3191419,
+    "longitude": 19.0784201
+  },
+  "Jaworzno": {
+    "latitude": 50.1894999,
+    "longitude": 19.2725112
+  },
+  "Pilchowice": {
+    "latitude": 50.2147849,
+    "longitude": 18.5626191
+  },
+  "Pręgowo": {
+    "latitude": 54.027855,
+    "longitude": 21.3421597
+  },
+  "Tulce": {
+    "latitude": 52.3434434,
+    "longitude": 17.0758308
+  },
+  "Otrębusy": {
+    "latitude": 52.1272222,
+    "longitude": 20.7613889
+  },
+  "Bierawa": {
+    "latitude": 50.2810555,
+    "longitude": 18.2424545
+  },
+  "Końskie": {
+    "latitude": 51.1910223,
+    "longitude": 20.4071836
+  },
+  "Stara Kuźnia": {
+    "latitude": 50.300646,
+    "longitude": 18.343136
+  },
+  "Mała Nieszawka": {
+    "latitude": 52.9900948,
+    "longitude": 18.5420894
+  },
+  "Kaźmierz": {
+    "latitude": 52.5129241,
+    "longitude": 16.5831468
+  },
+  "Wodzisław Śląski": {
+    "latitude": 50.0023056,
+    "longitude": 18.4481091
+  },
+  "Wschowa": {
+    "latitude": 51.8038354,
+    "longitude": 16.3172771
+  },
+  "Częstochowa": {
+    "latitude": 50.8089997,
+    "longitude": 19.1244089
+  },
+  "Rusko": {
+    "latitude": 54.39812,
+    "longitude": 16.41199
+  },
+  "Tuczno": {
+    "latitude": 53.194419,
+    "longitude": 16.1548235
+  },
+  "Czechowice": {
+    "latitude": 51.7280044,
+    "longitude": 20.0365662
+  },
+  "Dąbrówka": {
+    "latitude": 52.45019,
+    "longitude": 19.36263
+  },
+  "Strzelno": {
+    "latitude": 52.6301742,
+    "longitude": 18.1733807
+  },
+  "Dopiewo": {
+    "latitude": 52.3584401,
+    "longitude": 16.6764028
+  },
+  "Marki": {
+    "latitude": 52.3363752,
+    "longitude": 21.1207788
+  },
+  "Środa Wielkopolska": {
+    "latitude": 52.2284266,
+    "longitude": 17.277827
+  },
+  "Radzyń Podlaski": {
+    "latitude": 51.7827253,
+    "longitude": 22.6208818
+  },
+  "Gogolin": {
+    "latitude": 50.4925107,
+    "longitude": 18.0176197
+  },
+  "Wręczyca Wielka": {
+    "latitude": 50.8442673,
+    "longitude": 18.916773
+  },
+  "Siedlce": {
+    "latitude": 52.1663751,
+    "longitude": 22.2765138
+  },
+  "Gdynia": {
+    "latitude": 54.5164982,
+    "longitude": 18.5402738
+  },
+  "Teresin": {
+    "latitude": 52.1988856,
+    "longitude": 20.4168294
+  },
+  "Rybnik": {
+    "latitude": 50.1105691,
+    "longitude": 18.5531874
+  },
+  "Proszowice": {
+    "latitude": 50.1926479,
+    "longitude": 20.2917555
+  },
+  "Sitkówka": {
+    "latitude": 50.820132,
+    "longitude": 20.5446441
+  },
+  "Reszel": {
+    "latitude": 54.0482576,
+    "longitude": 21.1421611
+  },
+  "Pasturka": {
+    "latitude": 50.49634,
+    "longitude": 20.56679
+  },
+  "Łomianki": {
+    "latitude": 52.3355273,
+    "longitude": 20.895012
+  },
+  "Rogoźno": {
+    "latitude": 52.7523023,
+    "longitude": 16.9936288
+  },
+  "Słupca": {
+    "latitude": 52.2872924,
+    "longitude": 17.8713612
+  },
+  "Goczałkowice": {
+    "latitude": 49.9477778,
+    "longitude": 18.9636111
+  },
+  "Wrocław": {
+    "latitude": 51.1263106,
+    "longitude": 16.9781963
+  },
+  "Grójec": {
+    "latitude": 51.8655126,
+    "longitude": 20.8675017
+  },
+  "Niechanowo": {
+    "latitude": 52.4643201,
+    "longitude": 17.6777258
+  },
+  "Żary": {
+    "latitude": 51.6385162,
+    "longitude": 15.1422487
+  },
+  "Złotoryja": {
+    "latitude": 51.1247624,
+    "longitude": 15.9169833
+  },
+  "Miłocin": {
+    "latitude": 51.2573936,
+    "longitude": 22.30891
+  },
+  "Rogowo": {
+    "latitude": 52.7236965,
+    "longitude": 17.6508776
+  },
+  "Kołodziejewo": {
+    "latitude": 52.7135245,
+    "longitude": 18.0360342
+  },
+  "Legionowo": {
+    "latitude": 52.3952285,
+    "longitude": 20.9308309
+  },
+  "Ostrowiec Świętokrzyski": {
+    "latitude": 50.9398768,
+    "longitude": 21.38743
+  },
+  "Gierałtowice": {
+    "latitude": 50.2733791,
+    "longitude": 18.0902059
+  },
+  "Stargard": {
+    "latitude": 53.3379935,
+    "longitude": 15.0350493
+  },
+  "Gryfów Śląski": {
+    "latitude": 51.0281455,
+    "longitude": 15.4145051
+  },
+  "Mysłowice": {
+    "latitude": 50.2414715,
+    "longitude": 19.1414528
+  },
+  "Bełczna": {
+    "latitude": 53.7139056,
+    "longitude": 15.5932079
+  },
+  "Kamień Pomorski": {
+    "latitude": 53.9653947,
+    "longitude": 14.7728556
+  },
+  "Stara Jastrząbka": {
+    "latitude": 52.993439,
+    "longitude": 21.9875138
+  },
+  "Gołdap": {
+    "latitude": 54.3080218,
+    "longitude": 22.3018802
+  },
+  "Stara Gadka": {
+    "latitude": 51.6795735,
+    "longitude": 19.4506045
+  },
+  "Gdańsk": {
+    "latitude": 54.3482907,
+    "longitude": 18.6540233
+  },
+  "Szczytno": {
+    "latitude": 53.563733,
+    "longitude": 20.9968636
+  },
+  "Zebrzydowice": {
+    "latitude": 49.8699168,
+    "longitude": 18.6247092
+  },
+  "Wieliczka": {
+    "latitude": 49.9823773,
+    "longitude": 20.0602114
+  },
+  "Kudrowice": {
+    "latitude": 51.6870516,
+    "longitude": 19.2857582
+  },
+  "Płońsk": {
+    "latitude": 52.6226617,
+    "longitude": 20.3705091
+  },
+  "Rudka": {
+    "latitude": 53.5293846,
+    "longitude": 21.0420415
+  },
+  "Kościan": {
+    "latitude": 52.0833694,
+    "longitude": 16.6460888
+  },
+  "Tłuszcz": {
+    "latitude": 52.4301697,
+    "longitude": 21.4355074
+  },
+  "Nowy Dwór Mazowiecki": {
+    "latitude": 52.4306508,
+    "longitude": 20.7154712
+  },
+  "Jabłonka": {
+    "latitude": 53.4960002,
+    "longitude": 20.558356
+  },
+  "Myszczyn": {
+    "latitude": 52.2425512,
+    "longitude": 20.6915392
+  },
+  "Koło": {
+    "latitude": 52.2019866,
+    "longitude": 18.6359912
+  },
+  "Żywiec": {
+    "latitude": 49.7064961,
+    "longitude": 19.2191491
+  },
+  "Jawczyce": {
+    "latitude": 52.2123851,
+    "longitude": 20.8489841
+  },
+  "Wągrowiec": {
+    "latitude": 52.8122065,
+    "longitude": 17.2019135
+  },
+  "Oława": {
+    "latitude": 50.957093,
+    "longitude": 17.2902698
+  },
+  "Radomierzyce": {
+    "latitude": 51.0597607,
+    "longitude": 14.9741893
+  },
+  "Rawa Mazowiecka": {
+    "latitude": 51.7582859,
+    "longitude": 20.250998
+  },
+  "Ligota": {
+    "latitude": 49.8782566,
+    "longitude": 18.950007
+  },
+  "Gułtowy": {
+    "latitude": 52.3510995,
+    "longitude": 17.3295324
+  },
+  "Serokomla": {
+    "latitude": 51.6993481,
+    "longitude": 22.3335062
+  },
+  "Lubycza Królewska": {
+    "latitude": 50.3411612,
+    "longitude": 23.5196564
+  },
+  "Zgorzelec": {
+    "latitude": 51.1477005,
+    "longitude": 15.0079028
+  },
+  "Brzeźnica": {
+    "latitude": 52.7211922,
+    "longitude": 22.8159652
+  },
+  "Komorowo": {
+    "latitude": 54.20177,
+    "longitude": 16.65086
+  },
+  "Pszczółki": {
+    "latitude": 51.42247,
+    "longitude": 19.10207
+  },
+  "Police": {
+    "latitude": 53.5486435,
+    "longitude": 14.5657399
+  },
+  "Żelechów": {
+    "latitude": 51.8096724,
+    "longitude": 21.895505
+  },
+  "Kórnik": {
+    "latitude": 52.2492751,
+    "longitude": 17.0901242
+  },
+  "Kraków": {
+    "latitude": 50.0469432,
+    "longitude": 19.9971534
+  },
+  "Brzeg": {
+    "latitude": 50.8614882,
+    "longitude": 17.470497
+  },
+  "Przedbórz": {
+    "latitude": 51.0868077,
+    "longitude": 19.8744414
+  },
+  "Lesznowola": {
+    "latitude": 51.9122202,
+    "longitude": 20.9020749
   }
 }
