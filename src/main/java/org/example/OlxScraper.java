@@ -109,7 +109,7 @@ public class OlxScraper {
 
             } catch (InterruptedException e) {
                 System.err.println("Przerwano działanie podczas opóźnienia: " + e.getMessage());
-                Thread.currentThread().interrupt(); // Restore interrupted status
+                Thread.currentThread().interrupt(); // Restore interrupted_fkstatus
                 hasNextPage = false;
             } catch (IOException e) {
                 System.err.println("Błąd podczas pobierania danych z URL: " + url);
@@ -198,10 +198,20 @@ public class OlxScraper {
                 return null;
             }
 
+            // Ustalanie statusu daty
+            String dateStatus = "";
+            Matcher todayMatcher = TODAY_PATTERN.matcher(dateLocationText);
+            Matcher refreshedMatcher = REFRESHED_DATE_PATTERN.matcher(dateLocationText);
+            if (todayMatcher.find()) {
+                dateStatus = "dzisiaj";
+            } else if (refreshedMatcher.find()) {
+                dateStatus = "odświeżono";
+            }
+
             Element protectionElement = element.selectFirst("span[data-testid=btr-label-wrapper]");
             boolean hasProtectionPackage = protectionElement != null;
 
-            return new Offer(title, price, offerUrl, date, locationText, hasProtectionPackage, model, storageCapacity);
+            return new Offer(title, price, offerUrl, date, dateStatus, locationText, hasProtectionPackage, model, storageCapacity);
         } catch (Exception e) {
             System.err.println("Błąd podczas parsowania oferty: " + e.getMessage());
             return null;

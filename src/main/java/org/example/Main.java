@@ -23,9 +23,9 @@ public class Main {
     );
 
     private static final Map<String, List<Integer>> MODEL_GROUPS = new LinkedHashMap<>() {{
-        put("iPhone X–XR", Arrays.asList(0, 1, 2, 3)); // iPhone X, XS, XS Max, XR
-        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)); // 11, 12, 13, SE
-        put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27)); // 14, 15, 16
+        put("iPhone X–XR", Arrays.asList(0, 1, 2, 3));
+        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
+        put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27));
     }};
 
     private static class RecommendationAssessment {
@@ -64,32 +64,35 @@ public class Main {
         }
     }
 
+    private static final double SOCHACZEW_LAT = 52.2294;
+    private static final double SOCHACZEW_LON = 20.2384;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean continueSearching = true;
+
+        LocationCacheManager locationCacheManager = new LocationCacheManager();
+        DistanceCalculator distanceCalculator = new DistanceCalculator(locationCacheManager);
+
+        System.out.println("Ustawiona lokalizacja użytkownika: Sochaczew, Mazowieckie");
 
         while (continueSearching) {
             System.out.println("\n=== iFlip ===");
             System.out.println("\n=== Wyszukiwarka ofert iPhone na OLX ===");
             System.out.println("Wybierz opcje poniżej, aby znaleźć najlepsze oferty.\n");
 
-            // Wybór modelu
             String selectedModel = selectModel(scanner);
             if (selectedModel == null) continue;
 
-            // Wybór pojemności
             String selectedStorage = selectStorage(scanner);
             if (selectedStorage == null) continue;
 
-            // Wybór stanu
             List<String> selectedStates = selectStates(scanner);
             if (selectedStates == null) continue;
 
-            // Wybór lokalizacji
             String location = selectLocation(scanner);
             if (location == null) continue;
 
-            // Podsumowanie wyborów
             System.out.println("\n=== Podsumowanie wyborów ===");
             System.out.printf("Model: %s\n", selectedModel);
             System.out.printf("Pojemność: %s\n", selectedStorage);
@@ -98,29 +101,23 @@ public class Main {
             System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
             String confirm = scanner.nextLine().trim().toLowerCase();
             if (!confirm.equals("tak")) {
-                System.out.println("Powrót do wyboru opcji.\n");
                 continue;
             }
 
-            // Logowanie wybranych stanów
             System.out.println("Wybrane stany przed scrapowaniem: " + selectedStates);
 
-            // Scrapowanie i analiza
             OlxScraper scraper = new OlxScraper();
             List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
             PriceAnalyzer analyzer = new PriceAnalyzer(offers);
             PriceHistoryManager historyManager = new PriceHistoryManager();
-            historyManager.savePrices(offers); // Zapis ofert do pliku JSON
+            historyManager.savePrices(offers);
 
-            // Lista na tanie oferty odstające
             List<Offer> lowPriceOutlierOffers = new ArrayList<>();
 
-            // Obliczanie statystyk
             PriceStats overallStats = analyzer.getOverallPriceStats(lowPriceOutlierOffers);
             PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
             PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
 
-            // Obliczanie z-scores
             Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
                     offers.stream()
                             .filter(offer -> !offer.hasProtectionPackage())
@@ -136,19 +133,17 @@ public class Main {
                     statsWithProtection
             );
 
-            // Rekomendacje
             List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager);
             List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager);
             recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
             recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
 
-            // Wyświetlanie wyników
             displayResults(offers, selectedModel, selectedStorage, location,
                     overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection,
-                    lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection, historyManager);
+                    lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
+                    historyManager, distanceCalculator);
 
-            // Zapytanie o kontynuację
             System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
             continueSearching = scanner.nextLine().trim().toLowerCase().equals("tak");
         }
@@ -258,7 +253,7 @@ public class Main {
         }
 
         if (input.isEmpty()) {
-            return Arrays.asList("new", "used", "damaged"); // Wszystkie stany
+            return Arrays.asList("new", "used", "damaged");
         }
 
         try {
@@ -276,14 +271,10 @@ public class Main {
             List<String> selectedStates = stateChoices.stream()
                     .map(i -> {
                         switch (i) {
-                            case 1:
-                                return "new";
-                            case 2:
-                                return "used";
-                            case 3:
-                                return "damaged";
-                            default:
-                                return null;
+                            case 1: return "new";
+                            case 2: return "used";
+                            case 3: return "damaged";
+                            default: return null;
                         }
                     })
                     .filter(s -> s != null)
@@ -293,7 +284,6 @@ public class Main {
                     .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
                     .collect(Collectors.joining(", ")));
             return selectedStates;
-
         } catch (NumberFormatException e) {
             System.out.println("Proszę wpisać poprawne numery oddzielone spacją. Używam wszystkich stanów.");
             return Arrays.asList("new", "used", "damaged");
@@ -307,7 +297,7 @@ public class Main {
 
         String location = scanner.nextLine().trim();
         if (location.equalsIgnoreCase("q")) {
-            System.out.println("Anulowano wyboru.");
+            System.out.println("Anulowano wybór.");
             return null;
         }
 
@@ -324,14 +314,14 @@ public class Main {
                                        PriceStats statsWithProtection, List<Offer> recommendedWithout,
                                        List<Offer> recommendedWith, List<Offer> lowPriceOutlierOffers,
                                        Map<Offer, Double> zScoresWithoutProtection,
-                                       Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager) {
+                                       Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
+                                       DistanceCalculator distanceCalculator) {
         System.out.println("\n=== Wyniki wyszukiwania ===");
         System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
                 offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
         System.out.println("----------------------------------------");
 
-        // Statystyki cen
-        System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5. i powyżej 95. percentyla):");
+        System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5.0 i powyżej 95.0 percentyla):");
         System.out.println("• Ogólne:");
         System.out.printf("  - Średnia: %.2f PLN\n", overallStats.getAverage());
         System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", overallStats.getStandardDeviation());
@@ -349,19 +339,14 @@ public class Main {
                 statsWithProtection.getPercentile25(), statsWithProtection.getPercentile50(), statsWithProtection.getPercentile75());
         System.out.println("----------------------------------------");
 
-        // Rekomendacje bez pakietu ochronnego
         System.out.println("\nNotatka: Rekomendacje uwzględniają oferty z ceną poniżej mediany i z-score poniżej -0.5. " +
                 "Oferty zgodne z trendem cenowym są oznaczone w kolumnie 'Rekomendacja'.");
-        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager);
-
-        // Rekomendacje z pakietem ochronnym
-        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager);
-
-        // Wyświetlanie tanich ofert odstających
-        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5. percentyla)", lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager);
+        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager, distanceCalculator);
+        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
+        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
     }
 
-    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager) {
+    private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
         if (recommendations.isEmpty()) {
             System.out.println("\n" + title + ":");
             System.out.println("Brak rekomendowanych ofert (cena poniżej mediany i z-score poniżej -0.5).");
@@ -369,62 +354,80 @@ public class Main {
             return;
         }
 
-        // Stałe koszty
-        double shippingCost = 20.0; // Średni koszt przesyłki
-        double listingFee = 10.0;   // Średnia opłata za wystawienie
-        double sellingPrice = overallStats.getPercentile25(); // Szacowana cena sprzedaży (Q1)
+        double shippingCost = 20.0;
+        double listingFee = 10.0;
+        double sellingPrice = overallStats.getPercentile25();
 
         System.out.println("\n" + title + ":");
-        // Nagłówek tabeli z wyrównanymi kolumnami, zwiększona szerokość kolumny URL
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
-        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-26s | %-142s |\n",
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.printf("| %-48s | %-10s | %-19s | %-24s | %-23s | %-7s | %-15s | %-17s | %-26s | %-142s |\n",
                 "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy", "URL");
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
 
         for (Offer offer : recommendations) {
-            // Obcięcie tytułu do maksymalnej długości 48 znaków z dodaniem "..." jeśli za długi
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
             double zScore = zScores.getOrDefault(offer, 0.0);
             String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
             RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), stats, zScore, trendAnalysis);
 
-            // Obliczenie marży
             double purchasePrice = offer.getPrice();
             double totalCosts = purchasePrice + shippingCost + listingFee;
             double profitMargin = sellingPrice - totalCosts;
             double profitMarginPercentage = (profitMargin / sellingPrice) * 100;
             String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
 
-            // Formatowanie wiersza z wyrównaniem do lewej strony i stałymi szerokościami, pełny URL
-            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
-                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
-                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
+            String dateDisplay = offer.getDate().toString();
+            if (!offer.getDateStatus().isEmpty()) {
+                dateDisplay += " (" + offer.getDateStatus() + ")";
+            }
+
+            // Dołączanie odległości do lokalizacji
+            String locationDisplay = offer.getLocation().isEmpty() ? "Cała Polska" : offer.getLocation();
+            if (!offer.getLocation().isEmpty()) {
+                double[] offerCoordinates = distanceCalculator.getCoordinates(offer.getLocation());
+                if (offerCoordinates != null) {
+                    double distance = distanceCalculator.calculateHaversineDistance(
+                            SOCHACZEW_LAT, SOCHACZEW_LON,
+                            offerCoordinates[0], offerCoordinates[1]
+                    );
+                    locationDisplay = String.format("%s (%.2f km)", offer.getLocation(), distance);
+                } else {
+                    locationDisplay = offer.getLocation() + " (Brak danych)";
+                }
+            }
+
+            // Skrócenie locationDisplay, jeśli przekracza 23 znaki
+            if (locationDisplay.length() > 23) {
+                locationDisplay = locationDisplay.substring(0, 20) + "...";
+            }
+
+            System.out.printf("| %-48s | %-10.2f | %-19s | %-24s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
+                    shortTitle, offer.getPrice(), assessment.toString(), dateDisplay,
+                    locationDisplay, zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
         }
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
         System.out.println("----------------------------------------");
     }
 
-    private static void displayLowPriceOutlierOffers(String title, List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection, PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection, Map<Offer, Double> zScoresWithProtection, PriceStats overallStats, PriceHistoryManager historyManager) {
+    private static void displayLowPriceOutlierOffers(String title, List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection, PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection, Map<Offer, Double> zScoresWithProtection, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
         if (lowPriceOutlierOffers.isEmpty()) {
             System.out.println("\n" + title + ":");
-            System.out.println("Brak podejrzanych tanich ofert (ceny poniżej 5. percentyla).");
+            System.out.println("Brak podejrzanych tanich ofert (ceny poniżej 5.0 percentyla).");
             System.out.println("----------------------------------------");
             return;
         }
 
-        // Stałe koszty
-        double shippingCost = 20.0; // Średni koszt przesyłki
-        double listingFee = 10.0;   // Średnia opłata za wystawienie
-        double sellingPrice = overallStats.getPercentile25(); // Szacowana cena sprzedaży (Q1)
+        double shippingCost = 20.0;
+        double listingFee = 10.0;
+        double sellingPrice = overallStats.getPercentile25();
 
-        // Sortowanie ofert po cenie od najtańszej
         lowPriceOutlierOffers.sort(Comparator.comparingDouble(Offer::getPrice));
 
         System.out.println("\n" + title + ":");
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
-        System.out.printf("| %-48s | %-10s | %-19s | %-15s | %-23s | %-7s | %-15s | %-17s | %-26s | %-142s |\n",
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.printf("| %-48s | %-10s | %-19s | %-24s | %-23s | %-7s | %-15s | %-17s | %-26s | %-142s |\n",
                 "Tytuł oferty", "Cena (PLN)", "Rekomendacja", "Data", "Lokalizacja", "Z-Score", "Cena sprzedaży", "Marża", "Trend cenowy", "URL");
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
 
         for (Offer offer : lowPriceOutlierOffers) {
             String shortTitle = offer.getTitle().length() > 48 ? offer.getTitle().substring(0, 45) + "..." : offer.getTitle();
@@ -434,18 +437,42 @@ public class Main {
             String trendAnalysis = historyManager.analyzePriceTrend(offer.getModel(), offer.getStorageCapacity(), offer.hasProtectionPackage(), offer.getPrice());
             RecommendationAssessment assessment = getRecommendationAssessment(offer.getPrice(), relevantStats, zScore, trendAnalysis);
 
-            // Obliczenie marży
             double purchasePrice = offer.getPrice();
             double totalCosts = purchasePrice + shippingCost + listingFee;
             double profitMargin = sellingPrice - totalCosts;
             double profitMarginPercentage = (profitMargin / sellingPrice) * 100;
             String marginText = String.format("%.2f (%.2f%%)", profitMargin, profitMarginPercentage);
 
-            System.out.printf("| %-48s | %-10.2f | %-19s | %-15s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
-                    shortTitle, offer.getPrice(), assessment.toString(), offer.getDate().toString(),
-                    offer.getLocation(), zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
+            String dateDisplay = offer.getDate().toString();
+            if (!offer.getDateStatus().isEmpty()) {
+                dateDisplay += " (" + offer.getDateStatus() + ")";
+            }
+
+            // Dołączanie odległości do lokalizacji
+            String locationDisplay = offer.getLocation().isEmpty() ? "Cała Polska" : offer.getLocation();
+            if (!offer.getLocation().isEmpty()) {
+                double[] offerCoordinates = distanceCalculator.getCoordinates(offer.getLocation());
+                if (offerCoordinates != null) {
+                    double distance = distanceCalculator.calculateHaversineDistance(
+                            SOCHACZEW_LAT, SOCHACZEW_LON,
+                            offerCoordinates[0], offerCoordinates[1]
+                    );
+                    locationDisplay = String.format("%s (%.2f km)", offer.getLocation(), distance);
+                } else {
+                    locationDisplay = offer.getLocation() + " (Brak danych)";
+                }
+            }
+
+            // Skrócenie locationDisplay, jeśli przekracza 23 znaki
+            if (locationDisplay.length() > 23) {
+                locationDisplay = locationDisplay.substring(0, 20) + "...";
+            }
+
+            System.out.printf("| %-48s | %-10.2f | %-19s | %-24s | %-23s | %-7.2f | %-15.2f | %-17s | %-26s | %-142s |\n",
+                    shortTitle, offer.getPrice(), assessment.toString(), dateDisplay,
+                    locationDisplay, zScore, sellingPrice, marginText, trendAnalysis, offer.getUrl());
         }
-        System.out.println("+--------------------------------------------------+------------+---------------------+-----------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("+--------------------------------------------------+------------+---------------------+------------------------+-------------------------+---------+-----------------+-------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+");
         System.out.println("----------------------------------------");
     }
 }
