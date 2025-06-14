@@ -267,6 +267,10 @@
     "latitude": 51.1004651,
     "longitude": 23.4514125
   },
+  "Munina": {
+    "latitude": 49.99649,
+    "longitude": 22.72802
+  },
   "Miętne": {
     "latitude": 51.9229831,
     "longitude": 21.5803373
@@ -323,6 +327,10 @@
     "latitude": 51.6681499,
     "longitude": 16.5393277
   },
+  "Miechów": {
+    "latitude": 50.3566016,
+    "longitude": 20.0276912
+  },
   "Ośno Lubuskie": {
     "latitude": 52.455132,
     "longitude": 14.8682003
@@ -366,6 +374,10 @@
   "Józefin": {
     "latitude": 51.1898332,
     "longitude": 23.3413236
+  },
+  "Trzyciąż": {
+    "latitude": 50.3094145,
+    "longitude": 19.7675599
   },
   "Dąbrowa": {
     "latitude": 54.2741903,
@@ -458,6 +470,10 @@
   "Suwałki": {
     "latitude": 54.0990636,
     "longitude": 22.9279363
+  },
+  "Grajewo": {
+    "latitude": 53.6469842,
+    "longitude": 22.4548627
   },
   "Ciechanów": {
     "latitude": 52.8712044,
@@ -683,6 +699,10 @@
     "latitude": 52.8529055,
     "longitude": 19.6675433
   },
+  "Sokołowo Budzyńskie": {
+    "latitude": 52.8448,
+    "longitude": 16.94205
+  },
   "Gzin": {
     "latitude": 53.2041358,
     "longitude": 18.3125991
@@ -775,6 +795,10 @@
     "latitude": 51.58591,
     "longitude": 17.15149
   },
+  "Józefosław": {
+    "latitude": 52.1006181,
+    "longitude": 21.0468759
+  },
   "Basznia Górna": {
     "latitude": 50.1638467,
     "longitude": 23.256157
@@ -790,6 +814,10 @@
   "Siewierz": {
     "latitude": 50.4710097,
     "longitude": 19.2318901
+  },
+  "Krasnystaw": {
+    "latitude": 50.9918481,
+    "longitude": 23.165038
   },
   "Stanisławów Pierwszy": {
     "latitude": 51.2975,
@@ -1063,6 +1091,14 @@
     "latitude": 54.5618906,
     "longitude": 18.1047847
   },
+  "Suchy Las": {
+    "latitude": 52.4775865,
+    "longitude": 16.8772192
+  },
+  "Osie": {
+    "latitude": 53.5983538,
+    "longitude": 18.3475463
+  },
   "Pruszków": {
     "latitude": 52.1626141,
     "longitude": 20.8080199
@@ -1114,6 +1150,10 @@
   "Mielec": {
     "latitude": 50.2802473,
     "longitude": 21.4631343
+  },
+  "Kiekrz": {
+    "latitude": 52.4741813,
+    "longitude": 16.7800297
   },
   "Dakowy Mokre": {
     "latitude": 52.2699724,
@@ -1319,6 +1359,10 @@
     "latitude": 53.0779641,
     "longitude": 21.5748428
   },
+  "Bartoszyce": {
+    "latitude": 54.2523708,
+    "longitude": 20.8143702
+  },
   "Szczecno": {
     "latitude": 50.7327279,
     "longitude": 20.7643928
@@ -1334,6 +1378,10 @@
   "Grodzisk Wielkopolski": {
     "latitude": 52.2263198,
     "longitude": 16.3628106
+  },
+  "Brzoza": {
+    "latitude": 51.4669529,
+    "longitude": 19.6362878
   },
   "Murzynowo Leśne": {
     "latitude": 52.154676,
@@ -1438,6 +1486,10 @@
   "Mokronos Dolny": {
     "latitude": 51.0712597,
     "longitude": 16.9338718
+  },
+  "Odra": {
+    "latitude": 51.6127858,
+    "longitude": 16.337455
   },
   "Głuchołazy": {
     "latitude": 50.3170828,
@@ -1599,6 +1651,10 @@
     "latitude": 52.4082663,
     "longitude": 16.9335199
   },
+  "Pruszcz": {
+    "latitude": 54.2576476,
+    "longitude": 18.650104
+  },
   "Szczecin": {
     "latitude": 53.4296809,
     "longitude": 14.5929127
@@ -1606,6 +1662,14 @@
   "Lipno": {
     "latitude": 52.8473901,
     "longitude": 19.1792654
+  },
+  "Błażowa Dolna": {
+    "latitude": 49.9033811,
+    "longitude": 22.0968192
+  },
+  "Markowizna": {
+    "latitude": 51.2130556,
+    "longitude": 19.1608333
   },
   "Piła": {
     "latitude": 53.1347194,
@@ -1678,6 +1742,10 @@
   "Leszczyna": {
     "latitude": 52.8840604,
     "longitude": 20.3519572
+  },
+  "Myszków": {
+    "latitude": 50.5646661,
+    "longitude": 19.3248616
   },
   "Kutno": {
     "latitude": 52.2317559,
@@ -1783,6 +1851,10 @@
     "latitude": 52.3584401,
     "longitude": 16.6764028
   },
+  "Ćmielów": {
+    "latitude": 50.8918364,
+    "longitude": 21.5100875
+  },
   "Marki": {
     "latitude": 52.3363752,
     "longitude": 21.1207788
@@ -1846,6 +1918,10 @@
   "Słupca": {
     "latitude": 52.2872924,
     "longitude": 17.8713612
+  },
+  "Kraszew": {
+    "latitude": 51.8956986,
+    "longitude": 19.8225088
   },
   "Goczałkowice": {
     "latitude": 49.9477778,
@@ -2047,6 +2123,10 @@
     "latitude": 52.2492751,
     "longitude": 17.0901242
   },
+  "Luszowice": {
+    "latitude": 50.1733961,
+    "longitude": 19.402906
+  },
   "Kraków": {
     "latitude": 50.0469432,
     "longitude": 19.9971534
@@ -2062,5 +2142,13 @@
   "Lesznowola": {
     "latitude": 51.9122202,
     "longitude": 20.9020749
+  },
+  "Myślibórz": {
+    "latitude": 52.924825,
+    "longitude": 14.8664799
+  },
+  "Opatów": {
+    "latitude": 50.8017661,
+    "longitude": 21.4238281
   }
 }

@@ -122575,5 +122575,1888 @@
     "price": 3199,
     "model": "iPhone 14 Pro Max",
     "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1699,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": false,
+    "price": 1500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 1699,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1790,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 1499,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 2300,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1450,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 1600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 1399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 1680,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 1849,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 2500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1550,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1699,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-19",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": false,
+    "price": 2899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1839.99,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-23",
+    "hasProtectionPackage": true,
+    "price": 1899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1550,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1897,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 2070,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 1890,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 1200,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-30",
+    "hasProtectionPackage": false,
+    "price": 1799,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 2150,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 1630,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1890,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2149,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": true,
+    "price": 1899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 1849,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 2100,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 1920,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 2199,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 1500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": false,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-15",
+    "hasProtectionPackage": true,
+    "price": 1849,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1650,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 1938,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1829,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-12",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1997,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 2499,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 2290,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 1849,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 2199,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 1375,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 1899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": true,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": true,
+    "price": 3150,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 2100,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 2100,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2100,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 2199,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2199,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-06",
+    "hasProtectionPackage": false,
+    "price": 1900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 2050,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": false,
+    "price": 1769,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": true,
+    "price": 1699,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-08",
+    "hasProtectionPackage": false,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": true,
+    "price": 1899,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 2500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-29",
+    "hasProtectionPackage": false,
+    "price": 2099,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-17",
+    "hasProtectionPackage": false,
+    "price": 1939,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1950,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": false,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-31",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 1949,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1997,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 3000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": true,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": false,
+    "price": 2500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 2199,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 1799,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-18",
+    "hasProtectionPackage": false,
+    "price": 2300,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 2700,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1949,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-10",
+    "hasProtectionPackage": false,
+    "price": 2300,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 2350,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-22",
+    "hasProtectionPackage": true,
+    "price": 2500,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 3000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-20",
+    "hasProtectionPackage": true,
+    "price": 2000,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 2900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1969,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-01",
+    "hasProtectionPackage": true,
+    "price": 3400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-27",
+    "hasProtectionPackage": false,
+    "price": 2300,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 1769,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 1969,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 3900,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-14",
+    "hasProtectionPackage": true,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-28",
+    "hasProtectionPackage": false,
+    "price": 1750,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-25",
+    "hasProtectionPackage": true,
+    "price": 2650,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2249,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1969,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": true,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-04",
+    "hasProtectionPackage": true,
+    "price": 2300,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1969,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 3200,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-13",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2080,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": true,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-21",
+    "hasProtectionPackage": true,
+    "price": 2600,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 2400,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-07",
+    "hasProtectionPackage": false,
+    "price": 1769,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": false,
+    "price": 1999,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-16",
+    "hasProtectionPackage": false,
+    "price": 2049,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1969,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-09",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-05",
+    "hasProtectionPackage": false,
+    "price": 1800,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-26",
+    "hasProtectionPackage": true,
+    "price": 1949,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-03",
+    "hasProtectionPackage": true,
+    "price": 1850,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-11",
+    "hasProtectionPackage": true,
+    "price": 2299,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-05-24",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 2399,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
+  },
+  {
+    "date": "2025-06-02",
+    "hasProtectionPackage": true,
+    "price": 1869,
+    "model": "iPhone 13 Pro",
+    "storageCapacity": "256GB"
   }
 ]
