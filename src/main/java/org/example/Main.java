@@ -4,6 +4,7 @@ import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -97,11 +98,15 @@ public class Main {
             String location = selectLocation(scanner);
             if (location == null) continue;
 
+            Boolean todayOnly = selectTodayOnly(scanner);
+            if (todayOnly == null) continue;
+
             System.out.println("\n=== Podsumowanie wyborów ===");
             System.out.printf("Model: %s\n", selectedModel);
             System.out.printf("Pojemność: %s\n", selectedStorage);
             System.out.printf("Stan: %s\n", selectedStates.isEmpty() ? "Wszystkie" : String.join(", ", selectedStates));
             System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
+            System.out.printf("Tylko oferty z dzisiaj: %s\n", todayOnly ? "Tak" : "Nie");
             System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
             String confirm = scanner.nextLine().trim().toLowerCase();
             if (!confirm.equals("tak")) {
@@ -142,7 +147,7 @@ public class Main {
             recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
             recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
 
-            displayResults(offers, selectedModel, selectedStorage, location,
+            displayResults(offers, selectedModel, selectedStorage, location, todayOnly,
                     overallStats, statsWithoutProtection, statsWithProtection,
                     recommendedOffersWithoutProtection, recommendedOffersWithProtection,
                     lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
@@ -313,16 +318,61 @@ public class Main {
         return location;
     }
 
-    private static void displayResults(List<Offer> offers, String model, String storage, String location,
+    private static Boolean selectTodayOnly(Scanner scanner) {
+        System.out.println("\n=== Wybór ofert z dzisiaj ===");
+        System.out.println("Czy chcesz zobaczyć tylko oferty dodane dzisiaj? (tak/nie)");
+        System.out.print("Wpisz 'tak', 'nie' lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim().toLowerCase();
+        if (input.equals("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        if (!input.equals("tak") && !input.equals("nie")) {
+            System.out.println("Proszę wpisać 'tak' lub 'nie'.");
+            return null;
+        }
+
+        return input.equals("tak");
+    }
+
+    private static void displayResults(List<Offer> offers, String model, String storage, String location, Boolean todayOnly,
                                        PriceStats overallStats, PriceStats statsWithoutProtection,
                                        PriceStats statsWithProtection, List<Offer> recommendedWithout,
                                        List<Offer> recommendedWith, List<Offer> lowPriceOutlierOffers,
                                        Map<Offer, Double> zScoresWithoutProtection,
                                        Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
                                        DistanceCalculator distanceCalculator, Scanner scanner) {
+        // Filtrowanie ofert, jeśli wybrano tylko dzisiejsze
+        List<Offer> filteredOffers = todayOnly ?
+                offers.stream()
+                        .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                        .collect(Collectors.toList()) :
+                offers;
+
+        List<Offer> filteredRecommendedWithout = todayOnly ?
+                recommendedWithout.stream()
+                        .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                        .collect(Collectors.toList()) :
+                recommendedWithout;
+
+        List<Offer> filteredRecommendedWith = todayOnly ?
+                recommendedWith.stream()
+                        .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                        .collect(Collectors.toList()) :
+                recommendedWith;
+
+        List<Offer> filteredLowPriceOutlierOffers = todayOnly ?
+                lowPriceOutlierOffers.stream()
+                        .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                        .collect(Collectors.toList()) :
+                lowPriceOutlierOffers;
+
         System.out.println("\n=== Wyniki wyszukiwania ===");
-        System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s\n",
-                offers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location);
+        System.out.printf("Znaleziono %d ofert dla: %s %s, Lokalizacja: %s%s\n",
+                filteredOffers.size(), model, storage, location.isEmpty() ? "Cała Polska" : location,
+                todayOnly ? " (tylko dzisiaj)" : "");
         System.out.println("----------------------------------------");
 
         System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5.0 i powyżej 95.0 percentyla):");
@@ -345,12 +395,12 @@ public class Main {
 
         System.out.println("\nNotatka: Rekomendacje uwzględniają oferty z ceną poniżej mediany i z-score poniżej -0.5. " +
                 "Oferty zgodne z trendem cenowym są oznaczone w kolumnie 'Rekomendacja'.");
-        displayRecommendations("Oferty bez pakietu ochronnego", recommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager, distanceCalculator);
-        displayRecommendations("Oferty z pakietem ochronnym", recommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
-        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
+        displayRecommendations("Oferty bez pakietu ochronnego", filteredRecommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager, distanceCalculator);
+        displayRecommendations("Oferty z pakietem ochronnym", filteredRecommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
+        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
 
         // Prompt user to open links for "Świetna" recommendations from low price outliers
-        promptOpenSuperbOfferLinks(recommendedWithout, recommendedWith, lowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, historyManager, scanner);
+        promptOpenSuperbOfferLinks(filteredRecommendedWithout, filteredRecommendedWith, filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, historyManager, scanner);
     }
 
     private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
