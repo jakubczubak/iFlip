@@ -1,9 +1,5 @@
 package org.example;
 
-import java.awt.Desktop;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -29,7 +25,7 @@ public class Main {
 
     private static final Map<String, List<Integer>> MODEL_GROUPS = new LinkedHashMap<>() {{
         put("iPhone X–XR", Arrays.asList(0, 1, 2, 3));
-        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14, 15));
+        put("iPhone 11–13", Arrays.asList(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
         put("iPhone 14–16", Arrays.asList(16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27));
     }};
 
@@ -84,81 +80,304 @@ public class Main {
         while (continueSearching) {
             System.out.println("\n=== iFlip ===");
             System.out.println("\n=== Wyszukiwarka ofert iPhone na OLX ===");
-            System.out.println("Wybierz opcje poniżej, aby znaleźć najlepsze oferty.\n");
+            System.out.println("Wybierz tryb wyszukiwania:");
+            System.out.println("1. Codzienna rekomendacja (tylko oferty z dzisiaj, wybrane modele i pojemności)");
+            System.out.println("2. Standardowe wyszukiwanie");
+            System.out.print("Wpisz numer (1–2) lub 'q' aby wyjść: ");
 
-            String selectedModel = selectModel(scanner);
-            if (selectedModel == null) continue;
+            String modeInput = scanner.nextLine().trim();
+            if (modeInput.equalsIgnoreCase("q")) {
+                System.out.println("Zakończono program.");
+                break;
+            }
 
-            String selectedStorage = selectStorage(scanner);
-            if (selectedStorage == null) continue;
-
-            List<String> selectedStates = selectStates(scanner);
-            if (selectedStates == null) continue;
-
-            String location = selectLocation(scanner);
-            if (location == null) continue;
-
-            Boolean todayOnly = selectTodayOnly(scanner);
-            if (todayOnly == null) continue;
-
-            System.out.println("\n=== Podsumowanie wyborów ===");
-            System.out.printf("Model: %s\n", selectedModel);
-            System.out.printf("Pojemność: %s\n", selectedStorage);
-            System.out.printf("Stan: %s\n", selectedStates.isEmpty() ? "Wszystkie" : String.join(", ", selectedStates));
-            System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
-            System.out.printf("Tylko oferty z dzisiaj: %s\n", todayOnly ? "Tak" : "Nie");
-            System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
-            String confirm = scanner.nextLine().trim().toLowerCase();
-            if (!confirm.equals("tak")) {
+            int modeChoice;
+            try {
+                modeChoice = Integer.parseInt(modeInput);
+                if (modeChoice < 1 || modeChoice > 2) {
+                    System.out.println("Proszę wpisać numer od 1 do 2.");
+                    continue;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Proszę wpisać poprawny numer.");
                 continue;
             }
 
-            System.out.println("Wybrane stany przed scrapowaniem: " + selectedStates);
+            if (modeChoice == 1) {
+                // Codzienna rekomendacja
+                handleDailyRecommendation(scanner, locationCacheManager, distanceCalculator);
+            } else {
+                // Standardowe wyszukiwanie
+                handleStandardSearch(scanner, locationCacheManager, distanceCalculator);
+            }
 
-            OlxScraper scraper = new OlxScraper();
-            List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
-            PriceAnalyzer analyzer = new PriceAnalyzer(offers);
-            PriceHistoryManager historyManager = new PriceHistoryManager();
-            historyManager.savePrices(offers);
-
-            List<Offer> lowPriceOutlierOffers = new ArrayList<>();
-
-            PriceStats overallStats = analyzer.getOverallPriceStats(lowPriceOutlierOffers);
-            PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
-            PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
-
-            Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
-                    offers.stream()
-                            .filter(offer -> !offer.hasProtectionPackage())
-                            .filter(offer -> offer.getPrice() > 0)
-                            .collect(Collectors.toList()),
-                    statsWithoutProtection
-            );
-            Map<Offer, Double> zScoresWithProtection = analyzer.calculateZScores(
-                    offers.stream()
-                            .filter(Offer::hasProtectionPackage)
-                            .filter(offer -> offer.getPrice() > 0)
-                            .collect(Collectors.toList()),
-                    statsWithProtection
-            );
-
-            List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager);
-            List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager);
-            recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
-            recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
-
-            displayResults(offers, selectedModel, selectedStorage, location, todayOnly,
-                    overallStats, statsWithoutProtection, statsWithProtection,
-                    recommendedOffersWithoutProtection, recommendedOffersWithProtection,
-                    lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
-                    historyManager, distanceCalculator, scanner);
-
-            System.out.print("\nCzy chcesz wyszukać ponownie z innymi ustawieniami? (tak/nie): ");
+            System.out.print("\nCzy chcesz wyszukać ponownie? (tak/nie): ");
             continueSearching = scanner.nextLine().trim().toLowerCase().equals("tak");
         }
 
         System.out.println("\nDziękujemy za skorzystanie z wyszukiwarki OLX!");
         scanner.close();
+    }
+
+    private static void handleDailyRecommendation(Scanner scanner, LocationCacheManager locationCacheManager, DistanceCalculator distanceCalculator) {
+        List<String> selectedModels = selectModels(scanner);
+        if (selectedModels == null) return;
+
+        List<String> selectedStorages = selectStorageCapacities(scanner);
+        if (selectedStorages == null) return;
+
+        List<String> selectedStates = selectStates(scanner);
+        if (selectedStates == null) return;
+
+        String location = selectLocation(scanner);
+        if (location == null) return;
+
+        System.out.println("\n=== Podsumowanie wyborów ===");
+        System.out.printf("Modele: %s\n", String.join(", ", selectedModels));
+        System.out.printf("Pojemności: %s\n", String.join(", ", selectedStorages));
+        System.out.printf("Stan: %s\n", selectedStates.isEmpty() ? "Wszystkie" : String.join(", ", selectedStates.stream()
+                .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                .collect(Collectors.toList())));
+        System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
+        System.out.println("Tylko oferty z dzisiaj: Tak");
+        System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
+        String confirm = scanner.nextLine().trim().toLowerCase();
+        if (!confirm.equals("tak")) {
+            return;
+        }
+
+        OlxScraper scraper = new OlxScraper();
+        PriceHistoryManager historyManager = new PriceHistoryManager();
+
+        // Mapa przechowująca oferty dla każdej kombinacji modelu i pojemności
+        Map<String, Map<String, List<Offer>>> offersByModelAndStorage = new HashMap<>();
+
+        // Skanowanie dla wybranych modeli i pojemności
+        for (String model : selectedModels) {
+            offersByModelAndStorage.put(model, new HashMap<>());
+            for (String storage : selectedStorages) {
+                String statesDisplay = selectedStates.isEmpty() ? "wszystkie stany" : String.join(", ", selectedStates.stream()
+                        .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                        .collect(Collectors.toList()));
+                System.out.println("Skanuję oferty dla: " + model + " " + storage + " (" + statesDisplay + ")");
+                List<Offer> allOffers = scraper.scrapeOffers(model, storage, location, selectedStates);
+                // Filtruj tylko dzisiejsze oferty dla wyświetlania i logowania
+                List<Offer> todayOffers = allOffers.stream()
+                        .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                        .collect(Collectors.toList());
+                // Logowanie liczby ofert
+                System.out.printf("[Skanowanie] Model: %s, Pojemność: %s, Stany: %s, Liczba ofert z dzisiaj: %d\n",
+                        model, storage, statesDisplay, todayOffers.size());
+                if (!todayOffers.isEmpty()) {
+                    offersByModelAndStorage.get(model).put(storage, todayOffers);
+                    historyManager.savePrices(allOffers); // Zapisuj wszystkie oferty do historii
+                }
+            }
+        }
+
+        boolean hasOffers = offersByModelAndStorage.values().stream().anyMatch(map -> !map.isEmpty());
+        if (!hasOffers) {
+            String statesDisplay = selectedStates.isEmpty() ? "wszystkie stany" : String.join(", ", selectedStates.stream()
+                    .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                    .collect(Collectors.toList()));
+            System.out.println("\nBrak ofert z dzisiaj dla wybranych modeli: " + String.join(", ", selectedModels) + " w stanie: " + statesDisplay);
+            return;
+        }
+
+        // Przetwarzanie i wyświetlanie wyników dla każdej kombinacji modelu i pojemności
+        for (String model : selectedModels) {
+            Map<String, List<Offer>> offersByStorage = offersByModelAndStorage.get(model);
+            if (offersByStorage.isEmpty()) {
+                continue;
+            }
+            for (Map.Entry<String, List<Offer>> entry : offersByStorage.entrySet()) {
+                String storage = entry.getKey();
+                List<Offer> todayOffers = entry.getValue();
+                // Pobierz wszystkie oferty dla tej kombinacji, aby obliczyć statystyki
+                List<Offer> allOffers = scraper.scrapeOffers(model, storage, location, selectedStates);
+
+                PriceAnalyzer analyzer = new PriceAnalyzer(allOffers); // Użyj wszystkich ofert do statystyk
+                List<Offer> lowPriceOutlierOffers = new ArrayList<>();
+
+                PriceStats overallStats = analyzer.getOverallPriceStats(lowPriceOutlierOffers);
+                PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
+                PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
+
+                Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
+                        allOffers.stream()
+                                .filter(offer -> !offer.hasProtectionPackage())
+                                .filter(offer -> offer.getPrice() > 0)
+                                .collect(Collectors.toList()),
+                        statsWithoutProtection
+                );
+                Map<Offer, Double> zScoresWithProtection = analyzer.calculateZScores(
+                        allOffers.stream()
+                                .filter(Offer::hasProtectionPackage)
+                                .filter(offer -> offer.getPrice() > 0)
+                                .collect(Collectors.toList()),
+                        statsWithProtection
+                );
+
+                List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager);
+                List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager);
+                recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+                recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+
+                String statesDisplay = selectedStates.isEmpty() ? "wszystkie stany" : String.join(", ", selectedStates.stream()
+                        .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                        .collect(Collectors.toList()));
+                System.out.println("\n=== Wyniki dla: " + model + " " + storage + " (" + statesDisplay + ") ===");
+                displayResults(todayOffers, model, storage, location, true,
+                        overallStats, statsWithoutProtection, statsWithProtection,
+                        recommendedOffersWithoutProtection, recommendedOffersWithProtection,
+                        lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
+                        historyManager, distanceCalculator, scanner);
+            }
+        }
+    }
+
+    private static void handleStandardSearch(Scanner scanner, LocationCacheManager locationCacheManager, DistanceCalculator distanceCalculator) {
+        String selectedModel = selectModel(scanner);
+        if (selectedModel == null) return;
+
+        String selectedStorage = selectStorage(scanner);
+        if (selectedStorage == null) return;
+
+        List<String> selectedStates = selectStates(scanner);
+        if (selectedStates == null) return;
+
+        String location = selectLocation(scanner);
+        if (location == null) return;
+
+        Boolean todayOnly = selectTodayOnly(scanner);
+        if (todayOnly == null) return;
+
+        System.out.println("\n=== Podsumowanie wyborów ===");
+        System.out.printf("Model: %s\n", selectedModel);
+        System.out.printf("Pojemność: %s\n", selectedStorage);
+        System.out.printf("Stan: %s\n", selectedStates.isEmpty() ? "Wszystkie" : String.join(", ", selectedStates.stream()
+                .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
+                .collect(Collectors.toList())));
+        System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
+        System.out.printf("Tylko oferty z dzisiaj: %s\n", todayOnly ? "Tak" : "Nie");
+        System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
+        String confirm = scanner.nextLine().trim().toLowerCase();
+        if (!confirm.equals("tak")) {
+            return;
+        }
+
+        System.out.println("Wybrane stany przed scrapowaniem: " + selectedStates);
+
+        OlxScraper scraper = new OlxScraper();
+        List<Offer> offers = scraper.scrapeOffers(selectedModel, selectedStorage, location, selectedStates);
+        PriceAnalyzer analyzer = new PriceAnalyzer(offers);
+        PriceHistoryManager historyManager = new PriceHistoryManager();
+        historyManager.savePrices(offers);
+
+        List<Offer> lowPriceOutlierOffers = new ArrayList<>();
+
+        PriceStats overallStats = analyzer.getOverallPriceStats(lowPriceOutlierOffers);
+        PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
+        PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
+
+        Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
+                offers.stream()
+                        .filter(offer -> !offer.hasProtectionPackage())
+                        .filter(offer -> offer.getPrice() > 0)
+                        .collect(Collectors.toList()),
+                statsWithoutProtection
+        );
+        Map<Offer, Double> zScoresWithProtection = analyzer.calculateZScores(
+                offers.stream()
+                        .filter(Offer::hasProtectionPackage)
+                        .filter(offer -> offer.getPrice() > 0)
+                        .collect(Collectors.toList()),
+                statsWithProtection
+        );
+
+        List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager);
+        List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager);
+        recommendedOffersWithoutProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+        recommendedOffersWithProtection.sort(Comparator.comparingDouble(Offer::getPrice));
+
+        displayResults(offers, selectedModel, selectedStorage, location, todayOnly,
+                overallStats, statsWithoutProtection, statsWithProtection,
+                recommendedOffersWithoutProtection, recommendedOffersWithProtection,
+                lowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection,
+                historyManager, distanceCalculator, scanner);
+    }
+
+    private static List<String> selectModels(Scanner scanner) {
+        System.out.println("=== Wybór modeli iPhone’a ===");
+        System.out.println("Możesz wybrać kilka modeli, wpisując numery oddzielone spacją (np. '1 2').");
+        System.out.println("Wpisz przynajmniej jeden model.");
+        System.out.println("Wybierz grupę modeli:");
+        int groupIndex = 1;
+        for (String group : MODEL_GROUPS.keySet()) {
+            System.out.printf("%d. %s\n", groupIndex++, group);
+        }
+        System.out.print("Wpisz numer grupy (1–" + MODEL_GROUPS.size() + ") lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        int groupChoice;
+        try {
+            groupChoice = Integer.parseInt(input);
+            if (groupChoice < 1 || groupChoice > MODEL_GROUPS.size()) {
+                System.out.println("Proszę wpisać numer od 1 do " + MODEL_GROUPS.size() + ".");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawny numer.");
+            return null;
+        }
+
+        String selectedGroup = new ArrayList<>(MODEL_GROUPS.keySet()).get(groupChoice - 1);
+        List<Integer> modelIndices = MODEL_GROUPS.get(selectedGroup);
+
+        System.out.println("\nWybierz modele z grupy " + selectedGroup + ":");
+        for (int i = 0; i < modelIndices.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, IPHONE_MODELS.get(modelIndices.get(i)));
+        }
+        System.out.print("Wpisz numery modeli (1–" + modelIndices.size() + ") lub 'q' aby wyjść: ");
+
+        input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        if (input.isEmpty()) {
+            System.out.println("Proszę wybrać przynajmniej jeden model.");
+            return null;
+        }
+
+        try {
+            List<Integer> modelChoices = Arrays.stream(input.split("\\s+"))
+                    .map(Integer::parseInt)
+                    .filter(i -> i >= 1 && i <= modelIndices.size())
+                    .distinct()
+                    .collect(Collectors.toList());
+
+            if (modelChoices.isEmpty()) {
+                System.out.println("Nie wybrano żadnych poprawnych modeli.");
+                return null;
+            }
+
+            List<String> selectedModels = modelChoices.stream()
+                    .map(i -> IPHONE_MODELS.get(modelIndices.get(i - 1)))
+                    .collect(Collectors.toList());
+
+            System.out.println("Wybrane modele: " + String.join(", ", selectedModels));
+            return selectedModels;
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawne numery oddzielone spacją.");
+            return null;
+        }
     }
 
     private static String selectModel(Scanner scanner) {
@@ -244,6 +463,50 @@ public class Main {
         }
 
         return STORAGE_CAPACITIES.get(storageChoice - 1);
+    }
+
+    private static List<String> selectStorageCapacities(Scanner scanner) {
+        System.out.println("\n=== Wybór pojemności pamięci ===");
+        System.out.println("Możesz wybrać kilka pojemności, wpisując numery oddzielone spacją (np. '1 2').");
+        System.out.println("Wpisz przynajmniej jedną pojemność.");
+        for (int i = 0; i < STORAGE_CAPACITIES.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, STORAGE_CAPACITIES.get(i));
+        }
+        System.out.print("Wpisz numery pojemności (1–" + STORAGE_CAPACITIES.size() + ") lub 'q' aby wyjść: ");
+
+        String input = scanner.nextLine().trim();
+        if (input.equalsIgnoreCase("q")) {
+            System.out.println("Anulowano wybór.");
+            return null;
+        }
+
+        if (input.isEmpty()) {
+            System.out.println("Proszę wybrać przynajmniej jedną pojemność.");
+            return null;
+        }
+
+        try {
+            List<Integer> storageChoices = Arrays.stream(input.split("\\s+"))
+                    .map(Integer::parseInt)
+                    .filter(i -> i >= 1 && i <= STORAGE_CAPACITIES.size())
+                    .distinct()
+                    .collect(Collectors.toList());
+
+            if (storageChoices.isEmpty()) {
+                System.out.println("Nie wybrano żadnych poprawnych pojemności.");
+                return null;
+            }
+
+            List<String> selectedStorages = storageChoices.stream()
+                    .map(i -> STORAGE_CAPACITIES.get(i - 1))
+                    .collect(Collectors.toList());
+
+            System.out.println("Wybrane pojemności: " + String.join(", ", selectedStorages));
+            return selectedStorages;
+        } catch (NumberFormatException e) {
+            System.out.println("Proszę wpisać poprawne numery oddzielone spacją.");
+            return null;
+        }
     }
 
     private static List<String> selectStates(Scanner scanner) {
@@ -375,7 +638,7 @@ public class Main {
                 todayOnly ? " (tylko dzisiaj)" : "");
         System.out.println("----------------------------------------");
 
-        System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5.0 i powyżej 95.0 percentyla):");
+        System.out.println("\nStatystyki cen (po odfiltrowaniu wartości odstających - ceny poniżej 5.0 i powyżej 95.0 percentyla, na podstawie wszystkich ofert):");
         System.out.println("• Ogólne:");
         System.out.printf("  - Średnia: %.2f PLN\n", overallStats.getAverage());
         System.out.printf("  - Odchylenie standardowe: %.2f PLN\n", overallStats.getStandardDeviation());
@@ -397,10 +660,10 @@ public class Main {
                 "Oferty zgodne z trendem cenowym są oznaczone w kolumnie 'Rekomendacja'.");
         displayRecommendations("Oferty bez pakietu ochronnego", filteredRecommendedWithout, statsWithoutProtection, zScoresWithoutProtection, overallStats, historyManager, distanceCalculator);
         displayRecommendations("Oferty z pakietem ochronnym", filteredRecommendedWith, statsWithProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
-        displayLowPriceOutlierOffers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
+        displayLowPriceOutliers("Podejrzane tanie oferty (ceny poniżej 5.0 percentyla)", filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, overallStats, historyManager, distanceCalculator);
 
-        // Prompt user to open links for "Świetna" recommendations from low price outliers
-        promptOpenSuperbOfferLinks(filteredRecommendedWithout, filteredRecommendedWith, filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, historyManager, scanner);
+        // Informacja o najlepszych ofertach
+        promptOpenOffers(filteredRecommendedWithout, filteredRecommendedWith, filteredLowPriceOutlierOffers, statsWithoutProtection, statsWithProtection, zScoresWithoutProtection, zScoresWithProtection, historyManager, scanner);
     }
 
     private static void displayRecommendations(String title, List<Offer> recommendations, PriceStats stats, Map<Offer, Double> zScores, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
@@ -464,7 +727,7 @@ public class Main {
         System.out.println("----------------------------------------");
     }
 
-    private static void displayLowPriceOutlierOffers(String title, List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection, PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection, Map<Offer, Double> zScoresWithProtection, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
+    private static void displayLowPriceOutliers(String title, List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection, PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection, Map<Offer, Double> zScoresWithProtection, PriceStats overallStats, PriceHistoryManager historyManager, DistanceCalculator distanceCalculator) {
         if (lowPriceOutlierOffers.isEmpty()) {
             System.out.println("\n" + title + ":");
             System.out.println("Brak podejrzanych tanich ofert (ceny poniżej 5.0 percentyla).");
@@ -529,11 +792,11 @@ public class Main {
         System.out.println("----------------------------------------");
     }
 
-    private static void promptOpenSuperbOfferLinks(List<Offer> recommendedWithout, List<Offer> recommendedWith,
-                                                   List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection,
-                                                   PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection,
-                                                   Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
-                                                   Scanner scanner) {
+    private static void promptOpenOffers(List<Offer> recommendedWithout, List<Offer> recommendedWith,
+                                         List<Offer> lowPriceOutlierOffers, PriceStats statsWithoutProtection,
+                                         PriceStats statsWithProtection, Map<Offer, Double> zScoresWithoutProtection,
+                                         Map<Offer, Double> zScoresWithProtection, PriceHistoryManager historyManager,
+                                         Scanner scanner) {
         // Filter offers with "Świetna" recommendation from low price outliers
         List<Offer> superbOutliers = lowPriceOutlierOffers.stream()
                 .filter(offer -> {
@@ -546,34 +809,11 @@ public class Main {
                 })
                 .collect(Collectors.toList());
 
-        // Check if there are any superb offers in low price outliers
+        // Informacja o ofertach z rekomendacją "Świetna"
         if (superbOutliers.isEmpty()) {
             System.out.println("\nBrak ofert z rekomendacją 'Świetna' w tabeli 'Podejrzane tanie oferty'.");
-            return;
+        } else {
+            System.out.printf("\nZnaleziono %d ofert z rekomendacją 'Świetna' w tabeli 'Podejrzane tanie oferty'. Sprawdź szczegóły i linki w tabeli powyżej.\n", superbOutliers.size());
         }
-
-        System.out.printf("\nZnaleziono %d ofert z rekomendacją 'Świetna' w tabeli 'Podejrzane tanie oferty'. Czy chcesz je automatycznie otworzyć? (tak/nie): ", superbOutliers.size());
-        String input = scanner.nextLine().trim().toLowerCase();
-
-        if (!input.equals("tak")) {
-            System.out.println("Powrót do wyszukiwania.");
-            return;
-        }
-
-        // Open the superb offer links from low price outliers
-        System.out.printf("Otwieram %d linków do ofert 'Świetna' z tabeli 'Podejrzane tanie oferty'...\n", superbOutliers.size());
-        for (Offer offer : superbOutliers) {
-            try {
-                Desktop.getDesktop().browse(new URI(offer.getUrl()));
-                // Add a small delay to avoid overwhelming the browser
-                Thread.sleep(500);
-            } catch (IOException | URISyntaxException e) {
-                System.err.println("Błąd podczas otwierania linku: " + offer.getUrl() + " - " + e.getMessage());
-            } catch (InterruptedException e) {
-                System.err.println("Przerwano otwieranie linków: " + e.getMessage());
-                Thread.currentThread().interrupt();
-            }
-        }
-        System.out.println("Zakończono otwieranie linków.");
     }
 }
