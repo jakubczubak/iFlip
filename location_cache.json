@@ -215,6 +215,10 @@
     "latitude": 52.7051109,
     "longitude": 21.0840274
   },
+  "Gruszczyn": {
+    "latitude": 50.8728292,
+    "longitude": 20.160295
+  },
   "Zawiercie": {
     "latitude": 50.5055878,
     "longitude": 19.4717069
@@ -447,9 +451,17 @@
     "latitude": 54.1968155,
     "longitude": 18.3236359
   },
+  "Kleszczele": {
+    "latitude": 52.574173,
+    "longitude": 23.3254851
+  },
   "Rekowo Górne": {
     "latitude": 54.6425894,
     "longitude": 18.3384026
+  },
+  "Sejny": {
+    "latitude": 54.105725,
+    "longitude": 23.3496591
   },
   "Bieżeń": {
     "latitude": 50.8094444,
@@ -478,6 +490,10 @@
   "Szczecinek": {
     "latitude": 53.708021,
     "longitude": 16.6943922
+  },
+  "Golice": {
+    "latitude": 51.92414,
+    "longitude": 19.00429
   },
   "Bełchatów": {
     "latitude": 51.3547046,
@@ -575,6 +591,10 @@
     "latitude": 53.8861557,
     "longitude": 17.7190437
   },
+  "Łowicz": {
+    "latitude": 52.1012259,
+    "longitude": 19.9474624
+  },
   "Głogów": {
     "latitude": 51.6701928,
     "longitude": 16.0614037
@@ -642,6 +662,10 @@
   "Libiąż": {
     "latitude": 50.1030516,
     "longitude": 19.3147486
+  },
+  "Krasne": {
+    "latitude": 50.0486411,
+    "longitude": 22.0914337
   },
   "Połajewo": {
     "latitude": 52.5102506,
@@ -1219,6 +1243,10 @@
     "latitude": 50.0461163,
     "longitude": 21.4127615
   },
+  "Wartowice": {
+    "latitude": 51.2227163,
+    "longitude": 15.6477241
+  },
   "Kostomłoty Pierwsze": {
     "latitude": 50.9180484,
     "longitude": 20.5905677
@@ -1443,6 +1471,10 @@
     "latitude": 52.0162022,
     "longitude": 18.5114471
   },
+  "Kamieńsk": {
+    "latitude": 51.204172,
+    "longitude": 19.4970714
+  },
   "Ubocze": {
     "latitude": 53.89807,
     "longitude": 16.4031
@@ -1499,6 +1531,10 @@
     "latitude": 51.7472867,
     "longitude": 18.079532
   },
+  "Krzymów": {
+    "latitude": 52.348638,
+    "longitude": 19.5801929
+  },
   "Bytom": {
     "latitude": 50.3470387,
     "longitude": 18.9231857
@@ -1550,6 +1586,10 @@
   "Bukowiec": {
     "latitude": 52.8564728,
     "longitude": 17.2386686
+  },
+  "Tuchomie": {
+    "latitude": 54.1125387,
+    "longitude": 17.3350544
   },
   "Chęciny": {
     "latitude": 50.8000835,
@@ -1622,6 +1662,10 @@
   "Gąski": {
     "latitude": 53.6771806,
     "longitude": 20.1261217
+  },
+  "Brzozów": {
+    "latitude": 49.6950395,
+    "longitude": 22.0196537
   },
   "Strzelce Opolskie": {
     "latitude": 50.5109033,
@@ -1799,6 +1843,10 @@
     "latitude": 51.77082,
     "longitude": 16.215
   },
+  "Folwark": {
+    "latitude": 50.4989613,
+    "longitude": 20.6804439
+  },
   "Oświęcim": {
     "latitude": 50.0336707,
     "longitude": 19.2600798
@@ -1943,6 +1991,10 @@
     "latitude": 52.5129241,
     "longitude": 16.5831468
   },
+  "Podegrodzie": {
+    "latitude": 49.5761014,
+    "longitude": 20.5889551
+  },
   "Wodzisław Śląski": {
     "latitude": 50.0023056,
     "longitude": 18.4481091
@@ -2019,6 +2071,10 @@
     "latitude": 54.5164982,
     "longitude": 18.5402738
   },
+  "Ciągowice": {
+    "latitude": 50.446918,
+    "longitude": 19.3640011
+  },
   "Teresin": {
     "latitude": 52.1988856,
     "longitude": 20.4168294
@@ -2071,6 +2127,10 @@
     "latitude": 51.8655126,
     "longitude": 20.8675017
   },
+  "Blizne Jasińskiego": {
+    "latitude": 52.2445827,
+    "longitude": 20.8733306
+  },
   "Niechanowo": {
     "latitude": 52.4643201,
     "longitude": 17.6777258
@@ -2106,6 +2166,10 @@
   "Gierałtowice": {
     "latitude": 50.2733791,
     "longitude": 18.0902059
+  },
+  "Iwno": {
+    "latitude": 53.4936128,
+    "longitude": 14.7415309
   },
   "Stargard": {
     "latitude": 53.3379935,
@@ -2234,6 +2298,10 @@
   "Nagoszyn": {
     "latitude": 50.1346984,
     "longitude": 21.422939
+  },
+  "Janów Lubelski": {
+    "latitude": 50.7065895,
+    "longitude": 22.4110663
   },
   "Gułtowy": {
     "latitude": 52.3510995,

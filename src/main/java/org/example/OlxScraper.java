@@ -16,8 +16,12 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class OlxScraper {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("pl"));
@@ -25,9 +29,11 @@ public class OlxScraper {
     private static final Pattern TODAY_PATTERN = Pattern.compile("Dzisiaj o (\\d{2}:\\d{2})");
     private static final Pattern REFRESHED_DATE_PATTERN = Pattern.compile("Odświeżono dnia (\\d+ \\p{L}+ \\d{4})");
     private static final Pattern SIMPLE_DATE_PATTERN = Pattern.compile("(\\d+ \\p{L}+ \\d{4})$");
-    private static final int REQUEST_DELAY_MS = 2000; // 2 seconds delay between requests
+    private static final int REQUEST_DELAY_MS = 2000; // 2 seconds delay between batches
     private static final int MAX_RETRIES = 3; // Maximum number of retries for rate-limited requests
     private static final int RETRY_DELAY_MS = 5000; // 5 seconds delay between retries
+    private static final int CONCURRENT_PAGES = 4; // Number of pages to fetch concurrently
+    private static final ExecutorService EXECUTOR = Executors.newFixedThreadPool(CONCURRENT_PAGES); // Thread pool for async tasks
 
     public List<Offer> scrapeOffers(String model, String storageCapacity, String location, List<String> states) {
         List<Offer> offers = new ArrayList<>();
@@ -69,59 +75,95 @@ public class OlxScraper {
 
         int page = 1;
         boolean hasNextPage = true;
+        List<CompletableFuture<List<Offer>>> futures = new ArrayList<>();
 
         while (hasNextPage) {
-            String url = baseUrl + (page > 1 ? "&page=" + page : "");
-            System.out.println("Pobieram dane z URL (strona " + page + "): " + url);
+            // Prepare a batch of pages to fetch concurrently
+            List<Integer> pageBatch = new ArrayList<>();
+            for (int i = 0; i < CONCURRENT_PAGES && hasNextPage; i++) {
+                pageBatch.add(page + i);
+            }
 
-            try {
-                Document doc = fetchWithRetry(url);
-                if (doc == null) {
-                    System.err.println("Nie udało się pobrać danych z URL po kilku próbach: " + url);
-                    hasNextPage = false;
-                    break;
-                }
+            // Fetch pages in the batch asynchronously
+            futures.clear();
+            for (int currentPage : pageBatch) {
+                String url = baseUrl + (currentPage > 1 ? "&page=" + currentPage : "");
+                System.out.println("Planuję pobieranie danych z URL (strona " + currentPage + "): " + url);
+                futures.add(CompletableFuture.supplyAsync(() -> {
+                    try {
+                        Document doc = fetchWithRetry(url);
+                        if (doc == null) {
+                            System.err.println("Nie udało się pobrać danych z URL po kilku próbach: " + url);
+                            return new ArrayList<Offer>();
+                        }
 
-                Elements offerElements = doc.select("div.css-qfzx1y");
+                        Elements offerElements = doc.select("div.css-qfzx1y");
+                        if (offerElements.isEmpty()) {
+                            System.out.println("Nie znaleziono ofert na stronie " + currentPage + ".");
+                            return new ArrayList<Offer>();
+                        }
 
-                if (offerElements.isEmpty()) {
-                    System.out.println("Nie znaleziono ofert na stronie " + page + ". Kończę paginację.");
-                    hasNextPage = false;
-                    break;
-                }
+                        System.out.println("Znaleziono " + offerElements.size() + " ofert na stronie " + currentPage);
+                        List<Offer> pageOffers = new ArrayList<>();
+                        for (Element element : offerElements) {
+                            Offer offer = parseOffer(element, model, storageCapacity);
+                            if (offer != null) {
+                                pageOffers.add(offer);
+                            }
+                        }
 
-                System.out.println("Znaleziono " + offerElements.size() + " ofert na stronie " + page);
-
-                for (Element element : offerElements) {
-                    Offer offer = parseOffer(element, model, storageCapacity);
-                    if (offer != null) {
-                        offers.add(offer);
+                        // Check for next page
+                        boolean hasNext = doc.selectFirst("a[data-testid=pagination-forward]") != null;
+                        System.out.println("Czy jest następna strona po stronie " + currentPage + "? " + hasNext);
+                        return new PageResult(pageOffers, hasNext).getOffers();
+                    } catch (IOException e) {
+                        System.err.println("Błąd podczas pobierania danych z URL: " + url + ", szczegóły: " + e.getMessage());
+                        return new ArrayList<Offer>();
                     }
-                }
+                }, EXECUTOR));
+            }
 
-                Element nextPageElement = doc.selectFirst("a[data-testid=pagination-forward]");
-                hasNextPage = nextPageElement != null;
-                System.out.println("Czy jest następna strona? " + hasNextPage);
-                page++;
+            // Wait for all futures in the batch to complete
+            List<Offer> batchOffers = futures.stream()
+                    .map(CompletableFuture::join)
+                    .flatMap(List::stream)
+                    .collect(Collectors.toList());
+            offers.addAll(batchOffers);
 
-                // Delay between requests to avoid rate-limiting
+            // Check if any page in the batch has a next page
+            int finalPage = page;
+            hasNextPage = futures.stream()
+                    .map(future -> {
+                        try {
+                            // Re-fetch the document to check for next page (simplified check)
+                            String url = baseUrl + (finalPage > 1 ? "&page=" + finalPage : "");
+                            Document doc = fetchWithRetry(url);
+                            return doc != null && doc.selectFirst("a[data-testid=pagination-forward]") != null;
+                        } catch (IOException e) {
+                            return false;
+                        }
+                    })
+                    .anyMatch(Boolean::booleanValue);
+
+            page += CONCURRENT_PAGES;
+
+            // Delay between batches to avoid rate-limiting
+            try {
                 Thread.sleep(REQUEST_DELAY_MS);
-
             } catch (InterruptedException e) {
                 System.err.println("Przerwano działanie podczas opóźnienia: " + e.getMessage());
-                Thread.currentThread().interrupt(); // Restore interrupted_fkstatus
-                hasNextPage = false;
-            } catch (IOException e) {
-                System.err.println("Błąd podczas pobierania danych z URL: " + url);
-                System.err.println("Szczegóły błędu: " + e.getMessage());
+                Thread.currentThread().interrupt();
                 hasNextPage = false;
             }
         }
 
+        // Shutdown the executor (optional, depending on application lifecycle)
+        // EXECUTOR.shutdown();
+
         return offers;
     }
 
-    private Document fetchWithRetry(String url) throws IOException, InterruptedException {
+    private Document fetchWithRetry(String url) throws IOException {
         int retries = 0;
         while (retries < MAX_RETRIES) {
             try {
@@ -147,13 +189,18 @@ public class OlxScraper {
 
                 return Jsoup.parse(connection.getInputStream(), "UTF-8", url);
 
-            } catch (IOException e) {
+            } catch (IOException | InterruptedException e) {
                 System.err.println("Błąd podczas próby połączenia (próba " + (retries + 1) + "): " + e.getMessage());
                 retries++;
                 if (retries >= MAX_RETRIES) {
-                    throw e;
+                    throw new IOException("Nie udało się pobrać strony po " + MAX_RETRIES + " próbach", e);
                 }
-                Thread.sleep(RETRY_DELAY_MS);
+                try {
+                    Thread.sleep(RETRY_DELAY_MS);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    throw new IOException("Przerwano podczas oczekiwania na ponowienie", ie);
+                }
             }
         }
         return null;
@@ -294,6 +341,25 @@ public class OlxScraper {
         } catch (Exception e) {
             System.err.println("Błąd parsowania lokalizacji: " + dateLocationText);
             return "";
+        }
+    }
+
+    // Helper class to hold page results
+    private static class PageResult {
+        private final List<Offer> offers;
+        private final boolean hasNextPage;
+
+        public PageResult(List<Offer> offers, boolean hasNextPage) {
+            this.offers = offers;
+            this.hasNextPage = hasNextPage;
+        }
+
+        public List<Offer> getOffers() {
+            return offers;
+        }
+
+        public boolean hasNextPage() {
+            return hasNextPage;
         }
     }
 }
