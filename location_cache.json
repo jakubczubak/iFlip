@@ -663,6 +663,10 @@
     "latitude": 50.1030516,
     "longitude": 19.3147486
   },
+  "Brzezinka": {
+    "latitude": 50.0426055,
+    "longitude": 19.1879702
+  },
   "Krasne": {
     "latitude": 50.0486411,
     "longitude": 22.0914337
@@ -871,6 +875,10 @@
     "latitude": 51.1638949,
     "longitude": 16.5942505
   },
+  "Sokolniki": {
+    "latitude": 52.6826069,
+    "longitude": 20.0585609
+  },
   "Szkaradowo": {
     "latitude": 51.58591,
     "longitude": 17.15149
@@ -982,6 +990,10 @@
   "Kobiór": {
     "latitude": 50.0607873,
     "longitude": 18.9339311
+  },
+  "Nowostawy Górne": {
+    "latitude": 51.903135,
+    "longitude": 19.6756212
   },
   "Kołobrzeg": {
     "latitude": 54.1760677,
@@ -1311,6 +1323,10 @@
     "latitude": 50.3757791,
     "longitude": 18.9379389
   },
+  "Trojany": {
+    "latitude": 51.9825088,
+    "longitude": 19.1729314
+  },
   "Toruń": {
     "latitude": 53.0102721,
     "longitude": 18.6048094
@@ -1535,6 +1551,10 @@
     "latitude": 52.348638,
     "longitude": 19.5801929
   },
+  "Jugowice": {
+    "latitude": 50.7310111,
+    "longitude": 16.4027816
+  },
   "Bytom": {
     "latitude": 50.3470387,
     "longitude": 18.9231857
@@ -1742,6 +1762,10 @@
   "Gniewkowo": {
     "latitude": 52.894429,
     "longitude": 18.4066817
+  },
+  "Krynica": {
+    "latitude": 53.0336093,
+    "longitude": 23.5880673
   },
   "Wałcz": {
     "latitude": 53.2728538,
@@ -2262,6 +2286,10 @@
   "Myszczyn": {
     "latitude": 52.2425512,
     "longitude": 20.6915392
+  },
+  "Turka": {
+    "latitude": 52.7445332,
+    "longitude": 21.8176124
   },
   "Koło": {
     "latitude": 52.2019866,

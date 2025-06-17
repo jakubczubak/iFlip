@@ -29,11 +29,14 @@ public class OlxScraper {
     private static final Pattern TODAY_PATTERN = Pattern.compile("Dzisiaj o (\\d{2}:\\d{2})");
     private static final Pattern REFRESHED_DATE_PATTERN = Pattern.compile("Odświeżono dnia (\\d+ \\p{L}+ \\d{4})");
     private static final Pattern SIMPLE_DATE_PATTERN = Pattern.compile("(\\d+ \\p{L}+ \\d{4})$");
-    private static final int REQUEST_DELAY_MS = 2000; // 2 seconds delay between batches
-    private static final int MAX_RETRIES = 3; // Maximum number of retries for rate-limited requests
-    private static final int RETRY_DELAY_MS = 5000; // 5 seconds delay between retries
-    private static final int CONCURRENT_PAGES = 4; // Number of pages to fetch concurrently
-    private static final ExecutorService EXECUTOR = Executors.newFixedThreadPool(CONCURRENT_PAGES); // Thread pool for async tasks
+    private static int REQUEST_DELAY_MS = 2000; // Początkowe opóźnienie między partiami (zmienne)
+    private static final int MAX_REQUEST_DELAY_MS = 5000; // Maksymalne opóźnienie
+    private static final int MIN_REQUEST_DELAY_MS = 1000; // Minimalne opóźnienie
+    private static final int MAX_RETRIES = 3; // Maksymalna liczba prób dla żądań z ograniczeniem szybkości
+    private static final int RETRY_DELAY_MS = 5000; // Opóźnienie między próbami
+    private static int CONCURRENT_PAGES = 6; // Początkowa liczba stron pobieranych równolegle (zmienne)
+    private static final int MIN_CONCURRENT_PAGES = 3; // Minimalna liczba stron
+    private static ExecutorService EXECUTOR = Executors.newFixedThreadPool(CONCURRENT_PAGES); // Pula wątków dla zadań asynchronicznych
 
     public List<Offer> scrapeOffers(String model, String storageCapacity, String location, List<String> states) {
         List<Offer> offers = new ArrayList<>();
@@ -75,16 +78,23 @@ public class OlxScraper {
 
         int page = 1;
         boolean hasNextPage = true;
-        List<CompletableFuture<List<Offer>>> futures = new ArrayList<>();
+        List<CompletableFuture<PageResult>> futures = new ArrayList<>();
 
         while (hasNextPage) {
-            // Prepare a batch of pages to fetch concurrently
+            // Aktualizacja puli wątków, jeśli CONCURRENT_PAGES się zmieniło
+            synchronized (OlxScraper.class) {
+                if (EXECUTOR.isShutdown() || EXECUTOR.isTerminated()) {
+                    EXECUTOR = Executors.newFixedThreadPool(CONCURRENT_PAGES);
+                }
+            }
+
+            // Przygotowanie partii stron do równoległego pobierania
             List<Integer> pageBatch = new ArrayList<>();
             for (int i = 0; i < CONCURRENT_PAGES && hasNextPage; i++) {
                 pageBatch.add(page + i);
             }
 
-            // Fetch pages in the batch asynchronously
+            // Asynchroniczne pobieranie stron w partii
             futures.clear();
             for (int currentPage : pageBatch) {
                 String url = baseUrl + (currentPage > 1 ? "&page=" + currentPage : "");
@@ -94,61 +104,62 @@ public class OlxScraper {
                         Document doc = fetchWithRetry(url);
                         if (doc == null) {
                             System.err.println("Nie udało się pobrać danych z URL po kilku próbach: " + url);
-                            return new ArrayList<Offer>();
+                            return new PageResult(new ArrayList<>(), false);
                         }
 
                         Elements offerElements = doc.select("div.css-qfzx1y");
                         if (offerElements.isEmpty()) {
                             System.out.println("Nie znaleziono ofert na stronie " + currentPage + ".");
-                            return new ArrayList<Offer>();
+                            return new PageResult(new ArrayList<>(), false);
                         }
 
                         System.out.println("Znaleziono " + offerElements.size() + " ofert na stronie " + currentPage);
-                        List<Offer> pageOffers = new ArrayList<>();
-                        for (Element element : offerElements) {
-                            Offer offer = parseOffer(element, model, storageCapacity);
-                            if (offer != null) {
-                                pageOffers.add(offer);
-                            }
-                        }
+                        // Równoległe parsowanie ofert
+                        List<Offer> pageOffers = offerElements.stream()
+                                .parallel()
+                                .map(element -> parseOffer(element, model, storageCapacity))
+                                .filter(offer -> offer != null)
+                                .collect(Collectors.toList());
 
-                        // Check for next page
+                        // Sprawdzenie, czy istnieje następna strona
                         boolean hasNext = doc.selectFirst("a[data-testid=pagination-forward]") != null;
                         System.out.println("Czy jest następna strona po stronie " + currentPage + "? " + hasNext);
-                        return new PageResult(pageOffers, hasNext).getOffers();
+                        return new PageResult(pageOffers, hasNext);
                     } catch (IOException e) {
                         System.err.println("Błąd podczas pobierania danych z URL: " + url + ", szczegóły: " + e.getMessage());
-                        return new ArrayList<Offer>();
+                        return new PageResult(new ArrayList<>(), false);
                     }
                 }, EXECUTOR));
             }
 
-            // Wait for all futures in the batch to complete
-            List<Offer> batchOffers = futures.stream()
+            // Oczekiwanie na zakończenie wszystkich futures w partii
+            List<PageResult> batchResults = futures.stream()
                     .map(CompletableFuture::join)
-                    .flatMap(List::stream)
+                    .collect(Collectors.toList());
+
+            // Dodanie ofert z partii
+            List<Offer> batchOffers = batchResults.stream()
+                    .flatMap(result -> result.getOffers().stream())
                     .collect(Collectors.toList());
             offers.addAll(batchOffers);
 
-            // Check if any page in the batch has a next page
-            int finalPage = page;
-            hasNextPage = futures.stream()
-                    .map(future -> {
-                        try {
-                            // Re-fetch the document to check for next page (simplified check)
-                            String url = baseUrl + (finalPage > 1 ? "&page=" + finalPage : "");
-                            Document doc = fetchWithRetry(url);
-                            return doc != null && doc.selectFirst("a[data-testid=pagination-forward]") != null;
-                        } catch (IOException e) {
-                            return false;
-                        }
-                    })
-                    .anyMatch(Boolean::booleanValue);
+            // Sprawdzenie, czy istnieje następna strona na podstawie ostatniej strony w partii
+            int lastPageInBatch = page + CONCURRENT_PAGES - 1;
+            String lastPageUrl = baseUrl + (lastPageInBatch > 1 ? "&page=" + lastPageInBatch : "");
+            try {
+                Document doc = fetchWithRetry(lastPageUrl);
+                hasNextPage = doc != null && doc.selectFirst("a[data-testid=pagination-forward]") != null;
+                System.out.println("Sprawdzono następną stronę dla strony " + lastPageInBatch + ": " + hasNextPage);
+            } catch (IOException e) {
+                System.err.println("Błąd podczas sprawdzania następnej strony dla URL: " + lastPageUrl + ", szczegóły: " + e.getMessage());
+                hasNextPage = false;
+            }
 
             page += CONCURRENT_PAGES;
 
-            // Delay between batches to avoid rate-limiting
+            // Opóźnienie między partiami, aby uniknąć ograniczeń szybkości
             try {
+                System.out.println("Aktualne opóźnienie między partiami: " + REQUEST_DELAY_MS + "ms, CONCURRENT_PAGES: " + CONCURRENT_PAGES);
                 Thread.sleep(REQUEST_DELAY_MS);
             } catch (InterruptedException e) {
                 System.err.println("Przerwano działanie podczas opóźnienia: " + e.getMessage());
@@ -157,8 +168,10 @@ public class OlxScraper {
             }
         }
 
-        // Shutdown the executor (optional, depending on application lifecycle)
-        // EXECUTOR.shutdown();
+        // Zamknięcie puli wątków (opcjonalne, w zależności od cyklu życia aplikacji)
+        // synchronized (OlxScraper.class) {
+        //     EXECUTOR.shutdown();
+        // }
 
         return offers;
     }
@@ -176,6 +189,19 @@ public class OlxScraper {
                 if (responseCode == 429) {
                     System.err.println("Otrzymano kod HTTP 429 (Too Many Requests). Ponawiam próbę po opóźnieniu...");
                     retries++;
+                    synchronized (OlxScraper.class) {
+                        // Dynamiczne zwiększenie opóźnienia
+                        REQUEST_DELAY_MS = Math.min(REQUEST_DELAY_MS + 1000, MAX_REQUEST_DELAY_MS);
+                        // Dynamiczne zmniejszenie liczby równoległych stron
+                        if (CONCURRENT_PAGES > MIN_CONCURRENT_PAGES) {
+                            CONCURRENT_PAGES--;
+                            System.out.println("Zmniejszono CONCURRENT_PAGES do: " + CONCURRENT_PAGES);
+                            // Opcjonalnie: zamknięcie starej puli wątków i utworzenie nowej
+                            EXECUTOR.shutdown();
+                            EXECUTOR = Executors.newFixedThreadPool(CONCURRENT_PAGES);
+                        }
+                        System.out.println("Zwiększono REQUEST_DELAY_MS do: " + REQUEST_DELAY_MS);
+                    }
                     if (retries >= MAX_RETRIES) {
                         System.err.println("Przekroczono maksymalną liczbę prób dla URL: " + url);
                         return null;
@@ -185,6 +211,14 @@ public class OlxScraper {
                 } else if (responseCode != 200) {
                     System.err.println("Otrzymano kod HTTP: " + responseCode + " dla URL: " + url);
                     return null;
+                } else {
+                    // Po udanym żądaniu, stopniowe zmniejszenie opóźnienia
+                    synchronized (OlxScraper.class) {
+                        if (REQUEST_DELAY_MS > MIN_REQUEST_DELAY_MS) {
+                            REQUEST_DELAY_MS = Math.max(REQUEST_DELAY_MS - 500, MIN_REQUEST_DELAY_MS);
+                            System.out.println("Zmniejszono REQUEST_DELAY_MS do: " + REQUEST_DELAY_MS);
+                        }
+                    }
                 }
 
                 return Jsoup.parse(connection.getInputStream(), "UTF-8", url);
@@ -344,7 +378,7 @@ public class OlxScraper {
         }
     }
 
-    // Helper class to hold page results
+    // Klasa pomocnicza do przechowywania wyników strony
     private static class PageResult {
         private final List<Offer> offers;
         private final boolean hasNextPage;
