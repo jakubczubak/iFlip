@@ -370,6 +370,10 @@ public class Main {
         PriceStats statsWithProtection = analyzer.getPriceStatsWithProtection(lowPriceOutlierOffers);
         PriceStats statsWithoutProtection = analyzer.getPriceStatsWithoutProtection(lowPriceOutlierOffers);
 
+        // Wyświetlanie statystyk
+        System.out.println("\n=== Statystyki dla: " + selectedModel + " " + selectedStorage + " ===");
+        displayStats(selectedModel, selectedStorage, overallStats, statsWithoutProtection, statsWithProtection);
+
         Map<Offer, Double> zScoresWithoutProtection = analyzer.calculateZScores(
                 offers.stream()
                         .filter(offer -> !offer.hasProtectionPackage())

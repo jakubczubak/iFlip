@@ -199,6 +199,10 @@
     "latitude": 53.36283,
     "longitude": 18.62633
   },
+  "Kożuchów": {
+    "latitude": 51.7454762,
+    "longitude": 15.5944541
+  },
   "Łomża": {
     "latitude": 53.1824307,
     "longitude": 22.0521838
@@ -419,6 +423,10 @@
     "latitude": 53.6267978,
     "longitude": 17.4900075
   },
+  "Glina": {
+    "latitude": 51.3640281,
+    "longitude": 19.6638555
+  },
   "Imielin": {
     "latitude": 50.1440745,
     "longitude": 19.2025837
@@ -498,6 +506,10 @@
   "Bełchatów": {
     "latitude": 51.3547046,
     "longitude": 19.3769199
+  },
+  "Golkowice": {
+    "latitude": 49.9691449,
+    "longitude": 19.978742
   },
   "Legnica": {
     "latitude": 51.2047689,
@@ -687,6 +699,10 @@
     "latitude": 51.9509156,
     "longitude": 14.7293172
   },
+  "Czaniec Środkowy": {
+    "latitude": 49.8501708,
+    "longitude": 19.2556773
+  },
   "Wydorowo": {
     "latitude": 51.9715899,
     "longitude": 16.5437113
@@ -722,6 +738,10 @@
   "Kazimierz": {
     "latitude": 51.7688876,
     "longitude": 19.2031956
+  },
+  "Koziniec": {
+    "latitude": 50.6246593,
+    "longitude": 16.7501665
   },
   "Wudzyn": {
     "latitude": 53.3223504,
@@ -1195,6 +1215,10 @@
     "latitude": 52.5246501,
     "longitude": 17.5981524
   },
+  "Komorniki": {
+    "latitude": 52.3360059,
+    "longitude": 16.8080811
+  },
   "Myślenice": {
     "latitude": 49.834608,
     "longitude": 19.9384283
@@ -1218,6 +1242,10 @@
   "Osie": {
     "latitude": 53.5983538,
     "longitude": 18.3475463
+  },
+  "Przysietnica": {
+    "latitude": 49.5112603,
+    "longitude": 20.6173221
   },
   "Pruszków": {
     "latitude": 52.1626141,
@@ -1282,6 +1310,10 @@
   "Dakowy Mokre": {
     "latitude": 52.2699724,
     "longitude": 16.4849266
+  },
+  "Jarzębia Łąka": {
+    "latitude": 52.4598616,
+    "longitude": 21.4477629
   },
   "Sosnowiec": {
     "latitude": 50.2712401,
@@ -1359,6 +1391,10 @@
     "latitude": 53.65826,
     "longitude": 16.66858
   },
+  "Śliwniki": {
+    "latitude": 51.6936294,
+    "longitude": 17.9930175
+  },
   "Roszków": {
     "latitude": 51.95928,
     "longitude": 17.44578
@@ -1378,6 +1414,10 @@
   "Gorzów Wielkopolski": {
     "latitude": 52.7309926,
     "longitude": 15.2400451
+  },
+  "Rakowiska": {
+    "latitude": 52.0628247,
+    "longitude": 23.0822455
   },
   "Lębork": {
     "latitude": 54.5333804,
@@ -1487,6 +1527,10 @@
     "latitude": 50.9249236,
     "longitude": 22.229206
   },
+  "Strzyżów": {
+    "latitude": 49.8702087,
+    "longitude": 21.7856291
+  },
   "Turek": {
     "latitude": 52.0162022,
     "longitude": 18.5114471
@@ -1514,6 +1558,10 @@
   "Karpacz": {
     "latitude": 50.7639983,
     "longitude": 15.7451981
+  },
+  "Nowe Draganie": {
+    "latitude": 52.607006,
+    "longitude": 19.687033
   },
   "Osolin": {
     "latitude": 51.3423902,
@@ -1587,6 +1635,10 @@
     "latitude": 53.2580224,
     "longitude": 19.4054337
   },
+  "Żagań": {
+    "latitude": 51.6153231,
+    "longitude": 15.3007662
+  },
   "Węgrów": {
     "latitude": 52.3989231,
     "longitude": 22.0174472
@@ -1602,6 +1654,10 @@
   "Gaj": {
     "latitude": 52.7084796,
     "longitude": 23.0825802
+  },
+  "Mariampol": {
+    "latitude": 51.9020525,
+    "longitude": 19.2268693
   },
   "Stary Olsztyn": {
     "latitude": 53.7270206,
@@ -1747,6 +1803,10 @@
     "latitude": 51.2204629,
     "longitude": 22.6998639
   },
+  "Łajski": {
+    "latitude": 52.4289348,
+    "longitude": 20.9530742
+  },
   "Łazy": {
     "latitude": 50.4276105,
     "longitude": 19.3948494
@@ -1798,6 +1858,10 @@
   "Olsztyn": {
     "latitude": 53.7766839,
     "longitude": 20.476507
+  },
+  "Zgorzała": {
+    "latitude": 52.10663,
+    "longitude": 20.97867
   },
   "Knurów": {
     "latitude": 50.2071818,
@@ -1975,6 +2039,10 @@
     "latitude": 50.1894999,
     "longitude": 19.2725112
   },
+  "Mysiadło": {
+    "latitude": 52.1016841,
+    "longitude": 21.0182398
+  },
   "Pilchowice": {
     "latitude": 50.2147849,
     "longitude": 18.5626191
@@ -1986,6 +2054,10 @@
   "Bieruń": {
     "latitude": 50.0931922,
     "longitude": 19.0918262
+  },
+  "Wolica": {
+    "latitude": 50.4336955,
+    "longitude": 20.71522
   },
   "Tulce": {
     "latitude": 52.3434434,
@@ -2127,6 +2199,10 @@
     "latitude": 50.49634,
     "longitude": 20.56679
   },
+  "Lądek": {
+    "latitude": 52.20958,
+    "longitude": 17.92988
+  },
   "Łomianki": {
     "latitude": 52.3355273,
     "longitude": 20.895012
@@ -2218,6 +2294,10 @@
   "Popowice": {
     "latitude": 54.0715898,
     "longitude": 17.1914317
+  },
+  "Brzezina": {
+    "latitude": 52.9394663,
+    "longitude": 23.9054627
   },
   "Kamień Pomorski": {
     "latitude": 53.9653947,
