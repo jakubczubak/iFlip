@@ -7,6 +7,10 @@
     "latitude": 50.1691812,
     "longitude": 18.9044238
   },
+  "Pęchcin": {
+    "latitude": 52.86269,
+    "longitude": 20.57169
+  },
   "Bydgoszcz": {
     "latitude": 53.1297127,
     "longitude": 18.0294488
@@ -142,6 +146,10 @@
   "Janczewice": {
     "latitude": 52.110744,
     "longitude": 20.9314559
+  },
+  "Chmielów": {
+    "latitude": 50.9410901,
+    "longitude": 21.325701
   },
   "Stara Wieś": {
     "latitude": 49.7214975,
@@ -463,6 +471,10 @@
     "latitude": 52.574173,
     "longitude": 23.3254851
   },
+  "Morzyczyn": {
+    "latitude": 52.431362,
+    "longitude": 18.4063267
+  },
   "Rekowo Górne": {
     "latitude": 54.6425894,
     "longitude": 18.3384026
@@ -523,6 +535,10 @@
     "latitude": 54.0990636,
     "longitude": 22.9279363
   },
+  "Siedliska": {
+    "latitude": 53.8389564,
+    "longitude": 22.3186925
+  },
   "Grajewo": {
     "latitude": 53.6469842,
     "longitude": 22.4548627
@@ -555,6 +571,10 @@
     "latitude": 50.7170854,
     "longitude": 23.2525711
   },
+  "Nędza": {
+    "latitude": 50.1603307,
+    "longitude": 18.3107667
+  },
   "Gołaszyn": {
     "latitude": 52.6273481,
     "longitude": 16.8407979
@@ -566,6 +586,10 @@
   "Racławiczki": {
     "latitude": 50.4698182,
     "longitude": 17.7941309
+  },
+  "Brwinów": {
+    "latitude": 52.1425551,
+    "longitude": 20.7170701
   },
   "Leszno": {
     "latitude": 51.8436498,
@@ -671,6 +695,10 @@
     "latitude": 52.411713,
     "longitude": 20.8814051
   },
+  "Bukowno": {
+    "latitude": 50.2609998,
+    "longitude": 19.4361777
+  },
   "Libiąż": {
     "latitude": 50.1030516,
     "longitude": 19.3147486
@@ -706,6 +734,10 @@
   "Wydorowo": {
     "latitude": 51.9715899,
     "longitude": 16.5437113
+  },
+  "Natalin": {
+    "latitude": 51.5035569,
+    "longitude": 22.2711928
   },
   "Więcławice": {
     "latitude": 52.6288664,
@@ -782,6 +814,10 @@
   "Inowrocław": {
     "latitude": 52.7952408,
     "longitude": 18.2595624
+  },
+  "Tuchola": {
+    "latitude": 53.5880901,
+    "longitude": 17.8590414
   },
   "Czapury": {
     "latitude": 52.3248844,
@@ -979,6 +1015,10 @@
     "latitude": 52.98552,
     "longitude": 22.24117
   },
+  "Rzgów": {
+    "latitude": 51.6627785,
+    "longitude": 19.4908887
+  },
   "Wartkowice": {
     "latitude": 51.9755724,
     "longitude": 19.0022484
@@ -1026,6 +1066,10 @@
   "Gorlice": {
     "latitude": 49.6663323,
     "longitude": 21.1634843
+  },
+  "Radymno": {
+    "latitude": 49.9517176,
+    "longitude": 22.8183129
   },
   "Gościcino": {
     "latitude": 54.6034684,
@@ -1239,6 +1283,10 @@
     "latitude": 52.4775865,
     "longitude": 16.8772192
   },
+  "Sobolewo": {
+    "latitude": 54.0655499,
+    "longitude": 22.9927968
+  },
   "Osie": {
     "latitude": 53.5983538,
     "longitude": 18.3475463
@@ -1338,6 +1386,10 @@
   "Wieluń": {
     "latitude": 51.2204544,
     "longitude": 18.5700965
+  },
+  "Radziwiłłów": {
+    "latitude": 51.9936833,
+    "longitude": 20.28912
   },
   "Kozodrza": {
     "latitude": 50.10014,
@@ -1439,6 +1491,10 @@
     "latitude": 52.0854782,
     "longitude": 15.6259091
   },
+  "Kartuzy": {
+    "latitude": 54.3342281,
+    "longitude": 18.1973639
+  },
   "Ruda Śląska": {
     "latitude": 50.2703482,
     "longitude": 18.8643879
@@ -1527,6 +1583,10 @@
     "latitude": 50.9249236,
     "longitude": 22.229206
   },
+  "Niekursko": {
+    "latitude": 53.1145306,
+    "longitude": 16.395078
+  },
   "Strzyżów": {
     "latitude": 49.8702087,
     "longitude": 21.7856291
@@ -1535,9 +1595,17 @@
     "latitude": 52.0162022,
     "longitude": 18.5114471
   },
+  "Brzozowiec": {
+    "latitude": 51.0052741,
+    "longitude": 17.5523512
+  },
   "Kamieńsk": {
     "latitude": 51.204172,
     "longitude": 19.4970714
+  },
+  "Sulęcin": {
+    "latitude": 52.4413768,
+    "longitude": 15.1161501
   },
   "Ubocze": {
     "latitude": 53.89807,
@@ -1594,6 +1662,10 @@
   "Gliwice": {
     "latitude": 50.3011314,
     "longitude": 18.6623472
+  },
+  "Opole Lubelskie": {
+    "latitude": 51.1475365,
+    "longitude": 21.9664152
   },
   "Kalisz": {
     "latitude": 51.7472867,
@@ -1667,6 +1739,10 @@
     "latitude": 52.8564728,
     "longitude": 17.2386686
   },
+  "Garbatka": {
+    "latitude": 52.0291008,
+    "longitude": 20.8207593
+  },
   "Tuchomie": {
     "latitude": 54.1125387,
     "longitude": 17.3350544
@@ -1695,6 +1771,10 @@
     "latitude": 53.7828036,
     "longitude": 20.3641032
   },
+  "Krężoły": {
+    "latitude": 50.5182605,
+    "longitude": 20.1083901
+  },
   "Nowy Krępiec": {
     "latitude": 51.2140839,
     "longitude": 22.7438407
@@ -1714,6 +1794,10 @@
   "Głuchołazy": {
     "latitude": 50.3170828,
     "longitude": 17.3833809
+  },
+  "Łomianki Dolne": {
+    "latitude": 52.3513566,
+    "longitude": 20.9031909
   },
   "Piaszczyce": {
     "latitude": 51.11874,
@@ -1738,6 +1822,10 @@
   "Biała Podlaska": {
     "latitude": 52.0290318,
     "longitude": 23.1494095
+  },
+  "Nowa Sól": {
+    "latitude": 51.8019595,
+    "longitude": 15.7175608
   },
   "Gąski": {
     "latitude": 53.6771806,
@@ -1839,6 +1927,10 @@
     "latitude": 50.667603,
     "longitude": 23.8132858
   },
+  "Błonie": {
+    "latitude": 52.1946065,
+    "longitude": 20.6169694
+  },
   "Lubań": {
     "latitude": 51.1180898,
     "longitude": 15.2892651
@@ -1907,6 +1999,10 @@
     "latitude": 53.4296809,
     "longitude": 14.5929127
   },
+  "Augustówka": {
+    "latitude": 51.661997,
+    "longitude": 22.8119065
+  },
   "Lipno": {
     "latitude": 52.8473901,
     "longitude": 19.1792654
@@ -1914,6 +2010,10 @@
   "Błażowa Dolna": {
     "latitude": 49.9033811,
     "longitude": 22.0968192
+  },
+  "Jabłów": {
+    "latitude": 50.783371,
+    "longitude": 16.161087
   },
   "Markowizna": {
     "latitude": 51.2130556,
@@ -2043,6 +2143,10 @@
     "latitude": 52.1016841,
     "longitude": 21.0182398
   },
+  "Gumnisko": {
+    "latitude": 51.2346909,
+    "longitude": 18.9569248
+  },
   "Pilchowice": {
     "latitude": 50.2147849,
     "longitude": 18.5626191
@@ -2094,6 +2198,10 @@
   "Podegrodzie": {
     "latitude": 49.5761014,
     "longitude": 20.5889551
+  },
+  "Ożarów Mazowiecki": {
+    "latitude": 52.2080548,
+    "longitude": 20.7941606
   },
   "Wodzisław Śląski": {
     "latitude": 50.0023056,
@@ -2351,6 +2459,10 @@
     "latitude": 53.5293846,
     "longitude": 21.0420415
   },
+  "Cieszków": {
+    "latitude": 51.6303951,
+    "longitude": 17.35956
+  },
   "Kościan": {
     "latitude": 52.0833694,
     "longitude": 16.6460888
@@ -2415,6 +2527,10 @@
     "latitude": 50.7065895,
     "longitude": 22.4110663
   },
+  "Nowogrodziec": {
+    "latitude": 51.1971363,
+    "longitude": 15.3987046
+  },
   "Gułtowy": {
     "latitude": 52.3510995,
     "longitude": 17.3295324
@@ -2446,6 +2562,10 @@
   "Police": {
     "latitude": 53.5486435,
     "longitude": 14.5657399
+  },
+  "Człuchów": {
+    "latitude": 53.6651462,
+    "longitude": 17.3588324
   },
   "Żelechów": {
     "latitude": 51.8096724,
