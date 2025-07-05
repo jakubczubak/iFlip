@@ -86,7 +86,7 @@ public class Main {
             System.out.println("\n=== iFlip ===");
             System.out.println("\n=== Wyszukiwarka ofert iPhone na OLX ===");
             System.out.println("Wybierz tryb wyszukiwania:");
-            System.out.println("1. Codzienna rekomendacja (tylko oferty z dzisiaj, wybrane modele i pojemności)");
+            System.out.println("1. Codzienna rekomendacja (wybrane modele i pojemności)");
             System.out.println("2. Standardowe wyszukiwanie");
             System.out.print("Wpisz numer (1–2) lub 'q' aby wyjść: ");
 
@@ -130,7 +130,7 @@ public class Main {
         private final String model;
         private final String storage;
         private final List<Offer> allOffers;
-        private final List<Offer> todayOffers;
+        private final List<Offer> filteredOffers;
         private final PriceStats overallStats;
         private final PriceStats statsWithProtection;
         private final PriceStats statsWithoutProtection;
@@ -140,7 +140,7 @@ public class Main {
         private final Map<Offer, Double> zScoresWithoutProtection;
         private final Map<Offer, Double> zScoresWithProtection;
 
-        public CombinationResult(String model, String storage, List<Offer> allOffers, List<Offer> todayOffers,
+        public CombinationResult(String model, String storage, List<Offer> allOffers, List<Offer> filteredOffers,
                                  PriceStats overallStats, PriceStats statsWithProtection, PriceStats statsWithoutProtection,
                                  List<Offer> recommendedOffersWithoutProtection, List<Offer> recommendedOffersWithProtection,
                                  List<Offer> lowPriceOutlierOffers, Map<Offer, Double> zScoresWithoutProtection,
@@ -148,7 +148,7 @@ public class Main {
             this.model = model;
             this.storage = storage;
             this.allOffers = allOffers;
-            this.todayOffers = todayOffers;
+            this.filteredOffers = filteredOffers;
             this.overallStats = overallStats;
             this.statsWithProtection = statsWithProtection;
             this.statsWithoutProtection = statsWithoutProtection;
@@ -173,6 +173,9 @@ public class Main {
         String location = selectLocation(scanner);
         if (location == null) return;
 
+        Boolean todayOnly = selectTodayOnly(scanner);
+        if (todayOnly == null) return;
+
         System.out.println("\n=== Podsumowanie wyborów ===");
         System.out.printf("Modele: %s\n", String.join(", ", selectedModels));
         System.out.printf("Pojemności: %s\n", String.join(", ", selectedStorages));
@@ -180,7 +183,7 @@ public class Main {
                 .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
                 .collect(Collectors.toList())));
         System.out.printf("Lokalizacja: %s\n", location.isEmpty() ? "Cała Polska" : location);
-        System.out.println("Tylko oferty z dzisiaj: Tak");
+        System.out.printf("Tylko oferty z dzisiaj: %s\n", todayOnly ? "Tak" : "Nie");
         System.out.print("\nCzy chcesz kontynuować z tymi ustawieniami? (tak/nie): ");
         String confirm = scanner.nextLine().trim().toLowerCase();
         if (!confirm.equals("tak")) {
@@ -207,15 +210,17 @@ public class Main {
                 futures.add(CompletableFuture.supplyAsync(() -> {
                     System.out.println("Skanuję oferty dla: " + finalModel + " " + finalStorage + " (" + statesDisplay + ")");
                     List<Offer> allOffers = scraper.scrapeOffers(finalModel, finalStorage, location, selectedStates);
-                    List<Offer> todayOffers = allOffers.stream()
-                            .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
-                            .collect(Collectors.toList());
+                    List<Offer> filteredOffers = todayOnly ?
+                            allOffers.stream()
+                                    .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                                    .collect(Collectors.toList()) :
+                            allOffers;
 
-                    System.out.printf("[Skanowanie] Model: %s, Pojemność: %s, Stany: %s, Liczba ofert z dzisiaj: %d, Wszystkie oferty: %d\n",
-                            finalModel, finalStorage, statesDisplay, todayOffers.size(), allOffers.size());
+                    System.out.printf("[Skanowanie] Model: %s, Pojemność: %s, Stany: %s, Liczba ofert: %d, Wszystkie oferty: %d\n",
+                            finalModel, finalStorage, statesDisplay, filteredOffers.size(), allOffers.size());
 
-                    if (todayOffers.isEmpty()) {
-                        return new CombinationResult(finalModel, finalStorage, allOffers, todayOffers,
+                    if (filteredOffers.isEmpty()) {
+                        return new CombinationResult(finalModel, finalStorage, allOffers, filteredOffers,
                                 new PriceStats(0, 0, 0, 0, 0),
                                 new PriceStats(0, 0, 0, 0, 0),
                                 new PriceStats(0, 0, 0, 0, 0),
@@ -249,21 +254,21 @@ public class Main {
 
                     List<Offer> recommendedOffersWithoutProtection = analyzer.getRecommendedOffersWithoutProtection(-0.5, location.isEmpty() ? null : location, historyManager)
                             .stream()
-                            .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                            .filter(offer -> !todayOnly || offer.getDate().isEqual(LocalDate.now()))
                             .collect(Collectors.toList());
                     List<Offer> recommendedOffersWithProtection = analyzer.getRecommendedOffersWithProtection(-0.5, location.isEmpty() ? null : location, historyManager)
                             .stream()
-                            .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                            .filter(offer -> !todayOnly || offer.getDate().isEqual(LocalDate.now()))
                             .collect(Collectors.toList());
 
-                    List<Offer> todayLowPriceOutlierOffers = lowPriceOutlierOffers.stream()
-                            .filter(offer -> offer.getDate().isEqual(LocalDate.now()))
+                    List<Offer> filteredLowPriceOutlierOffers = lowPriceOutlierOffers.stream()
+                            .filter(offer -> !todayOnly || offer.getDate().isEqual(LocalDate.now()))
                             .collect(Collectors.toList());
 
-                    return new CombinationResult(finalModel, finalStorage, allOffers, todayOffers,
+                    return new CombinationResult(finalModel, finalStorage, allOffers, filteredOffers,
                             overallStats, statsWithProtection, statsWithoutProtection,
                             recommendedOffersWithoutProtection, recommendedOffersWithProtection,
-                            todayLowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection);
+                            filteredLowPriceOutlierOffers, zScoresWithoutProtection, zScoresWithProtection);
                 }, EXECUTOR));
             }
         }
@@ -275,7 +280,7 @@ public class Main {
                 .collect(Collectors.toList());
 
         // Agregacja wyników do globalnych list
-        List<Offer> allTodayOffers = new ArrayList<>();
+        List<Offer> allFilteredOffers = new ArrayList<>();
         List<Offer> allRecommendedWithoutProtection = new ArrayList<>();
         List<Offer> allRecommendedWithProtection = new ArrayList<>();
         List<Offer> allLowPriceOutlierOffers = new ArrayList<>();
@@ -288,9 +293,9 @@ public class Main {
         boolean hasOffers = false;
         for (CombinationResult result : combinationResults) {
             String key = result.model + " " + result.storage;
-            if (!result.todayOffers.isEmpty()) {
+            if (!result.filteredOffers.isEmpty()) {
                 hasOffers = true;
-                allTodayOffers.addAll(result.todayOffers);
+                allFilteredOffers.addAll(result.filteredOffers);
                 allRecommendedWithoutProtection.addAll(result.recommendedOffersWithoutProtection);
                 allRecommendedWithProtection.addAll(result.recommendedOffersWithProtection);
                 allLowPriceOutlierOffers.addAll(result.lowPriceOutlierOffers);
@@ -313,13 +318,14 @@ public class Main {
             String statesDisplay = selectedStates.isEmpty() ? "wszystkie stany" : String.join(", ", selectedStates.stream()
                     .map(s -> DEVICE_STATES.get(Arrays.asList("new", "used", "damaged").indexOf(s)))
                     .collect(Collectors.toList()));
-            System.out.println("\nBrak ofert z dzisiaj dla wybranych modeli: " + String.join(", ", selectedModels) +
-                    ", pojemności: " + String.join(", ", selectedStorages) + ", w stanie: " + statesDisplay);
+            System.out.println("\nBrak ofert dla wybranych modeli: " + String.join(", ", selectedModels) +
+                    ", pojemności: " + String.join(", ", selectedStorages) + ", w stanie: " + statesDisplay +
+                    (todayOnly ? " (tylko dzisiaj)" : ""));
             return;
         }
 
         // Wyświetlanie globalnych tabel
-        displayResults(allTodayOffers, selectedModels, selectedStorages, location, true,
+        displayResults(allFilteredOffers, selectedModels, selectedStorages, location, todayOnly,
                 overallStatsMap, statsWithoutProtectionMap, statsWithProtectionMap,
                 allRecommendedWithoutProtection, allRecommendedWithProtection,
                 allLowPriceOutlierOffers, zScoresWithoutProtectionMap, zScoresWithProtectionMap,

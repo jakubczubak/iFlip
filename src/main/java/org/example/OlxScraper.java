@@ -51,7 +51,7 @@ public class OlxScraper {
         filters.append("&search%5Bfilter_enum_builtinmemory_phones%5D%5B0%5D=")
                 .append(URLEncoder.encode(storageQuery, StandardCharsets.UTF_8));
 
-        // Dodanie parametru lokalizacji
+        // Dodanie parametrów lokalizacji
         if (location != null && !location.isEmpty()) {
             filters.insert(0, "search%5Bdist%5D=50&");
         }
@@ -107,7 +107,7 @@ public class OlxScraper {
                             return new PageResult(new ArrayList<>(), false);
                         }
 
-                        Elements offerElements = doc.select("div.css-qfzx1y");
+                        Elements offerElements = doc.select("div.css-1r93q13");
                         if (offerElements.isEmpty()) {
                             System.out.println("Nie znaleziono ofert na stronie " + currentPage + ".");
                             return new PageResult(new ArrayList<>(), false);
