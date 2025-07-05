@@ -24,6 +24,15 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class OlxScraper {
+    // CSS Selectors as constants
+    private static final String OFFER_CONTAINER_SELECTOR = "div.css-1sw7q4x";
+    private static final String TITLE_SELECTOR = "h4.css-1g61gc2";
+    private static final String PRICE_SELECTOR = "p[data-testid=ad-price]";
+    private static final String LINK_SELECTOR = "a.css-1tqlkj0";
+    private static final String DATE_LOCATION_SELECTOR = "p[data-testid=location-date]";
+    private static final String PROTECTION_PACKAGE_SELECTOR = "span[data-testid=btr-label-wrapper]";
+    private static final String NEXT_PAGE_SELECTOR = "a[data-testid=pagination-forward]";
+
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("pl"));
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
     private static final Pattern TODAY_PATTERN = Pattern.compile("Dzisiaj o (\\d{2}:\\d{2})");
@@ -107,7 +116,11 @@ public class OlxScraper {
                             return new PageResult(new ArrayList<>(), false);
                         }
 
+<<<<<<< HEAD
                         Elements offerElements = doc.select("div.css-1r93q13");
+=======
+                        Elements offerElements = doc.select(OFFER_CONTAINER_SELECTOR);
+>>>>>>> 326a721f3d0ab900c087f5111fdd26889776238a
                         if (offerElements.isEmpty()) {
                             System.out.println("Nie znaleziono ofert na stronie " + currentPage + ".");
                             return new PageResult(new ArrayList<>(), false);
@@ -122,7 +135,7 @@ public class OlxScraper {
                                 .collect(Collectors.toList());
 
                         // Sprawdzenie, czy istnieje następna strona
-                        boolean hasNext = doc.selectFirst("a[data-testid=pagination-forward]") != null;
+                        boolean hasNext = doc.selectFirst(NEXT_PAGE_SELECTOR) != null;
                         System.out.println("Czy jest następna strona po stronie " + currentPage + "? " + hasNext);
                         return new PageResult(pageOffers, hasNext);
                     } catch (IOException e) {
@@ -148,7 +161,7 @@ public class OlxScraper {
             String lastPageUrl = baseUrl + (lastPageInBatch > 1 ? "&page=" + lastPageInBatch : "");
             try {
                 Document doc = fetchWithRetry(lastPageUrl);
-                hasNextPage = doc != null && doc.selectFirst("a[data-testid=pagination-forward]") != null;
+                hasNextPage = doc != null && doc.selectFirst(NEXT_PAGE_SELECTOR) != null;
                 System.out.println("Sprawdzono następną stronę dla strony " + lastPageInBatch + ": " + hasNextPage);
             } catch (IOException e) {
                 System.err.println("Błąd podczas sprawdzania następnej strony dla URL: " + lastPageUrl + ", szczegóły: " + e.getMessage());
@@ -242,21 +255,21 @@ public class OlxScraper {
 
     private Offer parseOffer(Element element, String model, String storageCapacity) {
         try {
-            Element titleElement = element.selectFirst("h4.css-1g61gc2");
+            Element titleElement = element.selectFirst(TITLE_SELECTOR);
             String title = titleElement != null ? titleElement.text() : "";
             if (title.isEmpty()) {
                 System.err.println("Brak tytułu publikacji.");
                 return null;
             }
 
-            Element priceElement = element.selectFirst("p[data-testid=ad-price]");
+            Element priceElement = element.selectFirst(PRICE_SELECTOR);
             String priceText = priceElement != null ? priceElement.text() : "";
             double price = parsePrice(priceText);
             if (price <= 0) {
                 return null; // Cicho pomijamy oferty z nieprawidłową ceną
             }
 
-            Element linkElement = element.selectFirst("a.css-1tqlkj0");
+            Element linkElement = element.selectFirst(LINK_SELECTOR);
             String offerUrl = linkElement != null ? linkElement.attr("href") : "";
             if (offerUrl.isEmpty()) {
                 System.err.println("Brak URL dla publikacji: " + title);
@@ -266,7 +279,7 @@ public class OlxScraper {
                 offerUrl = "https://www.olx.pl" + offerUrl;
             }
 
-            Element dateLocationElement = element.selectFirst("p[data-testid=location-date]");
+            Element dateLocationElement = element.selectFirst(DATE_LOCATION_SELECTOR);
             String dateLocationText = dateLocationElement != null ? dateLocationElement.text() : "";
             String locationText = parseLocation(dateLocationText);
             if (locationText.isEmpty()) {
@@ -289,7 +302,7 @@ public class OlxScraper {
                 dateStatus = "odświeżono";
             }
 
-            Element protectionElement = element.selectFirst("span[data-testid=btr-label-wrapper]");
+            Element protectionElement = element.selectFirst(PROTECTION_PACKAGE_SELECTOR);
             boolean hasProtectionPackage = protectionElement != null;
 
             return new Offer(title, price, offerUrl, date, dateStatus, locationText, hasProtectionPackage, model, storageCapacity);
