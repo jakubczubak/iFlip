@@ -49,7 +49,16 @@ public class OlxScraper {
 
     public List<Offer> scrapeOffers(String model, String storageCapacity, String location, List<String> states) {
         List<Offer> offers = new ArrayList<>();
-        String modelQuery = model.toLowerCase().replaceAll("iphone\\s*", "").replaceAll("\\s+", "-");
+        String modelQuery;
+
+        // Dodajemy specjalny wyjątek dla modelu "iPhone 16 Pro"
+        if (model.equalsIgnoreCase("iPhone 16 Pro")) {
+            modelQuery = "16pro"; // Ustawiamy sztywno wymaganą wartość bez myślnika
+        } else {
+            // Dla wszystkich innych modeli stosujemy dotychczasową logikę
+            modelQuery = model.toLowerCase().replaceAll("iphone\\s*", "").replaceAll("\\s+", "-");
+        }
+
         String storageQuery = storageCapacity.toLowerCase().replace("tb", "tb").replace("gb", "gb");
         String baseUrl;
 
@@ -116,11 +125,11 @@ public class OlxScraper {
                             return new PageResult(new ArrayList<>(), false);
                         }
 
-<<<<<<< HEAD
-                        Elements offerElements = doc.select("div.css-1r93q13");
-=======
+
+
+
                         Elements offerElements = doc.select(OFFER_CONTAINER_SELECTOR);
->>>>>>> 326a721f3d0ab900c087f5111fdd26889776238a
+
                         if (offerElements.isEmpty()) {
                             System.out.println("Nie znaleziono ofert na stronie " + currentPage + ".");
                             return new PageResult(new ArrayList<>(), false);
